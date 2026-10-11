@@ -1,0 +1,169 @@
+cases:
+  - id: CL-001
+    kind: identity
+    description: Single income cut-off 226 + 1,237.70/0.5 = 2,701.40 (published)
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-10-11', relationship: single, homeowner: true, dates_of_birth: ['1955-01-01'], assessable_assets: 0, financial_assets: 0 }
+    expect: { status: ok, result: { income_cut_off_fortnightly: '2701.40', rate_fortnightly_per_person: '1237.70', binding_test: neither } }
+    source: https://www.servicesaustralia.gov.au/income-test-for-age-pension?context=22526
+    checked: verification/centrelink.md (ACCEPT)
+  - id: CL-002
+    kind: identity
+    description: Couple combined income cut-off 396 + 933/0.25 = 4,128.00 (published); max 933.00 each, 1,866 combined
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-10-11', relationship: couple, homeowner: true, dates_of_birth: ['1955-01-01', '1956-01-01'], assessable_assets: 0, financial_assets: 0 }
+    expect: { status: ok, result: { income_cut_off_fortnightly: '4128.00', rate_fortnightly_per_person: '933.00', rate_fortnightly_total: '1866.00' } }
+    source: https://www.servicesaustralia.gov.au/income-test-for-age-pension?context=22526
+    checked: verification/centrelink.md (ACCEPT)
+  - id: CL-ILLSEP-INCOME
+    kind: identity
+    description: Illness-separated couple combined income cut-off 5,346.80 (published)
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-10-11', relationship: illness_separated, homeowner: true, dates_of_birth: ['1955-01-01', '1956-01-01'], assessable_assets: 0, financial_assets: 0 }
+    expect: { status: ok, result: { income_cut_off_fortnightly: '5346.80', rate_fortnightly_per_person: '1237.70' } }
+    source: https://www.servicesaustralia.gov.au/income-test-for-age-pension?context=22526
+    checked: verification/centrelink.md
+  - id: CL-003
+    kind: identity
+    description: Couple homeowner asset cut-off 1,121,000 (published) via per-person 1064-G2 method
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-10-11', relationship: couple, homeowner: true, dates_of_birth: ['1955-01-01', '1956-01-01'], assessable_assets: 0, financial_assets: 0 }
+    expect: { status: ok, result: { assets_cut_off: '1121000.00' } }
+    source: https://www.servicesaustralia.gov.au/assets-test-for-age-pension?context=22526
+    checked: verification/centrelink.md (ACCEPT)
+  - id: CL-004
+    kind: identity
+    description: CORRECTED RULE — single homeowner asset cut-off 745,750 (published) from s1064-G7 (complete $250 units), not "round up to $250"
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-10-11', relationship: single, homeowner: true, dates_of_birth: ['1955-01-01'], assessable_assets: 0, financial_assets: 0 }
+    expect: { status: ok, result: { assets_cut_off: '745750.00' } }
+    source: https://www.servicesaustralia.gov.au/assets-test-for-age-pension?context=22526
+    checked: verification/centrelink.md (ACCEPT with corrected rule)
+  - id: CL-CUTOFF-SNH
+    kind: identity
+    description: Single non-homeowner asset cut-off 1,012,750 (published)
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-10-11', relationship: single, homeowner: false, dates_of_birth: ['1955-01-01'], assessable_assets: 0, financial_assets: 0 }
+    expect: { status: ok, result: { assets_cut_off: '1012750.00' } }
+    source: https://www.servicesaustralia.gov.au/assets-test-for-age-pension?context=22526
+    checked: verification/centrelink.md
+  - id: CL-CUTOFF-CNH
+    kind: identity
+    description: Couple non-homeowner asset cut-off 1,388,000 (published)
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-10-11', relationship: couple, homeowner: false, dates_of_birth: ['1955-01-01', '1956-01-01'], assessable_assets: 0, financial_assets: 0 }
+    expect: { status: ok, result: { assets_cut_off: '1388000.00' } }
+    source: https://www.servicesaustralia.gov.au/assets-test-for-age-pension?context=22526
+    checked: verification/centrelink.md
+  - id: CL-CUTOFF-ISH
+    kind: identity
+    description: Illness-separated homeowner asset cut-off 1,324,500 (published; combined-excess method would give 1,324,250)
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-10-11', relationship: illness_separated, homeowner: true, dates_of_birth: ['1955-01-01', '1956-01-01'], assessable_assets: 0, financial_assets: 0 }
+    expect: { status: ok, result: { assets_cut_off: '1324500.00' } }
+    source: https://www.servicesaustralia.gov.au/assets-test-for-age-pension?context=22526
+    checked: verification/centrelink.md
+  - id: CL-CUTOFF-ISNH
+    kind: identity
+    description: Illness-separated non-homeowner asset cut-off 1,591,500 (published)
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-10-11', relationship: illness_separated, homeowner: false, dates_of_birth: ['1955-01-01', '1956-01-01'], assessable_assets: 0, financial_assets: 0 }
+    expect: { status: ok, result: { assets_cut_off: '1591500.00' } }
+    source: https://www.servicesaustralia.gov.au/assets-test-for-age-pension?context=22526
+    checked: verification/centrelink.md
+  - id: CL-CUTOFF-JUL2026
+    kind: derived
+    description: Single homeowner cut-off 1 Jul – 19 Sep 2026 = 733,500 (derived by the verification agent)
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-08-01', relationship: single, homeowner: true, dates_of_birth: ['1955-01-01'], assessable_assets: 0, financial_assets: 0 }
+    expect: { status: ok, result: { assets_cut_off: '733500.00', rate_fortnightly_per_person: '1200.90' } }
+    source: https://guides.dss.gov.au/social-security-guide/5/2/2/10
+    checked: verification/centrelink.md
+  - id: CL-005
+    kind: derived
+    description: Deeming single 150,000 from 20 Sep 2026 = 66,800 × 1.75% + 83,200 × 3.75% = 4,289.00
+    calculator: centrelink.deeming
+    input: { assessment_date: '2026-10-11', financial_assets: 150000, status: single }
+    expect: { status: ok, result: { deemed_income_annual: '4289.00' } }
+    source: https://www.legislation.gov.au/F2026L01083/asmade/text
+    checked: verification/centrelink.md (ACCEPT; source replaced with primary)
+  - id: CL-006
+    kind: derived
+    description: Income-test rate single, $326/fn other income → 1,237.70 − 0.5 × 100 = 1,187.70
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-10-11', relationship: single, homeowner: true, dates_of_birth: ['1955-01-01'], assessable_assets: 0, financial_assets: 0, other_income_fortnightly: 326 }
+    expect: { status: ok, result: { income_test_rate_fortnightly: '1187.70', rate_fortnightly_per_person: '1187.70', binding_test: income } }
+    source: https://www.servicesaustralia.gov.au/income-test-for-age-pension?context=22526
+    checked: verification/centrelink.md (ACCEPT)
+  - id: CL-007
+    kind: derived
+    description: Assets-test rate single homeowner, assets 433,000 (no financial assets) → 937.70
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-10-11', relationship: single, homeowner: true, dates_of_birth: ['1955-01-01'], assessable_assets: 433000, financial_assets: 0 }
+    expect: { status: ok, result: { assets_test_rate_fortnightly: '937.70', rate_fortnightly_per_person: '937.70', binding_test: assets } }
+    source: https://www.servicesaustralia.gov.au/assets-test-for-age-pension?context=22526
+    checked: verification/centrelink.md (ACCEPT)
+  - id: CL-008
+    kind: derived
+    description: Single homeowner assets 734,500 on 20 Sep 2026 → 1,606 units × 19.50 = 31,317; (32,180.20 − 31,317)/26 = 33.20 (scenario facts from a secondary case study)
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-09-20', relationship: single, homeowner: true, dates_of_birth: ['1955-01-01'], assessable_assets: 734500, financial_assets: 0 }
+    expect: { status: ok, result: { rate_fortnightly_per_person: '33.20' } }
+    source: https://www.servicesaustralia.gov.au/assets-test-for-age-pension?context=22526
+    checked: verification/centrelink.md (ACCEPT; rate derived from verified parameters)
+  - id: CL-008b
+    kind: derived
+    description: Same assets on 19 Sep 2026 (MPR 1,200.90) → nil
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-09-19', relationship: single, homeowner: true, dates_of_birth: ['1955-01-01'], assessable_assets: 734500, financial_assets: 0 }
+    expect: { status: ok, result: { rate_fortnightly_per_person: '0.00' } }
+    source: https://guides.dss.gov.au/social-security-guide/5/2/2/10
+    checked: verification/centrelink.md
+  - id: CL-MIN-1
+    kind: derived
+    description: $1 minimum instalment — single homeowner assets 745,500 → 1,650 units × 19.50 = 32,175; 32,180.20 − 32,175 = 5.20 p.a. → 0.20/fn → paid $1.00 (DSS 8.4.1.50)
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-10-11', relationship: single, homeowner: true, dates_of_birth: ['1955-01-01'], assessable_assets: 745500, financial_assets: 0 }
+    expect: { status: ok, result: { rate_fortnightly_per_person: '1.00' } }
+    source: https://guides.dss.gov.au/social-security-guide/8/4/1/50
+    checked: 'verification/centrelink.md (CL-004 note — $0.20/fn paid as $1.00)'
+  - id: CL-WORK-BONUS
+    kind: derived
+    description: Work Bonus — single employment income 500/fn, no balance → 200 assessed; 1,237.70 − 0.5 × (200 − 226 → 0) = full rate
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-10-11', relationship: single, homeowner: true, dates_of_birth: ['1955-01-01'], assessable_assets: 0, financial_assets: 0, employment_income_fortnightly: [500] }
+    expect: { status: ok, result: { rate_fortnightly_per_person: '1237.70' } }
+    source: https://www.servicesaustralia.gov.au/how-work-bonus-works?context=22561
+    checked: orchestrator
+  - id: CL-NOT-AGE
+    kind: derived
+    description: Under Age Pension age → no recipients, total nil (with warning)
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-10-11', relationship: single, homeowner: true, dates_of_birth: ['1970-01-01'], assessable_assets: 0, financial_assets: 0 }
+    expect: { status: ok, result: { eligible_recipients: 0, rate_fortnightly_total: '0.00' } }
+    source: https://www.servicesaustralia.gov.au/who-can-get-age-pension?context=22526
+    checked: orchestrator
+  - id: CL-BEFORE-RANGE
+    kind: blocking
+    description: Assessment before 20 Sep 2025 → no verified maximum-rate record → blocked
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2025-08-01', relationship: single, homeowner: true, dates_of_birth: ['1955-01-01'], assessable_assets: 0, financial_assets: 0 }
+    expect: { status: blocked, blocked_code: PARAMETER_MISSING }
+    source: https://guides.dss.gov.au/social-security-guide/5/2/2/10
+    checked: orchestrator
+  - id: CL-CSHC-001
+    kind: derived
+    description: CSHC single — ATI 90,000 + deemed on 400,000 (1,169 + 333,200 × 3.75% = 12,495) = 103,664 ≤ 105,048
+    calculator: centrelink.cshc
+    input: { assessment_date: '2026-10-11', relationship: single, adjusted_taxable_income: 90000, account_based_income_streams: [400000] }
+    expect: { status: ok, result: { income_for_test: '103664.00', meets_income_test: true } }
+    source: https://www.servicesaustralia.gov.au/income-test-for-commonwealth-seniors-health-card?context=21966
+    checked: orchestrator
+  - id: CL-WB-UNDER-AGE-PARTNER
+    kind: derived
+    description: Work Bonus applies only to a partner of Age Pension age — younger partner's 500/fn employment income assessed in full (audit note)
+    calculator: centrelink.age_pension
+    input: { assessment_date: '2026-10-11', relationship: couple, homeowner: true, dates_of_birth: ['1955-01-01', '1970-01-01'], assessable_assets: 0, financial_assets: 0, employment_income_fortnightly: [0, 500] }
+    expect: { status: ok, result: { eligible_recipients: 1, assessable_income_fortnightly_per_person: '250.00', rate_fortnightly_per_person: '907.00' } }
+    source: https://www.servicesaustralia.gov.au/how-work-bonus-works?context=22561
+    checked: orchestrator (combined 500 − 396 = 104 × 25c = 26 → 933.00 − 26.00 = 907.00)

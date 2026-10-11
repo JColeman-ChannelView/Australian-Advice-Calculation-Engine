@@ -1,0 +1,422 @@
+# Age Pension / Centrelink parameters. Evidence: verification/centrelink.md (accessed 2026-10-11).
+# Pension rates change 20 March / 20 September; asset limits, free areas and deeming thresholds
+# change 1 July; deeming rates by ministerial determination. Windows are inclusive.
+
+sources:
+  sa_rates: &sa_rates
+    url: https://www.servicesaustralia.gov.au/how-much-age-pension-you-can-get?context=22526
+    title: Services Australia — How much Age Pension you can get
+    accessed: 2026-10-11
+    page_updated: 2026-09-20
+    primary: true
+  sa_income: &sa_income
+    url: https://www.servicesaustralia.gov.au/income-test-for-age-pension?context=22526
+    title: Services Australia — Income test for Age Pension
+    accessed: 2026-10-11
+    page_updated: 2026-09-20
+    primary: true
+  sa_assets: &sa_assets
+    url: https://www.servicesaustralia.gov.au/assets-test-for-age-pension?context=22526
+    title: Services Australia — Assets test for Age Pension
+    accessed: 2026-10-11
+    page_updated: 2026-09-20
+    primary: true
+  sa_deeming: &sa_deeming
+    url: https://www.servicesaustralia.gov.au/deeming?context=22526
+    title: Services Australia — Deeming
+    accessed: 2026-10-11
+    page_updated: 2026-09-20
+    primary: true
+  sa_who: &sa_who
+    url: https://www.servicesaustralia.gov.au/who-can-get-age-pension?context=22526
+    title: Services Australia — Who can get Age Pension
+    accessed: 2026-10-11
+    page_updated: 2025-12-01
+    primary: true
+  sa_wb: &sa_wb
+    url: https://www.servicesaustralia.gov.au/how-work-bonus-works?context=22561
+    title: Services Australia — How Work Bonus works
+    accessed: 2026-10-11
+    page_updated: 2025-02-14
+    primary: true
+  sa_cshc: &sa_cshc
+    url: https://www.servicesaustralia.gov.au/income-test-for-commonwealth-seniors-health-card?context=21966
+    title: Services Australia — Income test for Commonwealth Seniors Health Card
+    accessed: 2026-10-11
+    page_updated: 2026-09-20
+    primary: true
+  dss_mbr: &dss_mbr
+    url: https://guides.dss.gov.au/social-security-guide/5/2/2/10
+    title: DSS Social Security Guide 5.2.2.10 — Maximum basic rate history
+    accessed: 2026-10-11
+    page_updated: 2026-09-21
+    primary: true
+  dss_ps: &dss_ps
+    url: https://guides.dss.gov.au/social-security-guide/5/2/8/10
+    title: DSS Social Security Guide 5.2.8.10 — Pension supplement history
+    accessed: 2026-10-11
+    page_updated: 2026-09-21
+    primary: true
+  dss_es: &dss_es
+    url: https://guides.dss.gov.au/social-security-guide/5/1/10/20
+    title: DSS Social Security Guide 5.1.10.20 — Energy supplement rates
+    accessed: 2026-10-11
+    page_updated: 2026-01-02
+    primary: true
+  dss_limits: &dss_limits
+    url: https://guides.dss.gov.au/social-security-guide/4/10/3
+    title: DSS Social Security Guide 4.10.3 — Historical pension income and assets limits
+    accessed: 2026-10-11
+    page_updated: 2026-07-01
+    primary: true
+  dss_deeming: &dss_deeming
+    url: https://guides.dss.gov.au/social-security-guide/4/4/1/10
+    title: DSS Social Security Guide 4.4.1.10 — Overview of deeming
+    accessed: 2026-10-11
+    page_updated: 2026-09-21
+    primary: true
+  dss_assets: &dss_assets
+    url: https://guides.dss.gov.au/social-security-guide/4/2/3
+    title: DSS Social Security Guide 4.2.3 — Pensions assets test
+    accessed: 2026-10-11
+    page_updated: 2024-08-12
+    primary: true
+  ssa: &ssa
+    url: https://www.legislation.gov.au/C2004A04121/latest/text
+    title: Social Security Act 1991 (compilation of 20 Sep 2026) s1064 Modules A, B, E, G; s1073AB
+    accessed: 2026-10-11
+    page_updated: 2026-09-20
+    primary: true
+  deem_2025: &deem_2025
+    url: https://www.legislation.gov.au/F2025L00989/latest/text
+    title: Social Security (Deeming Threshold Rates) Determination 2025
+    accessed: 2026-10-11
+    primary: true
+  deem_2026: &deem_2026
+    url: https://www.legislation.gov.au/F2026L00137/asmade/text
+    title: Social Security (Deeming Threshold Rates) Determination 2026
+    accessed: 2026-10-11
+    primary: true
+  deem_2026b: &deem_2026b
+    url: https://www.legislation.gov.au/F2026L01083/asmade/text
+    title: Social Security (Deeming Threshold Rates) Determination (No. 2) 2026
+    accessed: 2026-10-11
+    page_updated: 2026-08-21
+    primary: true
+
+records:
+  - name: centrelink.age_pension_age
+    description: Age Pension qualifying age
+    kind: scalar
+    value: 67
+    unit: years
+    effective_from: 2023-07-01
+    effective_to: null
+    knowledge_date: 2014-06-30
+    verification: verified
+    legal_status: enacted
+    instrument: Social Security Act 1991 s23(5A)
+    sources:
+      - { <<: *sa_who, locator: '"Age Pension age is 67 years or older."' }
+
+  # ------------------------------------------------ maximum rates (fortnightly; annual = × 26)
+  - name: centrelink.age_pension_max_rates
+    description: Age Pension maximum fortnightly rates — basic rate, pension supplement, energy supplement (single; couple each)
+    kind: table
+    value:
+      single_basic: 1079.70
+      single_pension_supplement: 84.90
+      single_energy_supplement: 14.10
+      couple_basic: 813.90
+      couple_pension_supplement: 64.00
+      couple_energy_supplement: 10.60
+    unit: AUD per fortnight
+    effective_from: 2025-09-20
+    effective_to: 2026-03-19
+    knowledge_date: 2025-09-20
+    verification: derived
+    legal_status: instrument
+    instrument: Social Security Act 1991 s1064 Module B; indexation Part 3.16
+    notes: Annual DSS figures ÷ 26 (basic 28,072.20 / 21,161.40; PS 2,207.40 / 1,664.00). ES not indexed. Totals 1,178.70 / 888.50.
+    sources:
+      - { <<: *dss_mbr, locator: 20/09/2025 row }
+      - { <<: *dss_ps, locator: 20/09/2025 row }
+      - { <<: *dss_es, locator: '"ES is not indexed."' }
+  - name: centrelink.age_pension_max_rates
+    description: Age Pension maximum fortnightly rates — basic rate, pension supplement, energy supplement (single; couple each)
+    kind: table
+    value:
+      single_basic: 1100.30
+      single_pension_supplement: 86.50
+      single_energy_supplement: 14.10
+      couple_basic: 829.40
+      couple_pension_supplement: 65.20
+      couple_energy_supplement: 10.60
+    unit: AUD per fortnight
+    effective_from: 2026-03-20
+    effective_to: 2026-09-19
+    knowledge_date: 2026-03-20
+    verification: derived
+    legal_status: instrument
+    instrument: Social Security Act 1991 s1064 Module B; indexation Part 3.16
+    notes: Annual DSS figures ÷ 26 (basic 28,607.80 / 21,564.40; PS 2,249.00 / 1,695.20). Totals 1,200.90 / 905.20.
+    sources:
+      - { <<: *dss_mbr, locator: 20/03/2026 row }
+      - { <<: *dss_ps, locator: 20/03/2026 row }
+  - name: centrelink.age_pension_max_rates
+    description: Age Pension maximum fortnightly rates — basic rate, pension supplement, energy supplement (single; couple each)
+    kind: table
+    value:
+      single_basic: 1135.40
+      single_pension_supplement: 88.20
+      single_energy_supplement: 14.10
+      couple_basic: 855.90
+      couple_pension_supplement: 66.50
+      couple_energy_supplement: 10.60
+    unit: AUD per fortnight
+    effective_from: 2026-09-20
+    effective_to: 2027-03-19
+    knowledge_date: 2026-09-20
+    verification: verified
+    legal_status: instrument
+    instrument: Social Security Act 1991 s1064 Module B; indexation Part 3.16
+    notes: Totals single 1,237.70; couple each 933.00 (1,866.00 combined).
+    sources:
+      - { <<: *sa_rates, locator: 'table "Total $1,237.70" / "$933.00 $1,866"' }
+
+  # ------------------------------------------------ income test (annual, per person)
+  - name: centrelink.income_test
+    description: Pension income test — ordinary income free area per year (single; each member of a couple) and taper
+    kind: table
+    value:
+      single_free_area_pa: 5668
+      couple_free_area_each_pa: 4940
+      taper: 0.5
+    unit: AUD per year / rate
+    effective_from: 2025-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2025-07-01
+    verification: verified
+    legal_status: instrument
+    instrument: Social Security Act 1991 s1064 Module E (1064-E2, E10)
+    notes: Fortnightly equivalents $218 single, $380 couple combined. For couples each partner's income is half the combined income (1064-E2).
+    sources:
+      - { <<: *dss_limits, locator: 'Table 6 "01/07/2025 5,668 4,940"' }
+      - { <<: *ssa, locator: '1064-E10 "Ordinary income excess × 0.5"' }
+  - name: centrelink.income_test
+    description: Pension income test — ordinary income free area per year (single; each member of a couple) and taper
+    kind: table
+    value:
+      single_free_area_pa: 5876
+      couple_free_area_each_pa: 5148
+      taper: 0.5
+    unit: AUD per year / rate
+    effective_from: 2026-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2026-07-01
+    verification: verified
+    legal_status: instrument
+    instrument: Social Security Act 1991 s1064 Module E (1064-E2, E10)
+    notes: Fortnightly equivalents $226 single, $396 couple combined.
+    sources:
+      - { <<: *sa_income, locator: '"Up to $226 (free area)" / "Up to $396 (free area)"' }
+      - { <<: *dss_limits, locator: 'Table 6 "01/07/2026 5,876"' }
+      - { <<: *ssa, locator: '1064-E10 "Ordinary income excess × 0.5"' }
+
+  # ------------------------------------------------ assets test
+  - name: centrelink.assets_test
+    description: Pension assets test — full-pension asset value limits (single; couple combined) and reduction per complete $250 of excess per year
+    kind: table
+    value:
+      single_homeowner: 314000
+      single_non_homeowner: 566000
+      couple_homeowner: 470000
+      couple_non_homeowner: 722000
+      reduction_per_unit_pa: 19.5
+      unit: 250
+    unit: AUD
+    effective_from: 2024-07-01
+    effective_to: 2025-06-30
+    knowledge_date: 2024-07-01
+    verification: verified
+    legal_status: instrument
+    instrument: Social Security Act 1991 s1064 Module G (G2, G4, G7)
+    sources:
+      - { <<: *dss_limits, locator: Table 5 01/07/2024 }
+      - { <<: *ssa, locator: '1064-G7 "disregard any part of the excess that is not a multiple of $250"' }
+  - name: centrelink.assets_test
+    description: Pension assets test — full-pension asset value limits (single; couple combined) and reduction per complete $250 of excess per year
+    kind: table
+    value:
+      single_homeowner: 321500
+      single_non_homeowner: 579500
+      couple_homeowner: 481500
+      couple_non_homeowner: 739500
+      reduction_per_unit_pa: 19.5
+      unit: 250
+    unit: AUD
+    effective_from: 2025-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2025-07-01
+    verification: verified
+    legal_status: instrument
+    instrument: Social Security Act 1991 s1064 Module G (G2, G4, G7)
+    sources:
+      - { <<: *dss_limits, locator: Table 5 01/07/2025 }
+      - { <<: *ssa, locator: '1064-G4 Table G-2 "Assets excess × 19.5 / 250"' }
+  - name: centrelink.assets_test
+    description: Pension assets test — full-pension asset value limits (single; couple combined) and reduction per complete $250 of excess per year
+    kind: table
+    value:
+      single_homeowner: 333000
+      single_non_homeowner: 600000
+      couple_homeowner: 499000
+      couple_non_homeowner: 766000
+      reduction_per_unit_pa: 19.5
+      unit: 250
+    unit: AUD
+    effective_from: 2026-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2026-07-01
+    verification: verified
+    legal_status: instrument
+    instrument: Social Security Act 1991 s1064 Module G (G2, G4, G7)
+    notes: Couples are tested per person on 50% of combined assets against half the couple limit (1064-G2).
+    sources:
+      - { <<: *sa_assets, locator: '"Single $333,000 $600,000"; "A couple, combined $499,000 $766,000"' }
+      - { <<: *dss_assets, locator: '"Divide the assets excess by 250. Round the result DOWN"' }
+      - { <<: *ssa, locator: '1064-G7 "disregard any part of the excess that is not a multiple of $250"' }
+
+  # ------------------------------------------------ deeming
+  - name: centrelink.deeming_rates
+    description: Deeming rates — below-threshold and above-threshold rates
+    kind: table
+    value:
+      lower: 0.0025
+      upper: 0.0225
+    unit: rate p.a.
+    effective_from: 2024-07-01
+    effective_to: 2025-09-19
+    knowledge_date: 2024-07-01
+    verification: verified
+    legal_status: instrument
+    instrument: Social Security Act 1991 s1082 determinations
+    sources:
+      - { <<: *dss_deeming, locator: rates table rows 01/07/2024 and 01/07/2025 }
+  - name: centrelink.deeming_rates
+    description: Deeming rates — below-threshold and above-threshold rates
+    kind: table
+    value:
+      lower: 0.0075
+      upper: 0.0275
+    unit: rate p.a.
+    effective_from: 2025-09-20
+    effective_to: 2026-03-19
+    knowledge_date: 2025-08-25
+    verification: verified
+    legal_status: instrument
+    instrument: Social Security (Deeming Threshold Rates) Determination 2025 (F2025L00989)
+    sources:
+      - { <<: *deem_2025, locator: 's6 "below threshold rate ... is 0.75 per cent"' }
+      - { <<: *dss_deeming, locator: rates table }
+  - name: centrelink.deeming_rates
+    description: Deeming rates — below-threshold and above-threshold rates
+    kind: table
+    value:
+      lower: 0.0125
+      upper: 0.0325
+    unit: rate p.a.
+    effective_from: 2026-03-20
+    effective_to: 2026-09-19
+    knowledge_date: 2026-02-24
+    verification: verified
+    legal_status: instrument
+    instrument: Social Security (Deeming Threshold Rates) Determination 2026 (F2026L00137)
+    sources:
+      - { <<: *deem_2026, locator: 's6/s7 "1.25 per cent" / "3.25 per cent"' }
+  - name: centrelink.deeming_rates
+    description: Deeming rates — below-threshold and above-threshold rates
+    kind: table
+    value:
+      lower: 0.0175
+      upper: 0.0375
+    unit: rate p.a.
+    effective_from: 2026-09-20
+    effective_to: null
+    knowledge_date: 2026-08-21
+    verification: verified
+    legal_status: instrument
+    instrument: Social Security (Deeming Threshold Rates) Determination (No. 2) 2026 (F2026L01083)
+    sources:
+      - { <<: *deem_2026b, locator: 's6 "below threshold rate ... is 1.75 per cent"' }
+      - { <<: *sa_deeming, locator: '"The first $66,800 ... 1.75%"' }
+  - name: centrelink.deeming_thresholds
+    description: Deeming thresholds — single; pensioner couple (combined); member of a non-pensioner couple
+    kind: table
+    value:
+      single: 64200
+      pensioner_couple_combined: 106200
+      non_pensioner_couple_each: 53100
+    unit: AUD
+    effective_from: 2025-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2025-07-01
+    verification: verified
+    legal_status: instrument
+    instrument: Social Security Act 1991 s1081 (indexed 1 July)
+    sources:
+      - { <<: *dss_deeming, locator: row 01/07/2025 }
+  - name: centrelink.deeming_thresholds
+    description: Deeming thresholds — single; pensioner couple (combined); member of a non-pensioner couple
+    kind: table
+    value:
+      single: 66800
+      pensioner_couple_combined: 110600
+      non_pensioner_couple_each: 55300
+    unit: AUD
+    effective_from: 2026-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2026-07-01
+    verification: verified
+    legal_status: instrument
+    instrument: Social Security Act 1991 s1081 (indexed 1 July)
+    sources:
+      - { <<: *sa_deeming, locator: '"The first $66,800 ... 1.75%"' }
+      - { <<: *dss_deeming, locator: row 01/07/2026 }
+
+  # ------------------------------------------------ Work Bonus, CSHC
+  - name: centrelink.work_bonus
+    description: Work Bonus — fortnightly concession, maximum balance, new-claimant starting balance
+    kind: table
+    value:
+      fortnightly: 300
+      max_balance: 11800
+      new_claimant_balance: 4000
+    unit: AUD
+    effective_from: 2024-01-01
+    effective_to: null
+    knowledge_date: 2023-12-01
+    verification: verified
+    legal_status: enacted
+    instrument: Social Security Act 1991 ss1073AA, 1073AB
+    sources:
+      - { <<: *sa_wb, locator: '"$300 credit added to your Work Bonus balance each fortnight"' }
+      - { <<: *ssa, locator: 's1073AB(2) "$11,800"; s1073AB(1A) "$4,000"' }
+  - name: centrelink.cshc_income_limits
+    description: Commonwealth Seniors Health Card income limits (adjusted taxable income + deemed account-based income streams), per year
+    kind: table
+    value:
+      single: 105048
+      couple_combined: 168076
+      separated_combined: 210096
+      per_child: 639.60
+    unit: AUD per year
+    effective_from: 2026-09-20
+    effective_to: 2027-09-19
+    knowledge_date: 2026-09-20
+    verification: verified
+    legal_status: instrument
+    instrument: Social Security Act 1991 Part 2A.1 (indexed each 20 September)
+    notes: No assets test. Limits before 20 Sep 2026 were not found, so earlier dates block.
+    sources:
+      - { <<: *sa_cshc, locator: '"$105,048.00 a year if you''re single"' }

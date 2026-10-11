@@ -1,0 +1,232 @@
+cases:
+  - id: SUP-001
+    kind: official
+    description: Maximum contribution base 2026-27 = 32,500 × 100 ÷ 12 rounded down to $10 = 270,830; SG on 300,000 limited to MCB
+    calculator: super.sg
+    input: { financial_year: '2026-27', earnings: 300000 }
+    expect: { status: ok, result: { maximum_contribution_base: '270830.00', minimum_sg: '32499.60' } }
+    source: https://www.ato.gov.au/businesses-and-organisations/super-for-employers/paying-super-on-payday/what-payments-are-qualifying-earnings/maximum-contributions-base
+    checked: verification/super.md (ACCEPT)
+  - id: SUP-SG-Q-2025-26
+    kind: official
+    description: 2025-26 quarterly MCB 62,500 → maximum quarterly SG 7,500.00 (ATO Table 24)
+    calculator: super.sg
+    input: { financial_year: '2025-26', earnings: 70000 }
+    expect: { status: ok, result: { maximum_contribution_base: '62500.00', minimum_sg: '7500.00', base_period: quarter } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee
+    checked: verification/super.md
+  - id: SUP-SG-Q-2024-25
+    kind: official
+    description: 2024-25 quarterly MCB 65,070 × 11.5% = 7,483.05 (ATO Table 24)
+    calculator: super.sg
+    input: { financial_year: '2024-25', earnings: 65070 }
+    expect: { status: ok, result: { minimum_sg: '7483.05' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee
+    checked: verification/super.md
+  - id: SUP-002-ROBERT-2019-20
+    kind: official
+    description: ATO example Robert — age 67, 480,000 at 1 July 2019 → 5% = 24,000, halved for 2019-20 → 12,000
+    calculator: super.minimum_pension
+    input: { financial_year: '2019-20', date_of_birth: '1952-05-01', account_balance: 480000 }
+    expect: { status: ok, result: { minimum_annual_payment: '12000.00', age: 67 } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super
+    checked: verification/super.md (example exists; 2019-20 reduced minimum 12,000)
+  - id: SUP-002
+    kind: derived
+    description: Minimum pension age 67, 480,000, standard factor (2026-27) → 24,000
+    calculator: super.minimum_pension
+    input: { financial_year: '2026-27', date_of_birth: '1959-05-01', account_balance: 480000 }
+    expect: { status: ok, result: { minimum_annual_payment: '24000.00', percentage_factor: '0.05' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super
+    checked: verification/super.md (ACCEPT)
+  - id: SUP-003-THOMAS
+    kind: official
+    description: ATO example Thomas — commenced 1 Jan 2020 at 66 with 250,000; 12,500 × 182/366 = 6,215.85, halved 3,107.92 → 3,110
+    calculator: super.minimum_pension
+    input: { financial_year: '2019-20', date_of_birth: '1953-06-01', account_balance: 250000, commencement_date: '2020-01-01' }
+    expect: { status: ok, result: { minimum_annual_payment: '3110.00', age: 66 } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super
+    checked: verification/super.md (ATO final figure 3,110 agrees with SISR rounding)
+  - id: SUP-003
+    kind: derived
+    description: CORRECTED research fixture — same pro-rating without a temporary reduction (2023-24, 182/366 days) → 6,215.85 → nearest $10 = 6,220 (research said 6,215)
+    calculator: super.minimum_pension
+    input: { financial_year: '2023-24', date_of_birth: '1957-06-01', account_balance: 250000, commencement_date: '2024-01-01' }
+    expect: { status: ok, result: { minimum_annual_payment: '6220.00' } }
+    source: https://www.legislation.gov.au/F1996B00580/2026-07-01/2026-07-01/text/1/epub/OEBPS/document_2/document_2.html
+    checked: verification/super.md (REJECT 6,215; SISR Sch 7 cl 5)
+  - id: SUP-MINPEN-JUNE
+    kind: derived
+    description: Pension commencing on or after 1 June → no payment required (Sch 7 cl 4)
+    calculator: super.minimum_pension
+    input: { financial_year: '2026-27', date_of_birth: '1950-01-01', account_balance: 300000, commencement_date: '2027-06-05' }
+    expect: { status: ok, result: { minimum_annual_payment: '0.00' } }
+    source: https://www.legislation.gov.au/F1996B00580/2026-07-01/2026-07-01/text/1/epub/OEBPS/document_2/document_2.html
+    checked: verification/super.md
+  - id: PRJ-002
+    kind: derived
+    description: Minimum drawdown age 70, 500,000 → 25,000
+    calculator: super.minimum_pension
+    input: { financial_year: '2026-27', date_of_birth: '1956-03-01', account_balance: 500000 }
+    expect: { status: ok, result: { minimum_annual_payment: '25000.00' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super
+    checked: verification/super.md (ACCEPT)
+  - id: SUP-004
+    kind: official
+    description: NCC cap 2026-27 with TSB 1,000,000 → annual 130,000 (3-year bring-forward 390,000 available)
+    calculator: super.non_concessional_cap
+    input: { financial_year: '2026-27', total_super_balance_prior_30_june: 1000000, date_of_birth: '1970-01-01' }
+    expect: { status: ok, result: { annual_cap: '130000.00', maximum_with_bring_forward: '390000.00', bring_forward_period_years: 3 } }
+    source: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/non-concessional-contributions-cap
+    checked: verification/super.md (ACCEPT)
+  - id: SUP-005
+    kind: official
+    description: NCC nil when TSB ≥ TBC (2,100,000)
+    calculator: super.non_concessional_cap
+    input: { financial_year: '2026-27', total_super_balance_prior_30_june: 2100000, date_of_birth: '1970-01-01' }
+    expect: { status: ok, result: { annual_cap: '0.00', maximum_with_bring_forward: '0.00' } }
+    source: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/non-concessional-contributions-cap
+    checked: verification/super.md (ACCEPT)
+  - id: SUP-006
+    kind: official
+    description: Bring-forward 2-year (2026-27, age 60, TSB 1,900,000) → 260,000
+    calculator: super.non_concessional_cap
+    input: { financial_year: '2026-27', total_super_balance_prior_30_june: 1900000, date_of_birth: '1966-03-15' }
+    expect: { status: ok, result: { maximum_with_bring_forward: '260000.00', bring_forward_period_years: 2 } }
+    source: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/non-concessional-contributions-cap
+    checked: verification/super.md (ACCEPT; now verified from the ATO table)
+  - id: SUP-NCC-AGE75
+    kind: derived
+    description: Age 75 on 1 July → not under 75 at any time in the year → no bring-forward
+    calculator: super.non_concessional_cap
+    input: { financial_year: '2026-27', total_super_balance_prior_30_june: 500000, date_of_birth: '1951-06-30' }
+    expect: { status: ok, result: { annual_cap: '130000.00', maximum_with_bring_forward: '130000.00', bring_forward_period_years: 1 } }
+    source: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/non-concessional-contributions-cap
+    checked: orchestrator (docs/SOURCE-QUESTIONS.md C20)
+  - id: SUP-007
+    kind: derived
+    description: CORRECTED — Division 296 2026-27, TSB 4.5m, earnings 300,000 → proportion 33.33% (2 dp) → 14,998.50 (research said 15,000)
+    calculator: super.div296
+    input: { financial_year: '2026-27', tsb_end_of_year: 4500000, super_earnings: 300000 }
+    expect: { status: ok, result: { proportion_above_lsbt_pct: '33.33', div296_tax: '14998.50' } }
+    source: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/division-296-tax/how-division-296-tax-is-calculated
+    checked: verification/super.md (REJECT 15,000)
+  - id: SUP-D296-VLSBT
+    kind: derived
+    description: Division 296 above the VLSBT — TSB 12m, earnings 1,000,000 → 75% × 15% + 16.67% × 10% → 112,500 + 16,670 = 129,170
+    calculator: super.div296
+    input: { financial_year: '2026-27', tsb_end_of_year: 12000000, super_earnings: 1000000 }
+    expect: { status: ok, result: { proportion_above_lsbt_pct: '75', proportion_above_vlsbt_pct: '16.67', div296_tax: '129170.00' } }
+    source: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/division-296-tax/how-division-296-tax-is-calculated
+    checked: orchestrator
+  - id: SUP-008
+    kind: derived
+    description: CORRECTED — co-contribution 2026-27, income 56,793, 1,000 contributed → 500 − 0.03333 × 7,500 = 250.025 → rounded up to 5c = 250.05 (research said 250)
+    calculator: super.co_contribution
+    input: { financial_year: '2026-27', total_income: 56793, eligible_personal_contributions: 1000 }
+    expect: { status: ok, result: { co_contribution: '250.05' } }
+    source: https://www.legislation.gov.au/C2004A01195/2018-07-01/2018-07-01/text/original/epub/OEBPS/document_1/document_1.html
+    checked: verification/super.md (REJECT 250)
+  - id: SUP-COC-MIN
+    kind: derived
+    description: Co-contribution minimum $20 — 30 contributed at low income → 15 → raised to 20
+    calculator: super.co_contribution
+    input: { financial_year: '2026-27', total_income: 40000, eligible_personal_contributions: 30 }
+    expect: { status: ok, result: { co_contribution: '20.00' } }
+    source: https://www.legislation.gov.au/C2004A01195/2018-07-01/2018-07-01/text/original/epub/OEBPS/document_1/document_1.html
+    checked: orchestrator (s11)
+  - id: SUP-COC-HIGH
+    kind: derived
+    description: Co-contribution nil at the higher threshold (64,293)
+    calculator: super.co_contribution
+    input: { financial_year: '2026-27', total_income: 64293, eligible_personal_contributions: 1000 }
+    expect: { status: ok, result: { co_contribution: '0.00' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/government-contributions
+    checked: orchestrator
+  - id: SUP-LISTO-CAP
+    kind: derived
+    description: LISTO 2026-27 — 15% × 3,840 = 576 → capped at 500
+    calculator: super.listo
+    input: { financial_year: '2026-27', adjusted_taxable_income: 32000, concessional_contributions: 3840 }
+    expect: { status: ok, result: { listo: '500.00' } }
+    source: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/how-to-save-more-in-your-super/government-super-contributions/low-income-super-tax-offset
+    checked: orchestrator
+  - id: SUP-LISTO-2027-28
+    kind: derived
+    description: LISTO 2027-28 — ATI 44,000 ≤ 45,000; 15% × 5,400 = 810 (new maximum)
+    calculator: super.listo
+    input: { financial_year: '2027-28', adjusted_taxable_income: 44000, concessional_contributions: 6000 }
+    expect: { status: ok, result: { listo: '810.00' } }
+    source: https://www.ato.gov.au/about-ato/new-legislation/in-detail/superannuation/low-income-superannuation-tax-offset-listo
+    checked: verification/super.md
+  - id: SUP-SPOUSE-001
+    kind: derived
+    description: Spouse offset — spouse income 38,000, 3,000 contributed → 18% × 2,000 = 360
+    calculator: super.spouse_offset
+    input: { financial_year: '2026-27', spouse_income: 38000, contributions_for_spouse: 3000 }
+    expect: { status: ok, result: { spouse_offset: '360.00' } }
+    source: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/how-to-save-more-in-your-super/spouse-super-contributions
+    checked: orchestrator
+  - id: SUP-CC-CF-001
+    kind: derived
+    description: Carry-forward 2026-27 — TSB 350,000; unused 5,000 (2022-23) + 10,000 (2024-25) → available 47,500
+    calculator: super.concessional_cap
+    input:
+      financial_year: '2026-27'
+      total_super_balance_prior_30_june: 350000
+      unused_concessional_amounts: [{ financial_year: '2022-23', amount: 5000 }, { financial_year: '2024-25', amount: 10000 }]
+      concessional_contributions: 50000
+    expect: { status: ok, result: { cap_available: '47500.00', excess_concessional_contributions: '2500.00' } }
+    source: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/concessional-contributions-cap
+    checked: orchestrator
+  - id: SUP-CC-CF-002
+    kind: derived
+    description: Carry-forward unavailable at TSB 500,000 (must be less than 500,000); amounts older than 5 years ignored
+    calculator: super.concessional_cap
+    input:
+      financial_year: '2026-27'
+      total_super_balance_prior_30_june: 500000
+      unused_concessional_amounts: [{ financial_year: '2020-21', amount: 5000 }, { financial_year: '2024-25', amount: 10000 }]
+    expect: { status: ok, result: { carry_forward_eligible: false, carry_forward_applied: '0.00', cap_available: '32500.00' } }
+    source: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/concessional-contributions-cap
+    checked: orchestrator
+  - id: SUP-LUMP-UNDER-PRES
+    kind: derived
+    description: Lump sum under preservation age (age 58, preservation age 60) — taxed element 20% → 60,000
+    calculator: super.lump_sum_tax
+    input: { payment_date: '2026-10-01', date_of_birth: '1968-02-10', taxed_element: 300000, tax_free_component: 50000 }
+    expect: { status: ok, result: { total_tax_excluding_medicare: '60000.00' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super
+    checked: orchestrator
+  - id: SUP-LUMP-60
+    kind: derived
+    description: Lump sum at 60+ — taxed element nil; untaxed 100,000 at 15% → 15,000
+    calculator: super.lump_sum_tax
+    input: { payment_date: '2026-10-01', date_of_birth: '1960-01-01', taxed_element: 200000, untaxed_element: 100000 }
+    expect: { status: ok, result: { tax_on_taxed_element: '0.00', tax_on_untaxed_element: '15000.00' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super
+    checked: orchestrator
+  - id: SUP-LUMP-DEATH-ND
+    kind: derived
+    description: Death benefit to a non-dependant — 15% taxed, 30% untaxed → 30,000 + 15,000
+    calculator: super.lump_sum_tax
+    input: { payment_date: '2026-10-01', date_of_birth: '1950-01-01', taxed_element: 200000, untaxed_element: 50000, recipient: death_non_dependant }
+    expect: { status: ok, result: { tax_on_taxed_element: '30000.00', tax_on_untaxed_element: '15000.00' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super
+    checked: orchestrator
+  - id: SUP-PRES-AGE
+    kind: official
+    description: Preservation age — born 1 July 1963 → 59
+    calculator: super.preservation_age
+    input: { date_of_birth: '1963-07-01' }
+    expect: { status: ok, result: { preservation_age: 59, date_reached: '2022-07-01' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super
+    checked: verification/super.md
+  - id: SUP-PRES-AGE-55
+    kind: official
+    description: Preservation age — born 30 June 1960 → 55
+    calculator: super.preservation_age
+    input: { date_of_birth: '1960-06-30' }
+    expect: { status: ok, result: { preservation_age: 55 } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super
+    checked: verification/super.md

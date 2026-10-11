@@ -1,0 +1,43 @@
+{
+  "name": "au-advice-calc-engine",
+  "version": "0.1.0",
+  "description": "Clean-room, open-source reference engine for Australian tax, superannuation, Age Pension, aged care, projection, insurance-needs and loan calculations, with effective-dated, source-cited parameters. Not financial advice.",
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "params": "tsx scripts/build-params.ts",
+    "docs": "npm run params && tsx scripts/build-docs.ts",
+    "typecheck": "npm run params && tsc -p tsconfig.json --noEmit && tsc -p web/tsconfig.json --noEmit && tsc -p smoke/tsconfig.json",
+    "test": "npm run params && vitest run",
+    "test:watch": "vitest",
+    "build": "npm run params && tsc -p tsconfig.build.json && vite build web",
+    "start": "node dist/api/server.js",
+    "dev:web": "npm run params && vite web",
+    "dev:api": "npm run params && tsx src/api/server.ts",
+    "smoke": "playwright test",
+    "verify": "npm run typecheck && npm test && npm run build && npm run smoke"
+  },
+  "dependencies": {
+    "decimal.js": "^10.6.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "fast-check": "^4.10.2",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.3",
+    "yaml": "^2.9.1"
+  }
+}

@@ -1,0 +1,3259 @@
+{
+  "release": {
+    "hash": "d25c75eefb4c263653b78065a7871efbf4e9e7dddfd28e297f16d5b09e6ea7de",
+    "record_count": 97,
+    "currency_date": "2026-09-20"
+  },
+  "records": [
+    {
+      "name": "aged_care.fees",
+      "description": "Residential care daily amounts — basic daily fee, maximum hotelling supplement, maximum accommodation supplement, NCCC daily cap, NCCC lifetime cap, NCCC day cap",
+      "unit": "AUD per day / AUD / days",
+      "effective_from": "2025-11-01",
+      "effective_to": "2026-03-19",
+      "knowledge_date": "2025-11-01",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Aged Care Act 2024 ss277-279; Aged Care Rules 2025 ss7-20, 230-5, 230-10, 279-5, 279-10",
+      "sources": [
+        {
+          "url": "https://www.health.gov.au/sites/default/files/2025-11/schedule-of-fees-and-charges-for-residential-care.docx",
+          "title": "Schedule of fees and charges for residential care from 1 November 2025",
+          "accessed": "2026-10-11",
+          "locator": "Basic daily fee $65.55; MAS $70.94; Daily cap $105.30; Lifetime cap $135,318.69",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "basic_daily_fee": "65.55",
+        "max_hotelling_supplement": "22.15",
+        "max_accommodation_supplement": "70.94",
+        "nccc_daily_cap": "105.3",
+        "nccc_lifetime_cap": "135318.69",
+        "nccc_max_days": "1460"
+      },
+      "id": "aged_care.fees@2025-11-01"
+    },
+    {
+      "name": "aged_care.fees",
+      "description": "Residential care daily amounts — basic daily fee, maximum hotelling supplement, maximum accommodation supplement, NCCC daily cap, NCCC lifetime cap, NCCC day cap",
+      "unit": "AUD per day / AUD / days",
+      "effective_from": "2026-03-20",
+      "effective_to": "2026-09-19",
+      "knowledge_date": "2026-03-20",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Aged Care Act 2024 ss277-279; Aged Care Rules 2025 ss7-20, 230-5, 230-10, 279-5, 279-10",
+      "sources": [
+        {
+          "url": "https://www.health.gov.au/sites/default/files/2026-03/schedule_of_fees_and_charges_for_residential_care_-_20_march_2026.docx",
+          "title": "Schedule of fees and charges for residential care from 20 March 2026",
+          "accessed": "2026-10-11",
+          "locator": "BDF $66.80; MAS $72.30; daily cap $107.32",
+          "primary": true
+        },
+        {
+          "url": "https://www.legislation.gov.au/F2025L01173/latest/versions",
+          "title": "Aged Care Rules 2025 (Compilation No. 11, 20 September 2026)",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-20",
+          "locator": "Rules 279-5 \"the amount is $107.32\" (Comp. 10)",
+          "primary": true
+        }
+      ],
+      "notes": "The health.gov.au scenarios page prints the lifetime cap as $137,910.01; the Schedule and Rules 7-20 say $137,917.01 (used here).",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "basic_daily_fee": "66.8",
+        "max_hotelling_supplement": "22.15",
+        "max_accommodation_supplement": "72.3",
+        "nccc_daily_cap": "107.32",
+        "nccc_lifetime_cap": "137917.01",
+        "nccc_max_days": "1460"
+      },
+      "id": "aged_care.fees@2026-03-20"
+    },
+    {
+      "name": "aged_care.fees",
+      "description": "Residential care daily amounts — basic daily fee, maximum hotelling supplement, maximum accommodation supplement, NCCC daily cap, NCCC lifetime cap, NCCC day cap",
+      "unit": "AUD per day / AUD / days",
+      "effective_from": "2026-09-20",
+      "effective_to": "2027-03-19",
+      "knowledge_date": "2026-09-20",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Aged Care Act 2024 ss277-279; Aged Care Rules 2025 ss7-20, 230-5, 230-10, 279-5, 279-10",
+      "sources": [
+        {
+          "url": "https://www.health.gov.au/sites/default/files/2026-09/schedule_of_fees_and_charges_for_residential_care_20_september_2026.docx",
+          "title": "Schedule of fees and charges for residential care from 20 September 2026",
+          "accessed": "2026-10-11",
+          "locator": "MAS $73.73 per day; daily cap $109.45; lifetime cap $140,652.80",
+          "primary": true
+        },
+        {
+          "url": "https://www.legislation.gov.au/F2025L01173/latest/versions",
+          "title": "Aged Care Rules 2025 (Compilation No. 11, 20 September 2026)",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-20",
+          "locator": "Rules 279-5 \"the amount is $109.45\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "basic_daily_fee": "68.93",
+        "max_hotelling_supplement": "22.15",
+        "max_accommodation_supplement": "73.73",
+        "nccc_daily_cap": "109.45",
+        "nccc_lifetime_cap": "140652.8",
+        "nccc_max_days": "1460"
+      },
+      "id": "aged_care.fees@2026-09-20"
+    },
+    {
+      "name": "aged_care.max_accommodation_payment",
+      "description": "Maximum accommodation payment amount (maximum room price without IHACPA approval)",
+      "unit": "AUD",
+      "effective_from": "2025-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2025-07-01",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Aged Care Rules 2025 (indexed 1 July by CPI)",
+      "sources": [
+        {
+          "url": "https://www.health.gov.au/our-work/residential-aged-care/charging/maximum-accommodation-payment-amounts",
+          "title": "health.gov.au — Maximum accommodation payment amounts",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-06-26",
+          "locator": "Maximum refundable accommodation deposit $758,627",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "758627",
+      "id": "aged_care.max_accommodation_payment@2025-07-01"
+    },
+    {
+      "name": "aged_care.max_accommodation_payment",
+      "description": "Maximum accommodation payment amount (maximum room price without IHACPA approval)",
+      "unit": "AUD",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2026-06-26",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Aged Care Rules 2025 (indexed 1 July by CPI)",
+      "sources": [
+        {
+          "url": "https://www.health.gov.au/our-work/residential-aged-care/charging/maximum-accommodation-payment-amounts",
+          "title": "health.gov.au — Maximum accommodation payment amounts",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-06-26",
+          "locator": "\"From 1 July 2026, the maximum accommodation payment amount is $789,686\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "789686",
+      "id": "aged_care.max_accommodation_payment@2026-07-01"
+    },
+    {
+      "name": "aged_care.means_test",
+      "description": "Means-tested amount thresholds — income free areas and four income thresholds; asset free area and four asset thresholds (first asset threshold also caps the counted home value)",
+      "unit": "AUD per year / AUD",
+      "effective_from": "2025-11-01",
+      "effective_to": "2026-03-19",
+      "knowledge_date": "2025-11-01",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Aged Care Act 2024 s319; Aged Care Rules 2025 s319-5",
+      "sources": [
+        {
+          "url": "https://www.health.gov.au/sites/default/files/2025-11/schedule-of-fees-and-charges-for-residential-care.docx",
+          "title": "Schedule of fees and charges for residential care from 1 November 2025",
+          "accessed": "2026-10-11",
+          "locator": "Rates for 1 November 2025 fee and accommodation arrangements",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "income_free_area_single": "34762",
+        "income_free_area_couple": "34034",
+        "income_t1_single": "86406.32",
+        "income_t1_couple": "85678.32",
+        "income_t2": "101105",
+        "income_t3": "117230.2",
+        "income_t4_single": "139048",
+        "income_t4_couple": "136136",
+        "asset_free_area": "63000",
+        "asset_t1": "210555.2",
+        "asset_t2": "252000",
+        "asset_t3": "355366.66",
+        "asset_t4": "532055.2"
+      },
+      "id": "aged_care.means_test@2025-11-01"
+    },
+    {
+      "name": "aged_care.means_test",
+      "description": "Means-tested amount thresholds — income free areas and four income thresholds; asset free area and four asset thresholds (first asset threshold also caps the counted home value)",
+      "unit": "AUD per year / AUD",
+      "effective_from": "2026-03-20",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2026-03-20",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Aged Care Act 2024 s319; Aged Care Rules 2025 s319-5",
+      "sources": [
+        {
+          "url": "https://www.health.gov.au/sites/default/files/2026-03/schedule_of_fees_and_charges_for_residential_care_-_20_march_2026.docx",
+          "title": "Schedule of fees and charges for residential care from 20 March 2026",
+          "accessed": "2026-10-11",
+          "locator": "income free area $35,313.20; asset free area $64,500",
+          "primary": true
+        }
+      ],
+      "notes": "Parameter set used by the health.gov.au fee scenarios (rates current on 20 March 2026).",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "income_free_area_single": "35313.2",
+        "income_free_area_couple": "34585.2",
+        "income_t1_single": "87947.6",
+        "income_t1_couple": "87219.6",
+        "income_t2": "101105",
+        "income_t3": "117230.2",
+        "income_t4_single": "141252.8",
+        "income_t4_couple": "138340.8",
+        "asset_free_area": "64500",
+        "asset_t1": "214884",
+        "asset_t2": "258000",
+        "asset_t3": "361366.66",
+        "asset_t4": "536384"
+      },
+      "id": "aged_care.means_test@2026-03-20"
+    },
+    {
+      "name": "aged_care.means_test",
+      "description": "Means-tested amount thresholds — income free areas and four income thresholds; asset free area and four asset thresholds (first asset threshold also caps the counted home value)",
+      "unit": "AUD per year / AUD",
+      "effective_from": "2026-07-01",
+      "effective_to": "2026-09-19",
+      "knowledge_date": "2026-07-01",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Aged Care Act 2024 s319; Aged Care Rules 2025 s319-5",
+      "sources": [
+        {
+          "url": "https://www.health.gov.au/sites/default/files/2026-07/schedule_of_fees_and_charges_for_residential_care_1_july_2026_v2_0.docx",
+          "title": "Schedule of fees and charges for residential care from 1 July 2026 (v2)",
+          "accessed": "2026-10-11",
+          "locator": "from 1 July 2026 thresholds",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "income_free_area_single": "35521.2",
+        "income_free_area_couple": "34793.2",
+        "income_t1_single": "88155.6",
+        "income_t1_couple": "87427.6",
+        "income_t2": "101105",
+        "income_t3": "117230.2",
+        "income_t4_single": "142084.8",
+        "income_t4_couple": "139172.8",
+        "asset_free_area": "64500",
+        "asset_t1": "214884",
+        "asset_t2": "258000",
+        "asset_t3": "361366.66",
+        "asset_t4": "547884"
+      },
+      "id": "aged_care.means_test@2026-07-01"
+    },
+    {
+      "name": "aged_care.means_test",
+      "description": "Means-tested amount thresholds — income free areas and four income thresholds; asset free area and four asset thresholds (first asset threshold also caps the counted home value)",
+      "unit": "AUD per year / AUD",
+      "effective_from": "2026-09-20",
+      "effective_to": "2027-03-19",
+      "knowledge_date": "2026-09-20",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Aged Care Act 2024 s319; Aged Care Rules 2025 s319-5",
+      "sources": [
+        {
+          "url": "https://www.health.gov.au/sites/default/files/2026-09/schedule_of_fees_and_charges_for_residential_care_20_september_2026.docx",
+          "title": "Schedule of fees and charges for residential care from 20 September 2026",
+          "accessed": "2026-10-11",
+          "locator": "from 20 September 2026 thresholds",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "income_free_area_single": "36454.6",
+        "income_free_area_couple": "35726.6",
+        "income_t1_single": "90130.04",
+        "income_t1_couple": "89402.04",
+        "income_t2": "105048",
+        "income_t3": "121173.2",
+        "income_t4_single": "145818.4",
+        "income_t4_couple": "142906.4",
+        "asset_free_area": "66500",
+        "asset_t1": "219858.4",
+        "asset_t2": "266000",
+        "asset_t3": "369366.66",
+        "asset_t4": "552858.4"
+      },
+      "id": "aged_care.means_test@2026-09-20"
+    },
+    {
+      "name": "aged_care.means_test_rates",
+      "description": "Means-tested amount taper rates by band (income 50/0/50/0/50; assets 17.5/0/7.8/0/7.8) and the daily divisor",
+      "unit": "rate",
+      "effective_from": "2025-11-01",
+      "effective_to": null,
+      "knowledge_date": "2024-12-02",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Aged Care Act 2024 s319(1) Steps 1–14",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/C2024A00104/2026-07-01/2026-07-01/text/original/epub/OEBPS/document_1/document_1.html",
+          "title": "Aged Care Act 2024 (Compilation No. 2, 1 July 2026) ss235, 277, 278, 279, 308, 319",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-01",
+          "locator": "s319(1) \"50% of that excess, divided by 364\"; \"17.5% of the excess\"",
+          "primary": true
+        }
+      ],
+      "notes": "The 17.5% / 1% / 2% tiers belong only to the grandfathered post-2014 class (Rules 319-20) and are not used here.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "income_band1": "0.5",
+        "income_band3": "0.5",
+        "income_band5": "0.5",
+        "asset_band1": "0.175",
+        "asset_band3": "0.078",
+        "asset_band5": "0.078",
+        "days_divisor": "364"
+      },
+      "id": "aged_care.means_test_rates@2025-11-01"
+    },
+    {
+      "name": "aged_care.mpir",
+      "description": "Maximum permissible interest rate (used to convert room prices to daily accommodation payments) — rate on the day the price was agreed",
+      "unit": "rate p.a.",
+      "effective_from": "2025-10-01",
+      "effective_to": "2025-12-31",
+      "knowledge_date": "2025-10-01",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Aged Care Rules 2025 (MPIR, set quarterly)",
+      "sources": [
+        {
+          "url": "https://www.health.gov.au/sites/default/files/2025-11/schedule-of-fees-and-charges-for-residential-care.docx",
+          "title": "Schedule of fees and charges for residential care from 1 November 2025",
+          "accessed": "2026-10-11",
+          "locator": "\"from 1 October 2025 – 31 December 2025 | 7.61%\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "0.0761",
+      "id": "aged_care.mpir@2025-10-01"
+    },
+    {
+      "name": "aged_care.mpir",
+      "description": "Maximum permissible interest rate (used to convert room prices to daily accommodation payments) — rate on the day the price was agreed",
+      "unit": "rate p.a.",
+      "effective_from": "2026-01-01",
+      "effective_to": "2026-03-31",
+      "knowledge_date": "2026-01-01",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Aged Care Rules 2025 (MPIR, set quarterly)",
+      "sources": [
+        {
+          "url": "https://www.health.gov.au/sites/default/files/2025-12/schedule-of-fees-and-charges-for-residential-care.docx",
+          "title": "Schedule of fees and charges for residential care from 1 January 2026",
+          "accessed": "2026-10-11",
+          "locator": "\"from 1 January 2026 – 31 March 2026 | 7.65%\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "0.0765",
+      "id": "aged_care.mpir@2026-01-01"
+    },
+    {
+      "name": "aged_care.mpir",
+      "description": "Maximum permissible interest rate (used to convert room prices to daily accommodation payments) — rate on the day the price was agreed",
+      "unit": "rate p.a.",
+      "effective_from": "2026-04-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2026-03-20",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Aged Care Rules 2025 (MPIR, set quarterly)",
+      "sources": [
+        {
+          "url": "https://www.health.gov.au/sites/default/files/2026-03/schedule_of_fees_and_charges_for_residential_care_-_20_march_2026.docx",
+          "title": "Schedule of fees and charges for residential care from 20 March 2026",
+          "accessed": "2026-10-11",
+          "locator": "\"from 1 April 2026 – 30 June 2026 | 7.96%\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "0.0796",
+      "id": "aged_care.mpir@2026-04-01"
+    },
+    {
+      "name": "aged_care.mpir",
+      "description": "Maximum permissible interest rate (used to convert room prices to daily accommodation payments) — rate on the day the price was agreed",
+      "unit": "rate p.a.",
+      "effective_from": "2026-07-01",
+      "effective_to": "2026-09-30",
+      "knowledge_date": "2026-07-01",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Aged Care Rules 2025 (MPIR, set quarterly)",
+      "sources": [
+        {
+          "url": "https://www.health.gov.au/sites/default/files/2026-07/schedule_of_fees_and_charges_for_residential_care_1_july_2026_v2_0.docx",
+          "title": "Schedule of fees and charges for residential care from 1 July 2026 (v2)",
+          "accessed": "2026-10-11",
+          "locator": "\"from 1 July 2026 – 30 September 2026\" 8.43%",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "0.0843",
+      "id": "aged_care.mpir@2026-07-01"
+    },
+    {
+      "name": "aged_care.mpir",
+      "description": "Maximum permissible interest rate (used to convert room prices to daily accommodation payments) — rate on the day the price was agreed",
+      "unit": "rate p.a.",
+      "effective_from": "2026-10-01",
+      "effective_to": "2026-12-31",
+      "knowledge_date": "2026-09-20",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Aged Care Rules 2025 (MPIR, set quarterly)",
+      "sources": [
+        {
+          "url": "https://www.health.gov.au/sites/default/files/2026-09/schedule_of_fees_and_charges_for_residential_care_20_september_2026.docx",
+          "title": "Schedule of fees and charges for residential care from 20 September 2026",
+          "accessed": "2026-10-11",
+          "locator": "\"from 1 October 2026 – 31 December 2026 ... 8.51%\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "0.0851",
+      "id": "aged_care.mpir@2026-10-01"
+    },
+    {
+      "name": "aged_care.rad_retention",
+      "description": "Refundable deposit retention — annual rate (charged daily on the balance) and maximum years",
+      "unit": "rate / years",
+      "effective_from": "2025-11-01",
+      "effective_to": null,
+      "knowledge_date": "2024-12-02",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Aged Care Act 2024 s308",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/C2024A00104/2026-07-01/2026-07-01/text/original/epub/OEBPS/document_1/document_1.html",
+          "title": "Aged Care Act 2024 (Compilation No. 2, 1 July 2026) ss235, 277, 278, 279, 308, 319",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-01",
+          "locator": "s308 \"calculated at a rate of 2 per cent per annum: (a) on a daily basis\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.health.gov.au/our-work/residential-aged-care/charging/rad-and-rac-retention",
+          "title": "health.gov.au — RAD and RAC retention",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-02-16",
+          "locator": "\"multiply the RAD or RAC balance by 2% then divide by 365\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "rate": "0.02",
+        "years": "5",
+        "day_basis": "365"
+      },
+      "id": "aged_care.rad_retention@2025-11-01"
+    },
+    {
+      "name": "centrelink.age_pension_age",
+      "description": "Age Pension qualifying age",
+      "unit": "years",
+      "effective_from": "2023-07-01",
+      "effective_to": null,
+      "knowledge_date": "2014-06-30",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Social Security Act 1991 s23(5A)",
+      "sources": [
+        {
+          "url": "https://www.servicesaustralia.gov.au/who-can-get-age-pension?context=22526",
+          "title": "Services Australia — Who can get Age Pension",
+          "accessed": "2026-10-11",
+          "page_updated": "2025-12-01",
+          "locator": "\"Age Pension age is 67 years or older.\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "67",
+      "id": "centrelink.age_pension_age@2023-07-01"
+    },
+    {
+      "name": "centrelink.age_pension_max_rates",
+      "description": "Age Pension maximum fortnightly rates — basic rate, pension supplement, energy supplement (single; couple each)",
+      "unit": "AUD per fortnight",
+      "effective_from": "2025-09-20",
+      "effective_to": "2026-03-19",
+      "knowledge_date": "2025-09-20",
+      "verification": "derived",
+      "legal_status": "instrument",
+      "instrument": "Social Security Act 1991 s1064 Module B; indexation Part 3.16",
+      "sources": [
+        {
+          "url": "https://guides.dss.gov.au/social-security-guide/5/2/2/10",
+          "title": "DSS Social Security Guide 5.2.2.10 — Maximum basic rate history",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-21",
+          "locator": "20/09/2025 row",
+          "primary": true
+        },
+        {
+          "url": "https://guides.dss.gov.au/social-security-guide/5/2/8/10",
+          "title": "DSS Social Security Guide 5.2.8.10 — Pension supplement history",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-21",
+          "locator": "20/09/2025 row",
+          "primary": true
+        },
+        {
+          "url": "https://guides.dss.gov.au/social-security-guide/5/1/10/20",
+          "title": "DSS Social Security Guide 5.1.10.20 — Energy supplement rates",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-01-02",
+          "locator": "\"ES is not indexed.\"",
+          "primary": true
+        }
+      ],
+      "notes": "Annual DSS figures ÷ 26 (basic 28,072.20 / 21,161.40; PS 2,207.40 / 1,664.00). ES not indexed. Totals 1,178.70 / 888.50.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single_basic": "1079.7",
+        "single_pension_supplement": "84.9",
+        "single_energy_supplement": "14.1",
+        "couple_basic": "813.9",
+        "couple_pension_supplement": "64",
+        "couple_energy_supplement": "10.6"
+      },
+      "id": "centrelink.age_pension_max_rates@2025-09-20"
+    },
+    {
+      "name": "centrelink.age_pension_max_rates",
+      "description": "Age Pension maximum fortnightly rates — basic rate, pension supplement, energy supplement (single; couple each)",
+      "unit": "AUD per fortnight",
+      "effective_from": "2026-03-20",
+      "effective_to": "2026-09-19",
+      "knowledge_date": "2026-03-20",
+      "verification": "derived",
+      "legal_status": "instrument",
+      "instrument": "Social Security Act 1991 s1064 Module B; indexation Part 3.16",
+      "sources": [
+        {
+          "url": "https://guides.dss.gov.au/social-security-guide/5/2/2/10",
+          "title": "DSS Social Security Guide 5.2.2.10 — Maximum basic rate history",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-21",
+          "locator": "20/03/2026 row",
+          "primary": true
+        },
+        {
+          "url": "https://guides.dss.gov.au/social-security-guide/5/2/8/10",
+          "title": "DSS Social Security Guide 5.2.8.10 — Pension supplement history",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-21",
+          "locator": "20/03/2026 row",
+          "primary": true
+        }
+      ],
+      "notes": "Annual DSS figures ÷ 26 (basic 28,607.80 / 21,564.40; PS 2,249.00 / 1,695.20). Totals 1,200.90 / 905.20.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single_basic": "1100.3",
+        "single_pension_supplement": "86.5",
+        "single_energy_supplement": "14.1",
+        "couple_basic": "829.4",
+        "couple_pension_supplement": "65.2",
+        "couple_energy_supplement": "10.6"
+      },
+      "id": "centrelink.age_pension_max_rates@2026-03-20"
+    },
+    {
+      "name": "centrelink.age_pension_max_rates",
+      "description": "Age Pension maximum fortnightly rates — basic rate, pension supplement, energy supplement (single; couple each)",
+      "unit": "AUD per fortnight",
+      "effective_from": "2026-09-20",
+      "effective_to": "2027-03-19",
+      "knowledge_date": "2026-09-20",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Social Security Act 1991 s1064 Module B; indexation Part 3.16",
+      "sources": [
+        {
+          "url": "https://www.servicesaustralia.gov.au/how-much-age-pension-you-can-get?context=22526",
+          "title": "Services Australia — How much Age Pension you can get",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-20",
+          "locator": "table \"Total $1,237.70\" / \"$933.00 $1,866\"",
+          "primary": true
+        }
+      ],
+      "notes": "Totals single 1,237.70; couple each 933.00 (1,866.00 combined).",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single_basic": "1135.4",
+        "single_pension_supplement": "88.2",
+        "single_energy_supplement": "14.1",
+        "couple_basic": "855.9",
+        "couple_pension_supplement": "66.5",
+        "couple_energy_supplement": "10.6"
+      },
+      "id": "centrelink.age_pension_max_rates@2026-09-20"
+    },
+    {
+      "name": "centrelink.assets_test",
+      "description": "Pension assets test — full-pension asset value limits (single; couple combined) and reduction per complete $250 of excess per year",
+      "unit": "AUD",
+      "effective_from": "2024-07-01",
+      "effective_to": "2025-06-30",
+      "knowledge_date": "2024-07-01",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Social Security Act 1991 s1064 Module G (G2, G4, G7)",
+      "sources": [
+        {
+          "url": "https://guides.dss.gov.au/social-security-guide/4/10/3",
+          "title": "DSS Social Security Guide 4.10.3 — Historical pension income and assets limits",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-01",
+          "locator": "Table 5 01/07/2024",
+          "primary": true
+        },
+        {
+          "url": "https://www.legislation.gov.au/C2004A04121/latest/text",
+          "title": "Social Security Act 1991 (compilation of 20 Sep 2026) s1064 Modules A, B, E, G; s1073AB",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-20",
+          "locator": "1064-G7 \"disregard any part of the excess that is not a multiple of $250\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single_homeowner": "314000",
+        "single_non_homeowner": "566000",
+        "couple_homeowner": "470000",
+        "couple_non_homeowner": "722000",
+        "reduction_per_unit_pa": "19.5",
+        "unit": "250"
+      },
+      "id": "centrelink.assets_test@2024-07-01"
+    },
+    {
+      "name": "centrelink.assets_test",
+      "description": "Pension assets test — full-pension asset value limits (single; couple combined) and reduction per complete $250 of excess per year",
+      "unit": "AUD",
+      "effective_from": "2025-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2025-07-01",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Social Security Act 1991 s1064 Module G (G2, G4, G7)",
+      "sources": [
+        {
+          "url": "https://guides.dss.gov.au/social-security-guide/4/10/3",
+          "title": "DSS Social Security Guide 4.10.3 — Historical pension income and assets limits",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-01",
+          "locator": "Table 5 01/07/2025",
+          "primary": true
+        },
+        {
+          "url": "https://www.legislation.gov.au/C2004A04121/latest/text",
+          "title": "Social Security Act 1991 (compilation of 20 Sep 2026) s1064 Modules A, B, E, G; s1073AB",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-20",
+          "locator": "1064-G4 Table G-2 \"Assets excess × 19.5 / 250\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single_homeowner": "321500",
+        "single_non_homeowner": "579500",
+        "couple_homeowner": "481500",
+        "couple_non_homeowner": "739500",
+        "reduction_per_unit_pa": "19.5",
+        "unit": "250"
+      },
+      "id": "centrelink.assets_test@2025-07-01"
+    },
+    {
+      "name": "centrelink.assets_test",
+      "description": "Pension assets test — full-pension asset value limits (single; couple combined) and reduction per complete $250 of excess per year",
+      "unit": "AUD",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2026-07-01",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Social Security Act 1991 s1064 Module G (G2, G4, G7)",
+      "sources": [
+        {
+          "url": "https://www.servicesaustralia.gov.au/assets-test-for-age-pension?context=22526",
+          "title": "Services Australia — Assets test for Age Pension",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-20",
+          "locator": "\"Single $333,000 $600,000\"; \"A couple, combined $499,000 $766,000\"",
+          "primary": true
+        },
+        {
+          "url": "https://guides.dss.gov.au/social-security-guide/4/2/3",
+          "title": "DSS Social Security Guide 4.2.3 — Pensions assets test",
+          "accessed": "2026-10-11",
+          "page_updated": "2024-08-12",
+          "locator": "\"Divide the assets excess by 250. Round the result DOWN\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.legislation.gov.au/C2004A04121/latest/text",
+          "title": "Social Security Act 1991 (compilation of 20 Sep 2026) s1064 Modules A, B, E, G; s1073AB",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-20",
+          "locator": "1064-G7 \"disregard any part of the excess that is not a multiple of $250\"",
+          "primary": true
+        }
+      ],
+      "notes": "Couples are tested per person on 50% of combined assets against half the couple limit (1064-G2).",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single_homeowner": "333000",
+        "single_non_homeowner": "600000",
+        "couple_homeowner": "499000",
+        "couple_non_homeowner": "766000",
+        "reduction_per_unit_pa": "19.5",
+        "unit": "250"
+      },
+      "id": "centrelink.assets_test@2026-07-01"
+    },
+    {
+      "name": "centrelink.cshc_income_limits",
+      "description": "Commonwealth Seniors Health Card income limits (adjusted taxable income + deemed account-based income streams), per year",
+      "unit": "AUD per year",
+      "effective_from": "2026-09-20",
+      "effective_to": "2027-09-19",
+      "knowledge_date": "2026-09-20",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Social Security Act 1991 Part 2A.1 (indexed each 20 September)",
+      "sources": [
+        {
+          "url": "https://www.servicesaustralia.gov.au/income-test-for-commonwealth-seniors-health-card?context=21966",
+          "title": "Services Australia — Income test for Commonwealth Seniors Health Card",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-20",
+          "locator": "\"$105,048.00 a year if you're single\"",
+          "primary": true
+        }
+      ],
+      "notes": "No assets test. Limits before 20 Sep 2026 were not found, so earlier dates block.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single": "105048",
+        "couple_combined": "168076",
+        "separated_combined": "210096",
+        "per_child": "639.6"
+      },
+      "id": "centrelink.cshc_income_limits@2026-09-20"
+    },
+    {
+      "name": "centrelink.deeming_rates",
+      "description": "Deeming rates — below-threshold and above-threshold rates",
+      "unit": "rate p.a.",
+      "effective_from": "2024-07-01",
+      "effective_to": "2025-09-19",
+      "knowledge_date": "2024-07-01",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Social Security Act 1991 s1082 determinations",
+      "sources": [
+        {
+          "url": "https://guides.dss.gov.au/social-security-guide/4/4/1/10",
+          "title": "DSS Social Security Guide 4.4.1.10 — Overview of deeming",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-21",
+          "locator": "rates table rows 01/07/2024 and 01/07/2025",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "lower": "0.0025",
+        "upper": "0.0225"
+      },
+      "id": "centrelink.deeming_rates@2024-07-01"
+    },
+    {
+      "name": "centrelink.deeming_rates",
+      "description": "Deeming rates — below-threshold and above-threshold rates",
+      "unit": "rate p.a.",
+      "effective_from": "2025-09-20",
+      "effective_to": "2026-03-19",
+      "knowledge_date": "2025-08-25",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Social Security (Deeming Threshold Rates) Determination 2025 (F2025L00989)",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/F2025L00989/latest/text",
+          "title": "Social Security (Deeming Threshold Rates) Determination 2025",
+          "accessed": "2026-10-11",
+          "locator": "s6 \"below threshold rate ... is 0.75 per cent\"",
+          "primary": true
+        },
+        {
+          "url": "https://guides.dss.gov.au/social-security-guide/4/4/1/10",
+          "title": "DSS Social Security Guide 4.4.1.10 — Overview of deeming",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-21",
+          "locator": "rates table",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "lower": "0.0075",
+        "upper": "0.0275"
+      },
+      "id": "centrelink.deeming_rates@2025-09-20"
+    },
+    {
+      "name": "centrelink.deeming_rates",
+      "description": "Deeming rates — below-threshold and above-threshold rates",
+      "unit": "rate p.a.",
+      "effective_from": "2026-03-20",
+      "effective_to": "2026-09-19",
+      "knowledge_date": "2026-02-24",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Social Security (Deeming Threshold Rates) Determination 2026 (F2026L00137)",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/F2026L00137/asmade/text",
+          "title": "Social Security (Deeming Threshold Rates) Determination 2026",
+          "accessed": "2026-10-11",
+          "locator": "s6/s7 \"1.25 per cent\" / \"3.25 per cent\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "lower": "0.0125",
+        "upper": "0.0325"
+      },
+      "id": "centrelink.deeming_rates@2026-03-20"
+    },
+    {
+      "name": "centrelink.deeming_rates",
+      "description": "Deeming rates — below-threshold and above-threshold rates",
+      "unit": "rate p.a.",
+      "effective_from": "2026-09-20",
+      "effective_to": null,
+      "knowledge_date": "2026-08-21",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Social Security (Deeming Threshold Rates) Determination (No. 2) 2026 (F2026L01083)",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/F2026L01083/asmade/text",
+          "title": "Social Security (Deeming Threshold Rates) Determination (No. 2) 2026",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-08-21",
+          "locator": "s6 \"below threshold rate ... is 1.75 per cent\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.servicesaustralia.gov.au/deeming?context=22526",
+          "title": "Services Australia — Deeming",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-20",
+          "locator": "\"The first $66,800 ... 1.75%\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "lower": "0.0175",
+        "upper": "0.0375"
+      },
+      "id": "centrelink.deeming_rates@2026-09-20"
+    },
+    {
+      "name": "centrelink.deeming_thresholds",
+      "description": "Deeming thresholds — single; pensioner couple (combined); member of a non-pensioner couple",
+      "unit": "AUD",
+      "effective_from": "2025-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2025-07-01",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Social Security Act 1991 s1081 (indexed 1 July)",
+      "sources": [
+        {
+          "url": "https://guides.dss.gov.au/social-security-guide/4/4/1/10",
+          "title": "DSS Social Security Guide 4.4.1.10 — Overview of deeming",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-21",
+          "locator": "row 01/07/2025",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single": "64200",
+        "pensioner_couple_combined": "106200",
+        "non_pensioner_couple_each": "53100"
+      },
+      "id": "centrelink.deeming_thresholds@2025-07-01"
+    },
+    {
+      "name": "centrelink.deeming_thresholds",
+      "description": "Deeming thresholds — single; pensioner couple (combined); member of a non-pensioner couple",
+      "unit": "AUD",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2026-07-01",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Social Security Act 1991 s1081 (indexed 1 July)",
+      "sources": [
+        {
+          "url": "https://www.servicesaustralia.gov.au/deeming?context=22526",
+          "title": "Services Australia — Deeming",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-20",
+          "locator": "\"The first $66,800 ... 1.75%\"",
+          "primary": true
+        },
+        {
+          "url": "https://guides.dss.gov.au/social-security-guide/4/4/1/10",
+          "title": "DSS Social Security Guide 4.4.1.10 — Overview of deeming",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-21",
+          "locator": "row 01/07/2026",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single": "66800",
+        "pensioner_couple_combined": "110600",
+        "non_pensioner_couple_each": "55300"
+      },
+      "id": "centrelink.deeming_thresholds@2026-07-01"
+    },
+    {
+      "name": "centrelink.income_test",
+      "description": "Pension income test — ordinary income free area per year (single; each member of a couple) and taper",
+      "unit": "AUD per year / rate",
+      "effective_from": "2025-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2025-07-01",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Social Security Act 1991 s1064 Module E (1064-E2, E10)",
+      "sources": [
+        {
+          "url": "https://guides.dss.gov.au/social-security-guide/4/10/3",
+          "title": "DSS Social Security Guide 4.10.3 — Historical pension income and assets limits",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-01",
+          "locator": "Table 6 \"01/07/2025 5,668 4,940\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.legislation.gov.au/C2004A04121/latest/text",
+          "title": "Social Security Act 1991 (compilation of 20 Sep 2026) s1064 Modules A, B, E, G; s1073AB",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-20",
+          "locator": "1064-E10 \"Ordinary income excess × 0.5\"",
+          "primary": true
+        }
+      ],
+      "notes": "Fortnightly equivalents $218 single, $380 couple combined. For couples each partner's income is half the combined income (1064-E2).",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single_free_area_pa": "5668",
+        "couple_free_area_each_pa": "4940",
+        "taper": "0.5"
+      },
+      "id": "centrelink.income_test@2025-07-01"
+    },
+    {
+      "name": "centrelink.income_test",
+      "description": "Pension income test — ordinary income free area per year (single; each member of a couple) and taper",
+      "unit": "AUD per year / rate",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2026-07-01",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Social Security Act 1991 s1064 Module E (1064-E2, E10)",
+      "sources": [
+        {
+          "url": "https://www.servicesaustralia.gov.au/income-test-for-age-pension?context=22526",
+          "title": "Services Australia — Income test for Age Pension",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-20",
+          "locator": "\"Up to $226 (free area)\" / \"Up to $396 (free area)\"",
+          "primary": true
+        },
+        {
+          "url": "https://guides.dss.gov.au/social-security-guide/4/10/3",
+          "title": "DSS Social Security Guide 4.10.3 — Historical pension income and assets limits",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-01",
+          "locator": "Table 6 \"01/07/2026 5,876\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.legislation.gov.au/C2004A04121/latest/text",
+          "title": "Social Security Act 1991 (compilation of 20 Sep 2026) s1064 Modules A, B, E, G; s1073AB",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-20",
+          "locator": "1064-E10 \"Ordinary income excess × 0.5\"",
+          "primary": true
+        }
+      ],
+      "notes": "Fortnightly equivalents $226 single, $396 couple combined.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single_free_area_pa": "5876",
+        "couple_free_area_each_pa": "5148",
+        "taper": "0.5"
+      },
+      "id": "centrelink.income_test@2026-07-01"
+    },
+    {
+      "name": "centrelink.work_bonus",
+      "description": "Work Bonus — fortnightly concession, maximum balance, new-claimant starting balance",
+      "unit": "AUD",
+      "effective_from": "2024-01-01",
+      "effective_to": null,
+      "knowledge_date": "2023-12-01",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Social Security Act 1991 ss1073AA, 1073AB",
+      "sources": [
+        {
+          "url": "https://www.servicesaustralia.gov.au/how-work-bonus-works?context=22561",
+          "title": "Services Australia — How Work Bonus works",
+          "accessed": "2026-10-11",
+          "page_updated": "2025-02-14",
+          "locator": "\"$300 credit added to your Work Bonus balance each fortnight\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.legislation.gov.au/C2004A04121/latest/text",
+          "title": "Social Security Act 1991 (compilation of 20 Sep 2026) s1064 Modules A, B, E, G; s1073AB",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-20",
+          "locator": "s1073AB(2) \"$11,800\"; s1073AB(1A) \"$4,000\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "fortnightly": "300",
+        "max_balance": "11800",
+        "new_claimant_balance": "4000"
+      },
+      "id": "centrelink.work_bonus@2024-01-01"
+    },
+    {
+      "name": "projection.asic_generic.inflation",
+      "description": "Assumed inflation rate for present values in generic (non-superannuation) financial calculators",
+      "unit": "rate p.a.",
+      "effective_from": "2026-03-19",
+      "effective_to": "2031-03-31",
+      "knowledge_date": "2026-03-18",
+      "verification": "verified",
+      "legal_status": "administrative",
+      "instrument": "ASIC Corporations (Generic Calculators) Instrument 2026/41 s6 \"present value\"",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/F2026L00271/latest/text",
+          "title": "ASIC Instrument 2026/41",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-03-18",
+          "locator": "\"r is 0.025 or such other assumed inflation rate\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.legislation.gov.au/F2026L00271/asmade/2026-03-18/text/original/epub/OEBPS/document_1/document_1.html",
+          "title": "ASIC Instrument 2026/41 (epub text, s6 formula image alt text)",
+          "accessed": "2026-10-11",
+          "locator": "formula alt text \"C over open round bracket 1 plus r close bracket to the power of n\"",
+          "primary": true
+        }
+      ],
+      "notes": "Repealed at the start of 1 April 2031 (s9). Present value required for amounts payable 2+ years ahead (s8(1)(e)(iv)).",
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "0.025",
+      "id": "projection.asic_generic.inflation@2026-03-19"
+    },
+    {
+      "name": "projection.asic_super.cpi_deflator",
+      "description": "Default assumed inflation rate (s) for present values at and after the assumed retirement age",
+      "unit": "rate p.a.",
+      "effective_from": "2022-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2022-06-30",
+      "verification": "verified",
+      "legal_status": "administrative",
+      "instrument": "ASIC Instrument 2022/603 s4 \"present value\" paras (b), (c)",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/F2022L00895/latest/text",
+          "title": "ASIC Instrument 2022/603 (Compilation No. 1)",
+          "accessed": "2026-10-11",
+          "page_updated": "2024-09-11",
+          "locator": "\"s is 0.025 or such other assumed inflation rate\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "0.025",
+      "id": "projection.asic_super.cpi_deflator@2022-07-01"
+    },
+    {
+      "name": "projection.asic_super.drawdown_end_age",
+      "description": "Assumed drawdown period ends at the later of this age and drawdown_min_years after it starts",
+      "unit": "years",
+      "effective_from": "2022-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2022-06-30",
+      "verification": "verified",
+      "legal_status": "administrative",
+      "instrument": "ASIC Instrument 2022/603 s4 \"assumed drawdown period\"",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/F2022L00895/latest/text",
+          "title": "ASIC Instrument 2022/603 (Compilation No. 1)",
+          "accessed": "2026-10-11",
+          "page_updated": "2024-09-11",
+          "locator": "\"the person reaching 92 years of age\"",
+          "primary": true
+        }
+      ],
+      "notes": "Ends on, or within 12 months before, the later of age 92 and 5 years after the start.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "end_age": "92",
+        "min_years": "5"
+      },
+      "id": "projection.asic_super.drawdown_end_age@2022-07-01"
+    },
+    {
+      "name": "projection.asic_super.retirement_age",
+      "description": "Assumed retirement age where the person is under 67 or age unknown (age at next birthday if 67 or over)",
+      "unit": "years",
+      "effective_from": "2022-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2022-06-30",
+      "verification": "verified",
+      "legal_status": "administrative",
+      "instrument": "ASIC Instrument 2022/603 s4 \"assumed retirement age\"",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/F2022L00895/latest/text",
+          "title": "ASIC Instrument 2022/603 (Compilation No. 1)",
+          "accessed": "2026-10-11",
+          "page_updated": "2024-09-11",
+          "locator": "\"if the age of the person is less than 67 years\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "67",
+      "id": "projection.asic_super.retirement_age@2022-07-01"
+    },
+    {
+      "name": "projection.asic_super.wage_deflator",
+      "description": "Default nominal wage inflation rate (r) for present values before the assumed retirement age",
+      "unit": "rate p.a.",
+      "effective_from": "2022-07-01",
+      "effective_to": "2024-12-31",
+      "knowledge_date": "2022-06-30",
+      "verification": "verified",
+      "legal_status": "administrative",
+      "instrument": "ASIC Corporations (Superannuation Calculators and Retirement Estimates) Instrument 2022/603 s4 \"present value\"",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/F2022L00895/latest/text",
+          "title": "ASIC Instrument 2022/603 (Compilation No. 1)",
+          "accessed": "2026-10-11",
+          "page_updated": "2024-09-11",
+          "locator": "s4 def \"present value\", para (a), r",
+          "primary": true
+        }
+      ],
+      "notes": "4% before 11 Sep 2024. From 11 Sep 2024 to 31 Dec 2024 either 0.04 or 0.037 was permitted (Amendment Instrument 2024/733); this record keeps 0.04 for that window.",
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "0.04",
+      "id": "projection.asic_super.wage_deflator@2022-07-01"
+    },
+    {
+      "name": "projection.asic_super.wage_deflator",
+      "description": "Default nominal wage inflation rate (r) for present values before the assumed retirement age",
+      "unit": "rate p.a.",
+      "effective_from": "2025-01-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2024-09-10",
+      "verification": "verified",
+      "legal_status": "administrative",
+      "instrument": "ASIC Corporations (Superannuation Calculators and Retirement Estimates) Instrument 2022/603 s4 \"present value\"",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/F2022L00895/latest/text",
+          "title": "ASIC Instrument 2022/603 (Compilation No. 1)",
+          "accessed": "2026-10-11",
+          "page_updated": "2024-09-11",
+          "locator": "\"if this formula is used on or after 1 January 2025—0.037\"",
+          "primary": true
+        }
+      ],
+      "notes": "Based on the 2023 Intergenerational Report nominal wage growth forecast.",
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "0.037",
+      "id": "projection.asic_super.wage_deflator@2025-01-01"
+    },
+    {
+      "name": "projection.moneysmart.insurance_premium",
+      "description": "MoneySmart superannuation calculator default insurance premium (charged mid-year, indexed with inflation)",
+      "unit": "AUD p.a.",
+      "effective_from": "2026-07-02",
+      "effective_to": null,
+      "knowledge_date": "2026-07-02",
+      "verification": "verified",
+      "legal_status": "administrative",
+      "instrument": "MoneySmart superannuation calculator assumptions (ASIC)",
+      "sources": [
+        {
+          "url": "https://moneysmart.gov.au/how-super-works/superannuation-calculator",
+          "title": "MoneySmart superannuation calculator",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-02",
+          "locator": "\"$599 will be charged mid-year on average\"",
+          "primary": true
+        }
+      ],
+      "notes": "A calculator convention used for parity testing, not a legal requirement.",
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "599",
+      "id": "projection.moneysmart.insurance_premium@2026-07-02"
+    },
+    {
+      "name": "super.bring_forward",
+      "description": "Non-concessional bring-forward — TSB thresholds (at prior 30 June) and maximum cap/period, for someone not already in a bring-forward period and under 75 at any time in the first year",
+      "unit": "AUD",
+      "effective_from": "2024-07-01",
+      "effective_to": "2025-06-30",
+      "knowledge_date": "2024-06-30",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Assessment Act 1997 s292-85",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/non-concessional-contributions-cap",
+          "title": "ATO — Non-concessional contributions cap",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-05-07",
+          "locator": "2024-25 table \"Less than $1.66 million ... $360,000\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "three_year_tsb_below": "1660000",
+        "three_year_amount": "360000",
+        "two_year_tsb_below": "1780000",
+        "two_year_amount": "240000",
+        "nil_tsb_at_or_above": "1900000",
+        "age_under": "75"
+      },
+      "id": "super.bring_forward@2024-07-01"
+    },
+    {
+      "name": "super.bring_forward",
+      "description": "Non-concessional bring-forward — TSB thresholds (at prior 30 June) and maximum cap/period, for someone not already in a bring-forward period and under 75 at any time in the first year",
+      "unit": "AUD",
+      "effective_from": "2025-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2025-06-30",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Assessment Act 1997 s292-85",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/non-concessional-contributions-cap",
+          "title": "ATO — Non-concessional contributions cap",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-05-07",
+          "locator": "2025-26 table \"Less than $1.76 million ... $360,000\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "three_year_tsb_below": "1760000",
+        "three_year_amount": "360000",
+        "two_year_tsb_below": "1880000",
+        "two_year_amount": "240000",
+        "nil_tsb_at_or_above": "2000000",
+        "age_under": "75"
+      },
+      "id": "super.bring_forward@2025-07-01"
+    },
+    {
+      "name": "super.bring_forward",
+      "description": "Non-concessional bring-forward — TSB thresholds (at prior 30 June) and maximum cap/period, for someone not already in a bring-forward period and under 75 at any time in the first year",
+      "unit": "AUD",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2026-05-07",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Assessment Act 1997 s292-85",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/non-concessional-contributions-cap",
+          "title": "ATO — Non-concessional contributions cap",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-05-07",
+          "locator": "2026-27 table \"Less than $1.84 million ... $390,000 ... 3 years\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "three_year_tsb_below": "1840000",
+        "three_year_amount": "390000",
+        "two_year_tsb_below": "1970000",
+        "two_year_amount": "260000",
+        "nil_tsb_at_or_above": "2100000",
+        "age_under": "75"
+      },
+      "id": "super.bring_forward@2026-07-01"
+    },
+    {
+      "name": "super.carry_forward",
+      "description": "Carry-forward of unused concessional cap — total super balance limit at prior 30 June and years unused amounts remain available",
+      "unit": "AUD / years",
+      "effective_from": "2019-07-01",
+      "effective_to": null,
+      "knowledge_date": "2018-06-30",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Assessment Act 1997 s291-20(3)",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/concessional-contributions-cap",
+          "title": "ATO — Concessional contributions cap",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-02",
+          "locator": "\"total superannuation balance of less than $500,000 on 30 June\"",
+          "primary": true
+        }
+      ],
+      "notes": "TSB must be less than $500,000 at 30 June of the previous year. Unused amounts accrue from 2018-19 (first usable 2019-20), oldest used first, expire after 5 years.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "tsb_limit": "500000",
+        "years_available": "5",
+        "first_unused_year_start": "2018"
+      },
+      "id": "super.carry_forward@2019-07-01"
+    },
+    {
+      "name": "super.co_contribution",
+      "description": "Government co-contribution — income thresholds, maximum, matching rate, taper, minimum and payment rounding",
+      "unit": "AUD / rate",
+      "effective_from": "2024-07-01",
+      "effective_to": "2025-06-30",
+      "knowledge_date": "2024-02-28",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Superannuation (Government Co-contribution for Low Income Earners) Act 2003 ss9, 10, 10A, 11",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/government-contributions",
+          "title": "ATO — Key super rates and thresholds, government contributions",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-04-27",
+          "locator": "Table 25",
+          "primary": true
+        },
+        {
+          "url": "https://www.legislation.gov.au/C2004A01195/2018-07-01/2018-07-01/text/original/epub/OEBPS/document_1/document_1.html",
+          "title": "Superannuation (Government Co-contribution for Low Income Earners) Act 2003 (Compilation No. 28)",
+          "accessed": "2026-10-11",
+          "page_updated": "2018-07-01",
+          "locator": "s10(1C) \"$500 reduced by 3.333 cents for each dollar\"; s11 minimum $20",
+          "primary": true
+        },
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/how-to-save-more-in-your-super/government-super-contributions/super-co-contribution",
+          "title": "ATO — Super co-contribution",
+          "accessed": "2026-10-11",
+          "page_updated": "2023-08-02",
+          "locator": "\"rounded up to the nearest multiple of 5 cents\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "lower_threshold": "45400",
+        "higher_threshold": "60400",
+        "max": "500",
+        "matching_rate": "0.5",
+        "taper_per_dollar": "0.03333",
+        "minimum": "20",
+        "round_up_to": "0.05"
+      },
+      "id": "super.co_contribution@2024-07-01"
+    },
+    {
+      "name": "super.co_contribution",
+      "description": "Government co-contribution — income thresholds, maximum, matching rate, taper, minimum and payment rounding",
+      "unit": "AUD / rate",
+      "effective_from": "2025-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2025-02-26",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Superannuation (Government Co-contribution for Low Income Earners) Act 2003 ss9, 10, 10A, 11",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/government-contributions",
+          "title": "ATO — Key super rates and thresholds, government contributions",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-04-27",
+          "locator": "Table 25",
+          "primary": true
+        },
+        {
+          "url": "https://www.legislation.gov.au/C2004A01195/2018-07-01/2018-07-01/text/original/epub/OEBPS/document_1/document_1.html",
+          "title": "Superannuation (Government Co-contribution for Low Income Earners) Act 2003 (Compilation No. 28)",
+          "accessed": "2026-10-11",
+          "page_updated": "2018-07-01",
+          "locator": "s10(1C) \"$500 reduced by 3.333 cents for each dollar\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/how-to-save-more-in-your-super/government-super-contributions/super-co-contribution",
+          "title": "ATO — Super co-contribution",
+          "accessed": "2026-10-11",
+          "page_updated": "2023-08-02",
+          "locator": "\"rounded up to the nearest multiple of 5 cents\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "lower_threshold": "47488",
+        "higher_threshold": "62488",
+        "max": "500",
+        "matching_rate": "0.5",
+        "taper_per_dollar": "0.03333",
+        "minimum": "20",
+        "round_up_to": "0.05"
+      },
+      "id": "super.co_contribution@2025-07-01"
+    },
+    {
+      "name": "super.co_contribution",
+      "description": "Government co-contribution — income thresholds, maximum, matching rate, taper, minimum and payment rounding",
+      "unit": "AUD / rate",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2026-02-25",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Superannuation (Government Co-contribution for Low Income Earners) Act 2003 ss9, 10, 10A, 11",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/government-contributions",
+          "title": "ATO — Key super rates and thresholds, government contributions",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-04-27",
+          "locator": "Table 25 \"2026–27 $500 $49,293 $64,293\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.legislation.gov.au/C2004A01195/2018-07-01/2018-07-01/text/original/epub/OEBPS/document_1/document_1.html",
+          "title": "Superannuation (Government Co-contribution for Low Income Earners) Act 2003 (Compilation No. 28)",
+          "accessed": "2026-10-11",
+          "page_updated": "2018-07-01",
+          "locator": "s10(1C) \"$500 reduced by 3.333 cents for each dollar\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/how-to-save-more-in-your-super/government-super-contributions/super-co-contribution",
+          "title": "ATO — Super co-contribution",
+          "accessed": "2026-10-11",
+          "page_updated": "2023-08-02",
+          "locator": "\"rounded up to the nearest multiple of 5 cents\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "lower_threshold": "49293",
+        "higher_threshold": "64293",
+        "max": "500",
+        "matching_rate": "0.5",
+        "taper_per_dollar": "0.03333",
+        "minimum": "20",
+        "round_up_to": "0.05"
+      },
+      "id": "super.co_contribution@2026-07-01"
+    },
+    {
+      "name": "super.concessional_cap",
+      "description": "Concessional contributions cap (general)",
+      "unit": "AUD",
+      "effective_from": "2021-07-01",
+      "effective_to": "2024-06-30",
+      "knowledge_date": "2021-02-25",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Income Tax Assessment Act 1997 s291-20 (AWOTE-indexed, $2,500 increments)",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/concessional-contributions-cap",
+          "title": "ATO — Concessional contributions cap",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-02",
+          "locator": "\"1 July 2021 to 30 June 2024 ... $27,500\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "27500",
+      "id": "super.concessional_cap@2021-07-01"
+    },
+    {
+      "name": "super.concessional_cap",
+      "description": "Concessional contributions cap (general)",
+      "unit": "AUD",
+      "effective_from": "2024-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2024-02-28",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Income Tax Assessment Act 1997 s291-20 (AWOTE-indexed, $2,500 increments)",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/contributions-caps",
+          "title": "ATO — Key super rates and thresholds, contributions caps",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-11",
+          "locator": "Table 1.1",
+          "primary": true
+        },
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/concessional-contributions-cap",
+          "title": "ATO — Concessional contributions cap",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-02",
+          "locator": "\"1 July 2024 to 30 June 2026 ... cap was $30,000\"",
+          "primary": true
+        }
+      ],
+      "notes": "Research conflict flag ($27,500 on one ATO print page) not reproduced; all readable ATO pages say $30,000. See docs/SOURCE-QUESTIONS.md C19.",
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "30000",
+      "id": "super.concessional_cap@2024-07-01"
+    },
+    {
+      "name": "super.concessional_cap",
+      "description": "Concessional contributions cap (general)",
+      "unit": "AUD",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2026-02-25",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Income Tax Assessment Act 1997 s291-20 (AWOTE-indexed, $2,500 increments)",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/concessional-contributions-cap",
+          "title": "ATO — Concessional contributions cap",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-02",
+          "locator": "\"From 1 July 2026 ... cap is $32,500\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/contributions-caps",
+          "title": "ATO — Key super rates and thresholds, contributions caps",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-11",
+          "locator": "Table 1.1",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "32500",
+      "id": "super.concessional_cap@2026-07-01"
+    },
+    {
+      "name": "super.contributions_tax_rate",
+      "description": "Tax on concessional contributions within a complying fund",
+      "unit": "rate",
+      "effective_from": "2007-07-01",
+      "effective_to": null,
+      "knowledge_date": "2007-07-01",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Assessment Act 1997 s295-160, Income Tax Rates Act 1986 s26",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/understanding-concessional-and-non-concessional-contributions",
+          "title": "ATO — Understanding concessional and non-concessional contributions",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-01-15",
+          "locator": "\"taxed in your super fund at the rate of 15%\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "0.15",
+      "id": "super.contributions_tax_rate@2007-07-01"
+    },
+    {
+      "name": "super.div296",
+      "description": "Division 296 — large super balance threshold (LSBT), very large super balance threshold (VLSBT) and rates",
+      "unit": "AUD / rate",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2026-03-13",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Assessment Act 1997 Div 296 (Act No. 8 of 2026)",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/division-296-tax-thresholds-and-interest",
+          "title": "ATO — Division 296 tax thresholds and interest",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-21",
+          "locator": "Table 28 \"for the 2026‑27 income year—$3,000,000\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/division-296-tax/how-division-296-tax-is-calculated",
+          "title": "ATO — How Division 296 tax is calculated",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-06-29",
+          "locator": "\"the following formulas are used (rounded to 2 decimal places)\"",
+          "primary": true
+        }
+      ],
+      "notes": "Proportions are rounded to 2 decimal places (ATO). Thresholds CPI-indexed from 2027-28 in $150,000 / $500,000 increments (2027-28 values not yet published).",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "lsbt": "3000000",
+        "vlsbt": "10000000",
+        "rate_lsbt": "0.15",
+        "rate_vlsbt": "0.1",
+        "proportion_dp": "2"
+      },
+      "id": "super.div296@2026-07-01"
+    },
+    {
+      "name": "super.listo",
+      "description": "Low income super tax offset — rate on concessional contributions, maximum, minimum, adjusted taxable income threshold",
+      "unit": "AUD / rate",
+      "effective_from": "2017-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2017-07-01",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Superannuation (Government Co-contribution for Low Income Earners) Act 2003 ss12C, 12E",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/how-to-save-more-in-your-super/government-super-contributions/low-income-super-tax-offset",
+          "title": "ATO — Low income super tax offset",
+          "accessed": "2026-10-11",
+          "page_updated": "2023-08-02",
+          "locator": "\"by 0.15, rounding to the nearest cent\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.legislation.gov.au/C2004A01195/2018-07-01/2018-07-01/text/original/epub/OEBPS/document_1/document_1.html",
+          "title": "Superannuation (Government Co-contribution for Low Income Earners) Act 2003 (Compilation No. 28)",
+          "accessed": "2026-10-11",
+          "page_updated": "2018-07-01",
+          "locator": "s12E \"exceeds $500—$500\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "rate": "0.15",
+        "max": "500",
+        "min": "10",
+        "income_threshold": "37000"
+      },
+      "id": "super.listo@2017-07-01"
+    },
+    {
+      "name": "super.listo",
+      "description": "Low income super tax offset — rate on concessional contributions, maximum, minimum, adjusted taxable income threshold",
+      "unit": "AUD / rate",
+      "effective_from": "2027-07-01",
+      "effective_to": null,
+      "knowledge_date": "2026-03-13",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Superannuation (Government Co-contribution for Low Income Earners) Act 2003 as amended by Act No. 8 of 2026 Sch 4",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/about-ato/new-legislation/in-detail/superannuation/low-income-superannuation-tax-offset-listo",
+          "title": "ATO — New legislation, LISTO",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-03-17",
+          "locator": "\"maximum payment will also increase to $810\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.legislation.gov.au/C2026A00008/asmade/2026-03-13/text/original/epub/OEBPS/document_1/document_1.html",
+          "title": "Treasury Laws Amendment (Building a Stronger and Fairer Super System) Act 2026 (No. 8, 2026)",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-03-13",
+          "locator": "Sch 4 (commences 1 July 2027)",
+          "primary": true
+        }
+      ],
+      "notes": "ATO states the maximum rises to $810 and the threshold to $45,000. In the Act the threshold is the top of ITRA Sch 7 Pt I item 1 and the cap is a formula using the SG charge percentage (45,000 × 12% × 15% = 810 — consistency check only). Re-verify if the SG rate or bracket changes.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "rate": "0.15",
+        "max": "810",
+        "min": "10",
+        "income_threshold": "45000"
+      },
+      "id": "super.listo@2027-07-01"
+    },
+    {
+      "name": "super.low_rate_cap",
+      "description": "Low rate cap amount (taxable component of lump sums between preservation age and 59)",
+      "unit": "AUD",
+      "effective_from": "2024-07-01",
+      "effective_to": "2025-06-30",
+      "knowledge_date": "2024-02-28",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Income Tax Assessment Act 1997 s307-345",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super",
+          "title": "ATO — Key super rates and thresholds, payments from super",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-16",
+          "locator": "Table 9",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "245000",
+      "id": "super.low_rate_cap@2024-07-01"
+    },
+    {
+      "name": "super.low_rate_cap",
+      "description": "Low rate cap amount (taxable component of lump sums between preservation age and 59)",
+      "unit": "AUD",
+      "effective_from": "2025-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2025-06-30",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Income Tax Assessment Act 1997 s307-345 (AWOTE-indexed, last indexed value)",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super",
+          "title": "ATO — Key super rates and thresholds, payments from super",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-16",
+          "locator": "Table 9 (2025-26 $260,000)",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "260000",
+      "id": "super.low_rate_cap@2025-07-01"
+    },
+    {
+      "name": "super.low_rate_cap",
+      "description": "Low rate cap amount (taxable component of lump sums between preservation age and 59)",
+      "unit": "AUD",
+      "effective_from": "2026-07-01",
+      "effective_to": null,
+      "knowledge_date": "2026-09-16",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Assessment Act 1997 s307-345",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super",
+          "title": "ATO — Key super rates and thresholds, payments from super",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-16",
+          "locator": "\"From 1 July 2026, the low rate cap is $260,000\"",
+          "primary": true
+        }
+      ],
+      "notes": "\"From 1 July 2026, the low rate cap is $260,000\" and no longer indexed; 2025-26 was the last indexed value (also $260,000).",
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "260000",
+      "id": "super.low_rate_cap@2026-07-01"
+    },
+    {
+      "name": "super.lump_sum_rates",
+      "description": "Maximum tax rates on super lump sums (excluding Medicare levy) by element, recipient and age band",
+      "unit": "rate",
+      "effective_from": "2017-07-01",
+      "effective_to": null,
+      "knowledge_date": "2017-07-01",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Assessment Act 1997 Divs 301, 302 (Subdiv 301-B/C, 302-B)",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super",
+          "title": "ATO — Key super rates and thresholds, payments from super",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-16",
+          "locator": "Table 13 (lump sum tax rates)",
+          "primary": true
+        }
+      ],
+      "notes": "Maximum rates per ATO Table 13; the Medicare levy (2%) applies in addition where assessable. Death benefits to dependants are tax-free.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "taxed_under_preservation": "0.2",
+        "taxed_preservation_to_59_above_low_rate_cap": "0.15",
+        "untaxed_under_preservation_to_untaxed_cap": "0.3",
+        "untaxed_preservation_to_59_to_low_rate_cap": "0.15",
+        "untaxed_preservation_to_59_low_rate_cap_to_untaxed_cap": "0.3",
+        "untaxed_60_plus_to_untaxed_cap": "0.15",
+        "untaxed_above_untaxed_cap": "0.45",
+        "death_non_dependant_taxed": "0.15",
+        "death_non_dependant_untaxed": "0.3",
+        "small_benefit_below": "200",
+        "medicare_levy_note": "0.02"
+      },
+      "id": "super.lump_sum_rates@2017-07-01"
+    },
+    {
+      "name": "super.max_contribution_base_annual",
+      "description": "Maximum contribution base (annual, Payday Super) = concessional cap × 100 ÷ charge percentage, rounded down to $10",
+      "unit": "AUD per year",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2026-02-25",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Superannuation Guarantee (Administration) Act 1992 (as amended for Payday Super)",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/businesses-and-organisations/super-for-employers/paying-super-on-payday/what-payments-are-qualifying-earnings/maximum-contributions-base",
+          "title": "ATO — Maximum contributions base",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-08-10",
+          "locator": "\"rounded down to the nearest $10 multiple\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee",
+          "title": "ATO — Key super rates and thresholds, super guarantee",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-04-17",
+          "locator": "Table 23 \"For 2026–27, the maximum contribution base is $270,830\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "270830",
+      "id": "super.max_contribution_base_annual@2026-07-01"
+    },
+    {
+      "name": "super.max_contribution_base_quarterly",
+      "description": "Maximum super contribution base (per quarter)",
+      "unit": "AUD per quarter",
+      "effective_from": "2024-07-01",
+      "effective_to": "2025-06-30",
+      "knowledge_date": "2024-06-30",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Superannuation Guarantee (Administration) Act 1992 s15",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee",
+          "title": "ATO — Key super rates and thresholds, super guarantee",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-04-17",
+          "locator": "Table 24",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "65070",
+      "id": "super.max_contribution_base_quarterly@2024-07-01"
+    },
+    {
+      "name": "super.max_contribution_base_quarterly",
+      "description": "Maximum super contribution base (per quarter)",
+      "unit": "AUD per quarter",
+      "effective_from": "2025-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2025-06-30",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Superannuation Guarantee (Administration) Act 1992 s15",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee",
+          "title": "ATO — Key super rates and thresholds, super guarantee",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-04-17",
+          "locator": "Table 24 \"2025–26 $62,500 $7,500.00\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "62500",
+      "id": "super.max_contribution_base_quarterly@2025-07-01"
+    },
+    {
+      "name": "super.minimum_pension_factors",
+      "description": "Account-based pension minimum annual payment percentage factor by age (age on 1 July or on the commencement day)",
+      "unit": "rate",
+      "effective_from": "2007-07-01",
+      "effective_to": null,
+      "knowledge_date": "2007-07-01",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Superannuation Industry (Supervision) Regulations 1994 Sch 7",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/F1996B00580/2026-07-01/2026-07-01/text/1/epub/OEBPS/document_2/document_2.html",
+          "title": "Superannuation Industry (Supervision) Regulations 1994, Vol 2 (Compilation No. 159)",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-01",
+          "locator": "Sch 7 table \"Under 65 ... 4\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super",
+          "title": "ATO — Key super rates and thresholds, payments from super",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-16",
+          "locator": "Table 11",
+          "primary": true
+        }
+      ],
+      "notes": "Temporary reductions are a separate parameter (super.minimum_pension_reduction). Result rounded to the nearest $10 (exact $5 up), Sch 7 cl 5.",
+      "jurisdiction": "AU",
+      "kind": "bands",
+      "value": [
+        {
+          "from": "0",
+          "value": "0.04"
+        },
+        {
+          "from": "65",
+          "value": "0.05"
+        },
+        {
+          "from": "75",
+          "value": "0.06"
+        },
+        {
+          "from": "80",
+          "value": "0.07"
+        },
+        {
+          "from": "85",
+          "value": "0.09"
+        },
+        {
+          "from": "90",
+          "value": "0.11"
+        },
+        {
+          "from": "95",
+          "value": "0.14"
+        }
+      ],
+      "id": "super.minimum_pension_factors@2007-07-01"
+    },
+    {
+      "name": "super.minimum_pension_reduction",
+      "description": "Multiplier applied to the minimum pension amount (temporary reductions)",
+      "unit": "multiplier",
+      "effective_from": "2013-07-01",
+      "effective_to": "2019-06-30",
+      "knowledge_date": "2013-07-01",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Superannuation Industry (Supervision) Regulations 1994 Sch 7 cl 4A, 4B",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/F1996B00580/2026-07-01/2026-07-01/text/1/epub/OEBPS/document_2/document_2.html",
+          "title": "Superannuation Industry (Supervision) Regulations 1994, Vol 2 (Compilation No. 159)",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-01",
+          "locator": "Sch 7 cl 4A/4B (no reduction in these years)",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "1",
+      "id": "super.minimum_pension_reduction@2013-07-01"
+    },
+    {
+      "name": "super.minimum_pension_reduction",
+      "description": "Multiplier applied to the minimum pension amount (temporary reductions)",
+      "unit": "multiplier",
+      "effective_from": "2019-07-01",
+      "effective_to": "2023-06-30",
+      "knowledge_date": "2020-03-24",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Superannuation Industry (Supervision) Regulations 1994 Sch 7 cl 4A",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/F1996B00580/2026-07-01/2026-07-01/text/1/epub/OEBPS/document_2/document_2.html",
+          "title": "Superannuation Industry (Supervision) Regulations 1994, Vol 2 (Compilation No. 159)",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-01",
+          "locator": "\"half of the amount worked out\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "0.5",
+      "id": "super.minimum_pension_reduction@2019-07-01"
+    },
+    {
+      "name": "super.minimum_pension_reduction",
+      "description": "Multiplier applied to the minimum pension amount (temporary reductions)",
+      "unit": "multiplier",
+      "effective_from": "2023-07-01",
+      "effective_to": null,
+      "knowledge_date": "2023-07-01",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Superannuation Industry (Supervision) Regulations 1994 Sch 7",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super",
+          "title": "ATO — Key super rates and thresholds, payments from super",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-16",
+          "locator": "Table 11 (standard factors from 2023-24)",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "1",
+      "id": "super.minimum_pension_reduction@2023-07-01"
+    },
+    {
+      "name": "super.non_concessional_cap",
+      "description": "Non-concessional contributions cap (annual), nil if TSB >= general transfer balance cap at prior 30 June",
+      "unit": "AUD",
+      "effective_from": "2024-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2024-02-28",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Income Tax Assessment Act 1997 s292-85",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/contributions-caps",
+          "title": "ATO — Key super rates and thresholds, contributions caps",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-11",
+          "locator": "Table 4 \"$120,000 see Note 1\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "120000",
+      "id": "super.non_concessional_cap@2024-07-01"
+    },
+    {
+      "name": "super.non_concessional_cap",
+      "description": "Non-concessional contributions cap (annual), nil if TSB >= general transfer balance cap at prior 30 June",
+      "unit": "AUD",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2026-02-25",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Income Tax Assessment Act 1997 s292-85",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/non-concessional-contributions-cap",
+          "title": "ATO — Non-concessional contributions cap",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-05-07",
+          "locator": "\"From 1 July 2026, the non-concessional contributions cap is $130,000\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "130000",
+      "id": "super.non_concessional_cap@2026-07-01"
+    },
+    {
+      "name": "super.preservation_age",
+      "description": "Preservation age by date of birth (born on or after the band date)",
+      "unit": "years",
+      "effective_from": "1999-07-01",
+      "effective_to": null,
+      "knowledge_date": "1999-07-01",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Superannuation Industry (Supervision) Regulations 1994 reg 6.01(2)",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super",
+          "title": "ATO — Key super rates and thresholds, payments from super",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-16",
+          "locator": "Table 12 \"From 1 July 1964 60\"",
+          "primary": true
+        }
+      ],
+      "notes": "Values read from the ATO table; the SISR reg 6.01 text itself was not read.",
+      "jurisdiction": "AU",
+      "kind": "date_bands",
+      "value": [
+        {
+          "from": "1900-01-01",
+          "value": "55"
+        },
+        {
+          "from": "1960-07-01",
+          "value": "56"
+        },
+        {
+          "from": "1961-07-01",
+          "value": "57"
+        },
+        {
+          "from": "1962-07-01",
+          "value": "58"
+        },
+        {
+          "from": "1963-07-01",
+          "value": "59"
+        },
+        {
+          "from": "1964-07-01",
+          "value": "60"
+        }
+      ],
+      "id": "super.preservation_age@1999-07-01"
+    },
+    {
+      "name": "super.sg_rate",
+      "description": "Super guarantee charge percentage",
+      "unit": "rate",
+      "effective_from": "2024-07-01",
+      "effective_to": "2025-06-30",
+      "knowledge_date": "2021-06-30",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Superannuation Guarantee (Administration) Act 1992 s19",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee",
+          "title": "ATO — Key super rates and thresholds, super guarantee",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-04-17",
+          "locator": "Table 21",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "0.115",
+      "id": "super.sg_rate@2024-07-01"
+    },
+    {
+      "name": "super.sg_rate",
+      "description": "Super guarantee charge percentage",
+      "unit": "rate",
+      "effective_from": "2025-07-01",
+      "effective_to": null,
+      "knowledge_date": "2021-06-30",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Superannuation Guarantee (Administration) Act 1992 s19",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee",
+          "title": "ATO — Key super rates and thresholds, super guarantee",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-04-17",
+          "locator": "Table 21 \"1 July 2027 onwards 12.00\"",
+          "primary": true
+        }
+      ],
+      "notes": "Payday Super from 1 July 2026 — SG is a percentage of qualifying earnings each payday.",
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "0.12",
+      "id": "super.sg_rate@2025-07-01"
+    },
+    {
+      "name": "super.spouse_offset",
+      "description": "Spouse contribution tax offset — rate, maximum eligible contributions, spouse income threshold and cut-out",
+      "unit": "AUD / rate",
+      "effective_from": "2023-07-01",
+      "effective_to": null,
+      "knowledge_date": "2023-08-02",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Assessment Act 1997 s290-230",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/how-to-save-more-in-your-super/spouse-super-contributions",
+          "title": "ATO — Spouse super contributions",
+          "accessed": "2026-10-11",
+          "page_updated": "2023-08-02",
+          "locator": "\"18% of the lesser of\"; \"up to $540 per year\"",
+          "primary": true
+        }
+      ],
+      "notes": "Applied from the ATO page as current law (page dated 2 Aug 2023); earlier years not included.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "rate": "0.18",
+        "max_contributions": "3000",
+        "income_threshold": "37000",
+        "cut_out": "40000"
+      },
+      "id": "super.spouse_offset@2023-07-01"
+    },
+    {
+      "name": "super.transfer_balance_cap",
+      "description": "General transfer balance cap",
+      "unit": "AUD",
+      "effective_from": "2023-07-01",
+      "effective_to": "2025-06-30",
+      "knowledge_date": "2023-01-25",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Income Tax Assessment Act 1997 s294-35 (CPI-indexed)",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/transfer-balance-cap",
+          "title": "ATO — Key super rates and thresholds, transfer balance cap",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-04-27",
+          "locator": "Table 26",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "1900000",
+      "id": "super.transfer_balance_cap@2023-07-01"
+    },
+    {
+      "name": "super.transfer_balance_cap",
+      "description": "General transfer balance cap",
+      "unit": "AUD",
+      "effective_from": "2025-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2025-01-29",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Income Tax Assessment Act 1997 s294-35 (CPI-indexed)",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/transfer-balance-cap",
+          "title": "ATO — Key super rates and thresholds, transfer balance cap",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-04-27",
+          "locator": "Table 26",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "2000000",
+      "id": "super.transfer_balance_cap@2025-07-01"
+    },
+    {
+      "name": "super.transfer_balance_cap",
+      "description": "General transfer balance cap",
+      "unit": "AUD",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2026-01-28",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Income Tax Assessment Act 1997 s294-35 (CPI-indexed)",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/transfer-balance-cap",
+          "title": "ATO — Key super rates and thresholds, transfer balance cap",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-04-27",
+          "locator": "Table 26 \"2026–27 2.1\"",
+          "primary": true
+        }
+      ],
+      "notes": "2027-28 value not yet published; window closed at 30 June 2027 so later calculations block.",
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "2100000",
+      "id": "super.transfer_balance_cap@2026-07-01"
+    },
+    {
+      "name": "super.untaxed_plan_cap",
+      "description": "Untaxed plan cap amount",
+      "unit": "AUD",
+      "effective_from": "2024-07-01",
+      "effective_to": "2025-06-30",
+      "knowledge_date": "2024-02-28",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Income Tax Assessment Act 1997 s307-350",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super",
+          "title": "ATO — Key super rates and thresholds, payments from super",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-16",
+          "locator": "Table 10",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "1780000",
+      "id": "super.untaxed_plan_cap@2024-07-01"
+    },
+    {
+      "name": "super.untaxed_plan_cap",
+      "description": "Untaxed plan cap amount",
+      "unit": "AUD",
+      "effective_from": "2025-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2025-02-26",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Income Tax Assessment Act 1997 s307-350",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super",
+          "title": "ATO — Key super rates and thresholds, payments from super",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-16",
+          "locator": "Table 10",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "1865000",
+      "id": "super.untaxed_plan_cap@2025-07-01"
+    },
+    {
+      "name": "super.untaxed_plan_cap",
+      "description": "Untaxed plan cap amount",
+      "unit": "AUD",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2026-02-25",
+      "verification": "verified",
+      "legal_status": "instrument",
+      "instrument": "Income Tax Assessment Act 1997 s307-350",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super",
+          "title": "ATO — Key super rates and thresholds, payments from super",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-09-16",
+          "locator": "Table 10 \"2026–27 $1,935,000\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "1935000",
+      "id": "super.untaxed_plan_cap@2026-07-01"
+    },
+    {
+      "name": "tax.div293",
+      "description": "Division 293 tax — income threshold and rate",
+      "unit": "AUD / rate",
+      "effective_from": "2017-07-01",
+      "effective_to": null,
+      "knowledge_date": "2016-11-29",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Assessment Act 1997 Div 293",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/division-293-tax-on-concessional-contributions-by-high-income-earners",
+          "title": "ATO — Division 293 tax on concessional contributions by high-income earners",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-08-24",
+          "locator": "\"15% of the excess over the threshold or the taxable super contributions, whichever is less\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "threshold": "250000",
+        "rate": "0.15"
+      },
+      "id": "tax.div293@2017-07-01"
+    },
+    {
+      "name": "tax.foreign_resident_scale",
+      "description": "Foreign resident marginal tax scale (no tax-free threshold); no Medicare levy",
+      "unit": "AUD / rate",
+      "effective_from": "2024-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2024-03-27",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Rates Act 1986 Sch 7 Pt II",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/tax-rates-foreign-residents",
+          "title": "ATO — Tax rates, foreign residents",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-06-01",
+          "locator": "\"$60,850 plus 45c for each $1 over $190,000\"",
+          "primary": true
+        }
+      ],
+      "notes": "ATO bases 40,500 / 60,850.",
+      "jurisdiction": "AU",
+      "kind": "brackets",
+      "value": [
+        {
+          "over": "0",
+          "rate": "0.3"
+        },
+        {
+          "over": "135000",
+          "rate": "0.37"
+        },
+        {
+          "over": "190000",
+          "rate": "0.45"
+        }
+      ],
+      "id": "tax.foreign_resident_scale@2024-07-01"
+    },
+    {
+      "name": "tax.foreign_resident_scale",
+      "description": "Foreign resident marginal tax scale (no tax-free threshold); no Medicare levy",
+      "unit": "AUD / rate",
+      "effective_from": "2026-07-01",
+      "effective_to": null,
+      "knowledge_date": "2025-03-27",
+      "verification": "derived",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Rates Act 1986 Sch 7 Pt II",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/C2004A03348/latest/text",
+          "title": "Income Tax Rates Act 1986 (Compilation No. 66, 1 July 2026)",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-01",
+          "locator": "Sch 7 Pt II \"2024‑25 year of income or a later year\"",
+          "primary": true
+        }
+      ],
+      "notes": "Derived from the Act: Sch 7 Pt II applies \"for the 2024-25 year of income or a later year\" using the second (30%) and third (37%) resident rates, which are unchanged in the 2026-27 and 2027-28 Pt I tables. The ATO foreign-resident page (updated 2026-06-01) shows only up to 2025-26.",
+      "jurisdiction": "AU",
+      "kind": "brackets",
+      "value": [
+        {
+          "over": "0",
+          "rate": "0.3"
+        },
+        {
+          "over": "135000",
+          "rate": "0.37"
+        },
+        {
+          "over": "190000",
+          "rate": "0.45"
+        }
+      ],
+      "id": "tax.foreign_resident_scale@2026-07-01"
+    },
+    {
+      "name": "tax.help.repayment_schedule",
+      "description": "Study and training loan compulsory repayment (marginal method) — thresholds, rates and published band base",
+      "unit": "AUD / rate",
+      "effective_from": "2025-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2025-06-30",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Higher Education Support Act 2003 s154-20 (marginal method from 2025-26)",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/study-and-training-support-loans-rates-and-repayment-thresholds",
+          "title": "ATO — Study and training support loans rates and repayment thresholds",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-06-30",
+          "locator": "Table 2 (2025–26)",
+          "primary": true
+        }
+      ],
+      "notes": "\"$179,286 and over ... 10% of your total repayment income\"",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "threshold": "67000",
+        "rate1": "0.15",
+        "band2_over": "125000",
+        "band2_base": "8700",
+        "rate2": "0.17",
+        "top_from": "179286",
+        "top_rate_of_total": "0.1"
+      },
+      "id": "tax.help.repayment_schedule@2025-07-01"
+    },
+    {
+      "name": "tax.help.repayment_schedule",
+      "description": "Study and training loan compulsory repayment (marginal method) — thresholds, rates and published band base",
+      "unit": "AUD / rate",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2026-06-30",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Higher Education Support Act 2003 s154-20 (indexed)",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/study-and-training-support-loans-rates-and-repayment-thresholds",
+          "title": "ATO — Study and training support loans rates and repayment thresholds",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-06-30",
+          "locator": "\"$9,028 plus 17c for each $1 over $129,717\"",
+          "primary": true
+        }
+      ],
+      "notes": "The published band-2 base is 9,028 although 0.15 x (129,717 - 69,528) = 9,028.35; the ATO's own worked example (Barry, RI 137,064 -> 10,276.99) uses the published 9,028, so the engine uses the published base.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "threshold": "69528",
+        "rate1": "0.15",
+        "band2_over": "129717",
+        "band2_base": "9028",
+        "rate2": "0.17",
+        "top_from": "186051",
+        "top_rate_of_total": "0.1"
+      },
+      "id": "tax.help.repayment_schedule@2026-07-01"
+    },
+    {
+      "name": "tax.medicare.levy_rate",
+      "description": "Medicare levy rate on taxable income",
+      "unit": "rate",
+      "effective_from": "2014-07-01",
+      "effective_to": null,
+      "knowledge_date": "2013-06-28",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Medicare Levy Act 1986 s6(1)",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/C2004A03351/latest/text",
+          "title": "Medicare Levy Act 1986 (Compilation No. 53, 1 July 2026)",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-01",
+          "locator": "\"The rate of levy payable ... is 2%.\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "0.02",
+      "id": "tax.medicare.levy_rate@2014-07-01"
+    },
+    {
+      "name": "tax.medicare.low_income_thresholds",
+      "description": "Medicare levy low-income threshold amounts (individual) — lower threshold and phase-in limit",
+      "unit": "AUD",
+      "effective_from": "2024-07-01",
+      "effective_to": "2025-06-30",
+      "knowledge_date": "2025-06-30",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Medicare Levy Act 1986 s3, s7, s8",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/your-tax-return/instructions-to-complete-your-tax-return/mytax-instructions/2025/medicare-and-private-health-insurance/medicare-levy-reduction-or-exemption",
+          "title": "ATO — myTax 2025 Medicare levy reduction or exemption",
+          "accessed": "2026-10-11",
+          "locator": "Table 2 \"All other taxpayers $27,222 $34,027\"",
+          "primary": true
+        }
+      ],
+      "notes": "2024-25 family lower thresholds were not shown on the page read, so family reductions for 2024-25 are blocked.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single_lower": "27222",
+        "single_upper": "34027",
+        "single_sapto_lower": "43020",
+        "single_sapto_upper": "53775",
+        "family_upper": "57383",
+        "family_sapto_upper": "74857",
+        "family_child_upper": "5270"
+      },
+      "id": "tax.medicare.low_income_thresholds@2024-07-01"
+    },
+    {
+      "name": "tax.medicare.low_income_thresholds",
+      "description": "Medicare levy low-income threshold amounts (individual and family) — lower threshold and phase-in limit",
+      "unit": "AUD",
+      "effective_from": "2025-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2026-06-30",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Medicare Levy Act 1986 s3, s7, s8 (as amended by Act No. 58 of 2026)",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy/medicare-levy-reduction/medicare-levy-reduction-for-low-income-earners",
+          "title": "ATO — Medicare levy reduction for low-income earners",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-06-30",
+          "locator": "\"in any other case—$28,011\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy/medicare-levy-reduction/medicare-levy-reduction-family-income",
+          "title": "ATO — Medicare levy reduction, family income",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-06-30",
+          "locator": "\"$47,238 increased by $4,338 for each\" child",
+          "primary": true
+        },
+        {
+          "url": "https://www.legislation.gov.au/C2004A03351/latest/text",
+          "title": "Medicare Levy Act 1986 (Compilation No. 53, 1 July 2026)",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-01",
+          "locator": "s3 threshold amount and phase-in limit; s8(5) and s8(7)",
+          "primary": true
+        }
+      ],
+      "notes": "2026-27 thresholds are not yet published (Budget-set, often retrospectively); 2026-27 Medicare low-income calculations block until they are.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single_lower": "28011",
+        "single_upper": "35013",
+        "single_sapto_lower": "44268",
+        "single_sapto_upper": "55335",
+        "family_lower": "47238",
+        "family_upper": "59047",
+        "family_child_lower": "4338",
+        "family_child_upper": "5423",
+        "family_sapto_lower": "61623",
+        "family_sapto_upper": "77028"
+      },
+      "id": "tax.medicare.low_income_thresholds@2025-07-01"
+    },
+    {
+      "name": "tax.medicare.phase_in_rate",
+      "description": "Low-income phase-in — levy may not exceed this share of taxable income above the threshold",
+      "unit": "rate",
+      "effective_from": "2014-07-01",
+      "effective_to": null,
+      "knowledge_date": "2013-06-28",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Medicare Levy Act 1986 s7",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/C2004A03351/latest/text",
+          "title": "Medicare Levy Act 1986 (Compilation No. 53, 1 July 2026)",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-01",
+          "locator": "\"shall not exceed 10% of the amount of the excess\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "0.1",
+      "id": "tax.medicare.phase_in_rate@2014-07-01"
+    },
+    {
+      "name": "tax.medicare.surcharge_tiers",
+      "description": "Medicare levy surcharge income-for-MLS tier thresholds (upper bound of base tier, tier 1 and tier 2) and rates",
+      "unit": "AUD / rate",
+      "effective_from": "2024-07-01",
+      "effective_to": "2025-06-30",
+      "knowledge_date": "2024-06-30",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "A New Tax System (Medicare Levy Surcharge—Fringe Benefits) Act 1999; Medicare Levy Act 1986",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy-surcharge/medicare-levy-surcharge-income-thresholds-and-rates",
+          "title": "ATO — Medicare levy surcharge income, thresholds and rates",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-06-22",
+          "locator": "\"$97,000 or less\"",
+          "primary": true
+        }
+      ],
+      "notes": "2024-25 family tiers not captured, so family MLS tiers for 2024-25 are blocked.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single_base_max": "97000",
+        "single_t1_max": "113000",
+        "single_t2_max": "151000",
+        "rate_t1": "0.01",
+        "rate_t2": "0.0125",
+        "rate_t3": "0.015"
+      },
+      "id": "tax.medicare.surcharge_tiers@2024-07-01"
+    },
+    {
+      "name": "tax.medicare.surcharge_tiers",
+      "description": "Medicare levy surcharge income-for-MLS tier thresholds (upper bound of base tier, tier 1 and tier 2) and rates",
+      "unit": "AUD / rate",
+      "effective_from": "2025-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2025-06-30",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "A New Tax System (Medicare Levy Surcharge—Fringe Benefits) Act 1999; Medicare Levy Act 1986",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy-surcharge/medicare-levy-surcharge-income-thresholds-and-rates",
+          "title": "ATO — Medicare levy surcharge income, thresholds and rates",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-06-22",
+          "locator": "\"$101,000 or less\" / \"$202,000 or less\"",
+          "primary": true
+        }
+      ],
+      "notes": "Family thresholds increase by 1,500 for each MLS dependent child after the first.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single_base_max": "101000",
+        "single_t1_max": "118000",
+        "single_t2_max": "158000",
+        "family_base_max": "202000",
+        "family_t1_max": "236000",
+        "family_t2_max": "316000",
+        "family_child_increment": "1500",
+        "rate_t1": "0.01",
+        "rate_t2": "0.0125",
+        "rate_t3": "0.015"
+      },
+      "id": "tax.medicare.surcharge_tiers@2025-07-01"
+    },
+    {
+      "name": "tax.medicare.surcharge_tiers",
+      "description": "Medicare levy surcharge income-for-MLS tier thresholds (upper bound of base tier, tier 1 and tier 2) and rates",
+      "unit": "AUD / rate",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2026-06-22",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "A New Tax System (Medicare Levy Surcharge—Fringe Benefits) Act 1999; Medicare Levy Act 1986",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy-surcharge/medicare-levy-surcharge-income-thresholds-and-rates",
+          "title": "ATO — Medicare levy surcharge income, thresholds and rates",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-06-22",
+          "locator": "\"$105,000 or less\" / \"$210,000 or less\"",
+          "primary": true
+        }
+      ],
+      "notes": "Family thresholds increase by 1,500 for each MLS dependent child after the first.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single_base_max": "105000",
+        "single_t1_max": "123000",
+        "single_t2_max": "164000",
+        "family_base_max": "210000",
+        "family_t1_max": "246000",
+        "family_t2_max": "328000",
+        "family_child_increment": "1500",
+        "rate_t1": "0.01",
+        "rate_t2": "0.0125",
+        "rate_t3": "0.015"
+      },
+      "id": "tax.medicare.surcharge_tiers@2026-07-01"
+    },
+    {
+      "name": "tax.offsets.lito",
+      "description": "Low income tax offset — maximum, taper thresholds and rates (non-refundable)",
+      "unit": "AUD / rate",
+      "effective_from": "2024-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2026-06-08",
+      "verification": "derived",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Assessment Act 1997 s61-110, s61-115",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/income-deductions-offsets-and-records/tax-offsets/low-income-tax-offset",
+          "title": "ATO — Low income tax offset",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-06-08",
+          "locator": "\"$700 minus 5 cents for every $1 above $37,500\"",
+          "primary": true
+        }
+      ],
+      "notes": "Values VERIFIED as current law on the ATO page (updated 2026-06-08), but the page is not year-stamped, so per-year applicability is derived: they are applied to 2024-25..2026-27 on the basis that the page describes the law in force over that period and records no change. 2027-28 is left uncovered until confirmed against ITAA97 s61-115, so 2027-28 calculations needing LITO block.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "max": "700",
+        "full_to": "37500",
+        "taper1": "0.05",
+        "step_at": "45000",
+        "step_amount": "325",
+        "taper2": "0.015",
+        "cut_out": "66667"
+      },
+      "id": "tax.offsets.lito@2024-07-01"
+    },
+    {
+      "name": "tax.offsets.sapto",
+      "description": "Seniors and pensioners tax offset — maximum offset, shade-out threshold and cut-out by category",
+      "unit": "AUD / rate",
+      "effective_from": "2025-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2025-06-30",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Assessment Act 1936 s160AAAA; Income Tax Assessment (1936 Act) Regulations 2025",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/income-deductions-offsets-and-records/tax-offsets/seniors-and-pensioners-tax-offset",
+          "title": "ATO — Seniors and pensioners tax offset",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-10-02",
+          "locator": "\"Single $2,230 $34,919 $52,759\"",
+          "primary": true
+        }
+      ],
+      "notes": "Couple values are per partner. Offset rounded up to the nearest whole dollar (ATO).",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single_max": "2230",
+        "single_shade_out": "34919",
+        "single_cut_out": "52759",
+        "couple_max": "1602",
+        "couple_shade_out": "30994",
+        "couple_cut_out": "43810",
+        "illness_separated_max": "2040",
+        "illness_separated_shade_out": "33732",
+        "illness_separated_cut_out": "50052",
+        "taper": "0.125"
+      },
+      "id": "tax.offsets.sapto@2025-07-01"
+    },
+    {
+      "name": "tax.offsets.sapto",
+      "description": "Seniors and pensioners tax offset — maximum offset, shade-out threshold and cut-out by category",
+      "unit": "AUD / rate",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2025-03-27",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Assessment Act 1936 s160AAAA; Income Tax Assessment (1936 Act) Regulations",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/about-ato/new-legislation/in-detail/individuals/personal-income-tax-new-tax-cuts-for-every-australian-taxpayer",
+          "title": "ATO — Personal income tax, new tax cuts for every Australian taxpayer",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-05-13",
+          "locator": "\"Single $2,230 $36,034 $53,874\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.ato.gov.au/individuals-and-families/income-deductions-offsets-and-records/tax-offsets/seniors-and-pensioners-tax-offset",
+          "title": "ATO — Seniors and pensioners tax offset",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-10-02",
+          "locator": "taper \"$0.125 for every dollar\"",
+          "primary": true
+        }
+      ],
+      "notes": "2027-28 thresholds are not published; 2027-28 SAPTO calculations block.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "single_max": "2230",
+        "single_shade_out": "36034",
+        "single_cut_out": "53874",
+        "couple_max": "1602",
+        "couple_shade_out": "31847",
+        "couple_cut_out": "44663",
+        "illness_separated_max": "2040",
+        "illness_separated_shade_out": "34767",
+        "illness_separated_cut_out": "51087",
+        "taper": "0.125"
+      },
+      "id": "tax.offsets.sapto@2026-07-01"
+    },
+    {
+      "name": "tax.offsets.wato",
+      "description": "Working Australians tax offset — maximum (lesser of this and basic tax on net labour income); non-refundable",
+      "unit": "AUD",
+      "effective_from": "2027-07-01",
+      "effective_to": null,
+      "knowledge_date": "2026-06-26",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Assessment Act 1997 ss61-155, 61-160 (inserted by Act No. 49 of 2026)",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/C2026A00049/asmade/text",
+          "title": "Treasury Laws Amendment (Tax Reform No. 1) Act 2026 (No. 49, 2026)",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-06-26",
+          "locator": "s61-160 \"the lesser of: (a) $250\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.ato.gov.au/about-ato/new-legislation/in-detail/individuals/working-australians-tax-offset",
+          "title": "ATO — Working Australians tax offset",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-23",
+          "locator": "non-refundable, cannot transfer or carry forward",
+          "primary": true
+        }
+      ],
+      "notes": "Eligible if an Australian resident at any time in the year and net labour income exceeds the tax-free threshold.",
+      "jurisdiction": "AU",
+      "kind": "table",
+      "value": {
+        "max": "250"
+      },
+      "id": "tax.offsets.wato@2027-07-01"
+    },
+    {
+      "name": "tax.resident_scale",
+      "description": "Resident individual marginal tax scale (full-year resident, full tax-free threshold); excludes Medicare levy",
+      "unit": "AUD / rate",
+      "effective_from": "2024-07-01",
+      "effective_to": "2026-06-30",
+      "knowledge_date": "2024-03-27",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Rates Act 1986 Sch 7 Pt I",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents",
+          "title": "ATO — Tax rates, Australian resident",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-08-13",
+          "locator": "Resident tax rates 2024–25 and 2025–26 tables",
+          "primary": true
+        },
+        {
+          "url": "https://www.legislation.gov.au/C2004A03348/latest/text",
+          "title": "Income Tax Rates Act 1986 (Compilation No. 66, 1 July 2026)",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-01",
+          "locator": "Sch 7 Pt I table for 2024-25 or 2025-26",
+          "primary": true
+        }
+      ],
+      "notes": "2024-25 and 2025-26. ATO published bases 4,288 / 31,288 / 51,638.",
+      "jurisdiction": "AU",
+      "kind": "brackets",
+      "value": [
+        {
+          "over": "0",
+          "rate": "0"
+        },
+        {
+          "over": "18200",
+          "rate": "0.16"
+        },
+        {
+          "over": "45000",
+          "rate": "0.3"
+        },
+        {
+          "over": "135000",
+          "rate": "0.37"
+        },
+        {
+          "over": "190000",
+          "rate": "0.45"
+        }
+      ],
+      "id": "tax.resident_scale@2024-07-01"
+    },
+    {
+      "name": "tax.resident_scale",
+      "description": "Resident individual marginal tax scale (full-year resident, full tax-free threshold); excludes Medicare levy",
+      "unit": "AUD / rate",
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "knowledge_date": "2025-03-27",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Rates Act 1986 Sch 7 Pt I",
+      "sources": [
+        {
+          "url": "https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents",
+          "title": "ATO — Tax rates, Australian resident",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-08-13",
+          "locator": "Resident tax rates 2026–27 table",
+          "primary": true
+        },
+        {
+          "url": "https://www.legislation.gov.au/C2004A03348/latest/text",
+          "title": "Income Tax Rates Act 1986 (Compilation No. 66, 1 July 2026)",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-01",
+          "locator": "\"Tax rates for resident taxpayers for the 2026‑27 year of income\"",
+          "primary": true
+        }
+      ],
+      "notes": "2026-27. ATO published bases 4,020 / 31,020 / 51,370.",
+      "jurisdiction": "AU",
+      "kind": "brackets",
+      "value": [
+        {
+          "over": "0",
+          "rate": "0"
+        },
+        {
+          "over": "18200",
+          "rate": "0.15"
+        },
+        {
+          "over": "45000",
+          "rate": "0.3"
+        },
+        {
+          "over": "135000",
+          "rate": "0.37"
+        },
+        {
+          "over": "190000",
+          "rate": "0.45"
+        }
+      ],
+      "id": "tax.resident_scale@2026-07-01"
+    },
+    {
+      "name": "tax.resident_scale",
+      "description": "Resident individual marginal tax scale (full-year resident, full tax-free threshold); excludes Medicare levy",
+      "unit": "AUD / rate",
+      "effective_from": "2027-07-01",
+      "effective_to": null,
+      "knowledge_date": "2025-03-27",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Rates Act 1986 Sch 7 Pt I (2027-28 or a later year of income)",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/C2004A03348/latest/text",
+          "title": "Income Tax Rates Act 1986 (Compilation No. 66, 1 July 2026)",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-01",
+          "locator": "Sch 7 Pt I table \"2027‑28 year of income or a later year\"",
+          "primary": true
+        },
+        {
+          "url": "https://www.ato.gov.au/about-ato/new-legislation/in-detail/individuals/personal-income-tax-new-tax-cuts-for-every-australian-taxpayer",
+          "title": "ATO — Personal income tax, new tax cuts for every Australian taxpayer",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-05-13",
+          "locator": "\"From 1 July 2027 ... reduced further to 14 per cent\"",
+          "primary": true
+        }
+      ],
+      "notes": "Bases derived 3,752 / 30,752 / 51,102 (not published by the ATO on its rates page as at 2026-10-11).",
+      "jurisdiction": "AU",
+      "kind": "brackets",
+      "value": [
+        {
+          "over": "0",
+          "rate": "0"
+        },
+        {
+          "over": "18200",
+          "rate": "0.14"
+        },
+        {
+          "over": "45000",
+          "rate": "0.3"
+        },
+        {
+          "over": "135000",
+          "rate": "0.37"
+        },
+        {
+          "over": "190000",
+          "rate": "0.45"
+        }
+      ],
+      "id": "tax.resident_scale@2027-07-01"
+    },
+    {
+      "name": "tax.tax_free_threshold",
+      "description": "Resident tax-free threshold (used for WATO eligibility)",
+      "unit": "AUD",
+      "effective_from": "2012-07-01",
+      "effective_to": null,
+      "knowledge_date": "2012-06-30",
+      "verification": "verified",
+      "legal_status": "enacted",
+      "instrument": "Income Tax Rates Act 1986 s3 \"tax-free threshold\"",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.au/C2004A03348/latest/text",
+          "title": "Income Tax Rates Act 1986 (Compilation No. 66, 1 July 2026)",
+          "accessed": "2026-10-11",
+          "page_updated": "2026-07-01",
+          "locator": "\"tax‑free threshold means $18,200.\"",
+          "primary": true
+        }
+      ],
+      "jurisdiction": "AU",
+      "kind": "scalar",
+      "value": "18200",
+      "id": "tax.tax_free_threshold@2012-07-01"
+    }
+  ]
+}

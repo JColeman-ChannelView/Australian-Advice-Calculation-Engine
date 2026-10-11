@@ -1,0 +1,713 @@
+# Superannuation parameters. Evidence: verification/super.md (all accessed 2026-10-11).
+# Windows are inclusive. Values not yet published for 2027-28 are left uncovered (calculations block).
+
+sources:
+  caps: &caps
+    url: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/contributions-caps
+    title: ATO — Key super rates and thresholds, contributions caps
+    accessed: 2026-10-11
+    page_updated: 2026-09-11
+    primary: true
+  cc_cap: &cc_cap
+    url: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/concessional-contributions-cap
+    title: ATO — Concessional contributions cap
+    accessed: 2026-10-11
+    page_updated: 2026-07-02
+    primary: true
+  ncc_cap: &ncc_cap
+    url: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/non-concessional-contributions-cap
+    title: ATO — Non-concessional contributions cap
+    accessed: 2026-10-11
+    page_updated: 2026-05-07
+    primary: true
+  sg: &sg
+    url: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee
+    title: ATO — Key super rates and thresholds, super guarantee
+    accessed: 2026-10-11
+    page_updated: 2026-04-17
+    primary: true
+  mcb: &mcb
+    url: https://www.ato.gov.au/businesses-and-organisations/super-for-employers/paying-super-on-payday/what-payments-are-qualifying-earnings/maximum-contributions-base
+    title: ATO — Maximum contributions base
+    accessed: 2026-10-11
+    page_updated: 2026-08-10
+    primary: true
+  tbc: &tbc
+    url: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/transfer-balance-cap
+    title: ATO — Key super rates and thresholds, transfer balance cap
+    accessed: 2026-10-11
+    page_updated: 2026-04-27
+    primary: true
+  payments: &payments
+    url: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/payments-from-super
+    title: ATO — Key super rates and thresholds, payments from super
+    accessed: 2026-10-11
+    page_updated: 2026-09-16
+    primary: true
+  sisr: &sisr
+    url: https://www.legislation.gov.au/F1996B00580/2026-07-01/2026-07-01/text/1/epub/OEBPS/document_2/document_2.html
+    title: Superannuation Industry (Supervision) Regulations 1994, Vol 2 (Compilation No. 159)
+    accessed: 2026-10-11
+    page_updated: 2026-07-01
+    primary: true
+  govt: &govt
+    url: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/government-contributions
+    title: ATO — Key super rates and thresholds, government contributions
+    accessed: 2026-10-11
+    page_updated: 2026-04-27
+    primary: true
+  coact: &coact
+    url: https://www.legislation.gov.au/C2004A01195/2018-07-01/2018-07-01/text/original/epub/OEBPS/document_1/document_1.html
+    title: Superannuation (Government Co-contribution for Low Income Earners) Act 2003 (Compilation No. 28)
+    accessed: 2026-10-11
+    page_updated: 2018-07-01
+    primary: true
+  coc_page: &coc_page
+    url: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/how-to-save-more-in-your-super/government-super-contributions/super-co-contribution
+    title: ATO — Super co-contribution
+    accessed: 2026-10-11
+    page_updated: 2023-08-02
+    primary: true
+  listo_page: &listo_page
+    url: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/how-to-save-more-in-your-super/government-super-contributions/low-income-super-tax-offset
+    title: ATO — Low income super tax offset
+    accessed: 2026-10-11
+    page_updated: 2023-08-02
+    primary: true
+  listo_new: &listo_new
+    url: https://www.ato.gov.au/about-ato/new-legislation/in-detail/superannuation/low-income-superannuation-tax-offset-listo
+    title: ATO — New legislation, LISTO
+    accessed: 2026-10-11
+    page_updated: 2026-03-17
+    primary: true
+  d296_rates: &d296_rates
+    url: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/division-296-tax-thresholds-and-interest
+    title: ATO — Division 296 tax thresholds and interest
+    accessed: 2026-10-11
+    page_updated: 2026-09-21
+    primary: true
+  d296_calc: &d296_calc
+    url: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/division-296-tax/how-division-296-tax-is-calculated
+    title: ATO — How Division 296 tax is calculated
+    accessed: 2026-10-11
+    page_updated: 2026-06-29
+    primary: true
+  bsfss_act: &bsfss_act
+    url: https://www.legislation.gov.au/C2026A00008/asmade/2026-03-13/text/original/epub/OEBPS/document_1/document_1.html
+    title: Treasury Laws Amendment (Building a Stronger and Fairer Super System) Act 2026 (No. 8, 2026)
+    accessed: 2026-10-11
+    page_updated: 2026-03-13
+    primary: true
+  spouse: &spouse
+    url: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/how-to-save-more-in-your-super/spouse-super-contributions
+    title: ATO — Spouse super contributions
+    accessed: 2026-10-11
+    page_updated: 2023-08-02
+    primary: true
+
+records:
+  # ---------------------------------------------------------------- caps
+  - name: super.concessional_cap
+    description: Concessional contributions cap (general)
+    kind: scalar
+    value: 27500
+    unit: AUD
+    effective_from: 2021-07-01
+    effective_to: 2024-06-30
+    knowledge_date: 2021-02-25
+    verification: verified
+    legal_status: instrument
+    instrument: Income Tax Assessment Act 1997 s291-20 (AWOTE-indexed, $2,500 increments)
+    sources:
+      - { <<: *cc_cap, locator: '"1 July 2021 to 30 June 2024 ... $27,500"' }
+  - name: super.concessional_cap
+    description: Concessional contributions cap (general)
+    kind: scalar
+    value: 30000
+    unit: AUD
+    effective_from: 2024-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2024-02-28
+    verification: verified
+    legal_status: instrument
+    instrument: Income Tax Assessment Act 1997 s291-20 (AWOTE-indexed, $2,500 increments)
+    notes: Research conflict flag ($27,500 on one ATO print page) not reproduced; all readable ATO pages say $30,000. See docs/SOURCE-QUESTIONS.md C19.
+    sources:
+      - { <<: *caps, locator: Table 1.1 }
+      - { <<: *cc_cap, locator: '"1 July 2024 to 30 June 2026 ... cap was $30,000"' }
+  - name: super.concessional_cap
+    description: Concessional contributions cap (general)
+    kind: scalar
+    value: 32500
+    unit: AUD
+    effective_from: 2026-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2026-02-25
+    verification: verified
+    legal_status: instrument
+    instrument: Income Tax Assessment Act 1997 s291-20 (AWOTE-indexed, $2,500 increments)
+    sources:
+      - { <<: *cc_cap, locator: '"From 1 July 2026 ... cap is $32,500"' }
+      - { <<: *caps, locator: Table 1.1 }
+  - name: super.carry_forward
+    description: Carry-forward of unused concessional cap — total super balance limit at prior 30 June and years unused amounts remain available
+    kind: table
+    value:
+      tsb_limit: 500000
+      years_available: 5
+      first_unused_year_start: 2018
+    unit: AUD / years
+    effective_from: 2019-07-01
+    effective_to: null
+    knowledge_date: 2018-06-30
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Assessment Act 1997 s291-20(3)
+    notes: TSB must be less than $500,000 at 30 June of the previous year. Unused amounts accrue from 2018-19 (first usable 2019-20), oldest used first, expire after 5 years.
+    sources:
+      - { <<: *cc_cap, locator: '"total superannuation balance of less than $500,000 on 30 June"' }
+  - name: super.non_concessional_cap
+    description: Non-concessional contributions cap (annual), nil if TSB >= general transfer balance cap at prior 30 June
+    kind: scalar
+    value: 120000
+    unit: AUD
+    effective_from: 2024-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2024-02-28
+    verification: verified
+    legal_status: instrument
+    instrument: Income Tax Assessment Act 1997 s292-85
+    sources:
+      - { <<: *caps, locator: 'Table 4 "$120,000 see Note 1"' }
+  - name: super.non_concessional_cap
+    description: Non-concessional contributions cap (annual), nil if TSB >= general transfer balance cap at prior 30 June
+    kind: scalar
+    value: 130000
+    unit: AUD
+    effective_from: 2026-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2026-02-25
+    verification: verified
+    legal_status: instrument
+    instrument: Income Tax Assessment Act 1997 s292-85
+    sources:
+      - { <<: *ncc_cap, locator: '"From 1 July 2026, the non-concessional contributions cap is $130,000"' }
+  - name: super.bring_forward
+    description: Non-concessional bring-forward — TSB thresholds (at prior 30 June) and maximum cap/period, for someone not already in a bring-forward period and under 75 at any time in the first year
+    kind: table
+    value:
+      three_year_tsb_below: 1660000
+      three_year_amount: 360000
+      two_year_tsb_below: 1780000
+      two_year_amount: 240000
+      nil_tsb_at_or_above: 1900000
+      age_under: 75
+    unit: AUD
+    effective_from: 2024-07-01
+    effective_to: 2025-06-30
+    knowledge_date: 2024-06-30
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Assessment Act 1997 s292-85
+    sources:
+      - { <<: *ncc_cap, locator: '2024-25 table "Less than $1.66 million ... $360,000"' }
+  - name: super.bring_forward
+    description: Non-concessional bring-forward — TSB thresholds (at prior 30 June) and maximum cap/period, for someone not already in a bring-forward period and under 75 at any time in the first year
+    kind: table
+    value:
+      three_year_tsb_below: 1760000
+      three_year_amount: 360000
+      two_year_tsb_below: 1880000
+      two_year_amount: 240000
+      nil_tsb_at_or_above: 2000000
+      age_under: 75
+    unit: AUD
+    effective_from: 2025-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2025-06-30
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Assessment Act 1997 s292-85
+    sources:
+      - { <<: *ncc_cap, locator: '2025-26 table "Less than $1.76 million ... $360,000"' }
+  - name: super.bring_forward
+    description: Non-concessional bring-forward — TSB thresholds (at prior 30 June) and maximum cap/period, for someone not already in a bring-forward period and under 75 at any time in the first year
+    kind: table
+    value:
+      three_year_tsb_below: 1840000
+      three_year_amount: 390000
+      two_year_tsb_below: 1970000
+      two_year_amount: 260000
+      nil_tsb_at_or_above: 2100000
+      age_under: 75
+    unit: AUD
+    effective_from: 2026-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2026-05-07
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Assessment Act 1997 s292-85
+    sources:
+      - { <<: *ncc_cap, locator: '2026-27 table "Less than $1.84 million ... $390,000 ... 3 years"' }
+  - name: super.transfer_balance_cap
+    description: General transfer balance cap
+    kind: scalar
+    value: 1900000
+    unit: AUD
+    effective_from: 2023-07-01
+    effective_to: 2025-06-30
+    knowledge_date: 2023-01-25
+    verification: verified
+    legal_status: instrument
+    instrument: Income Tax Assessment Act 1997 s294-35 (CPI-indexed)
+    sources:
+      - { <<: *tbc, locator: Table 26 }
+  - name: super.transfer_balance_cap
+    description: General transfer balance cap
+    kind: scalar
+    value: 2000000
+    unit: AUD
+    effective_from: 2025-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2025-01-29
+    verification: verified
+    legal_status: instrument
+    instrument: Income Tax Assessment Act 1997 s294-35 (CPI-indexed)
+    sources:
+      - { <<: *tbc, locator: Table 26 }
+  - name: super.transfer_balance_cap
+    description: General transfer balance cap
+    kind: scalar
+    value: 2100000
+    unit: AUD
+    effective_from: 2026-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2026-01-28
+    verification: verified
+    legal_status: instrument
+    instrument: Income Tax Assessment Act 1997 s294-35 (CPI-indexed)
+    notes: 2027-28 value not yet published; window closed at 30 June 2027 so later calculations block.
+    sources:
+      - { <<: *tbc, locator: 'Table 26 "2026–27 2.1"' }
+
+  # ---------------------------------------------------------------- SG
+  - name: super.sg_rate
+    description: Super guarantee charge percentage
+    kind: scalar
+    value: 0.115
+    unit: rate
+    effective_from: 2024-07-01
+    effective_to: 2025-06-30
+    knowledge_date: 2021-06-30
+    verification: verified
+    legal_status: enacted
+    instrument: Superannuation Guarantee (Administration) Act 1992 s19
+    sources:
+      - { <<: *sg, locator: Table 21 }
+  - name: super.sg_rate
+    description: Super guarantee charge percentage
+    kind: scalar
+    value: 0.12
+    unit: rate
+    effective_from: 2025-07-01
+    effective_to: null
+    knowledge_date: 2021-06-30
+    verification: verified
+    legal_status: enacted
+    instrument: Superannuation Guarantee (Administration) Act 1992 s19
+    notes: Payday Super from 1 July 2026 — SG is a percentage of qualifying earnings each payday.
+    sources:
+      - { <<: *sg, locator: 'Table 21 "1 July 2027 onwards 12.00"' }
+  - name: super.max_contribution_base_quarterly
+    description: Maximum super contribution base (per quarter)
+    kind: scalar
+    value: 65070
+    unit: AUD per quarter
+    effective_from: 2024-07-01
+    effective_to: 2025-06-30
+    knowledge_date: 2024-06-30
+    verification: verified
+    legal_status: instrument
+    instrument: Superannuation Guarantee (Administration) Act 1992 s15
+    sources:
+      - { <<: *sg, locator: Table 24 }
+  - name: super.max_contribution_base_quarterly
+    description: Maximum super contribution base (per quarter)
+    kind: scalar
+    value: 62500
+    unit: AUD per quarter
+    effective_from: 2025-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2025-06-30
+    verification: verified
+    legal_status: instrument
+    instrument: Superannuation Guarantee (Administration) Act 1992 s15
+    sources:
+      - { <<: *sg, locator: 'Table 24 "2025–26 $62,500 $7,500.00"' }
+  - name: super.max_contribution_base_annual
+    description: Maximum contribution base (annual, Payday Super) = concessional cap × 100 ÷ charge percentage, rounded down to $10
+    kind: scalar
+    value: 270830
+    unit: AUD per year
+    effective_from: 2026-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2026-02-25
+    verification: verified
+    legal_status: enacted
+    instrument: Superannuation Guarantee (Administration) Act 1992 (as amended for Payday Super)
+    sources:
+      - { <<: *mcb, locator: '"rounded down to the nearest $10 multiple"' }
+      - { <<: *sg, locator: 'Table 23 "For 2026–27, the maximum contribution base is $270,830"' }
+
+  # ---------------------------------------------------------------- access and pensions
+  - name: super.preservation_age
+    description: Preservation age by date of birth (born on or after the band date)
+    kind: date_bands
+    value:
+      - { from: 1900-01-01, value: 55 }
+      - { from: 1960-07-01, value: 56 }
+      - { from: 1961-07-01, value: 57 }
+      - { from: 1962-07-01, value: 58 }
+      - { from: 1963-07-01, value: 59 }
+      - { from: 1964-07-01, value: 60 }
+    unit: years
+    effective_from: 1999-07-01
+    effective_to: null
+    knowledge_date: 1999-07-01
+    verification: verified
+    legal_status: enacted
+    instrument: Superannuation Industry (Supervision) Regulations 1994 reg 6.01(2)
+    notes: Values read from the ATO table; the SISR reg 6.01 text itself was not read.
+    sources:
+      - { <<: *payments, locator: 'Table 12 "From 1 July 1964 60"' }
+  - name: super.minimum_pension_factors
+    description: Account-based pension minimum annual payment percentage factor by age (age on 1 July or on the commencement day)
+    kind: bands
+    value:
+      - { from: 0, value: 0.04 }
+      - { from: 65, value: 0.05 }
+      - { from: 75, value: 0.06 }
+      - { from: 80, value: 0.07 }
+      - { from: 85, value: 0.09 }
+      - { from: 90, value: 0.11 }
+      - { from: 95, value: 0.14 }
+    unit: rate
+    effective_from: 2007-07-01
+    effective_to: null
+    knowledge_date: 2007-07-01
+    verification: verified
+    legal_status: enacted
+    instrument: Superannuation Industry (Supervision) Regulations 1994 Sch 7
+    notes: Temporary reductions are a separate parameter (super.minimum_pension_reduction). Result rounded to the nearest $10 (exact $5 up), Sch 7 cl 5.
+    sources:
+      - { <<: *sisr, locator: 'Sch 7 table "Under 65 ... 4"' }
+      - { <<: *payments, locator: Table 11 }
+  - name: super.minimum_pension_reduction
+    description: Multiplier applied to the minimum pension amount (temporary reductions)
+    kind: scalar
+    value: 1
+    unit: multiplier
+    effective_from: 2013-07-01
+    effective_to: 2019-06-30
+    knowledge_date: 2013-07-01
+    verification: verified
+    legal_status: enacted
+    instrument: Superannuation Industry (Supervision) Regulations 1994 Sch 7 cl 4A, 4B
+    sources:
+      - { <<: *sisr, locator: Sch 7 cl 4A/4B (no reduction in these years) }
+  - name: super.minimum_pension_reduction
+    description: Multiplier applied to the minimum pension amount (temporary reductions)
+    kind: scalar
+    value: 0.5
+    unit: multiplier
+    effective_from: 2019-07-01
+    effective_to: 2023-06-30
+    knowledge_date: 2020-03-24
+    verification: verified
+    legal_status: enacted
+    instrument: Superannuation Industry (Supervision) Regulations 1994 Sch 7 cl 4A
+    sources:
+      - { <<: *sisr, locator: '"half of the amount worked out"' }
+  - name: super.minimum_pension_reduction
+    description: Multiplier applied to the minimum pension amount (temporary reductions)
+    kind: scalar
+    value: 1
+    unit: multiplier
+    effective_from: 2023-07-01
+    effective_to: null
+    knowledge_date: 2023-07-01
+    verification: verified
+    legal_status: enacted
+    instrument: Superannuation Industry (Supervision) Regulations 1994 Sch 7
+    sources:
+      - { <<: *payments, locator: Table 11 (standard factors from 2023-24) }
+
+  # ---------------------------------------------------------------- benefit tax
+  - name: super.low_rate_cap
+    description: Low rate cap amount (taxable component of lump sums between preservation age and 59)
+    kind: scalar
+    value: 245000
+    unit: AUD
+    effective_from: 2024-07-01
+    effective_to: 2025-06-30
+    knowledge_date: 2024-02-28
+    verification: verified
+    legal_status: instrument
+    instrument: Income Tax Assessment Act 1997 s307-345
+    sources:
+      - { <<: *payments, locator: Table 9 }
+  - name: super.low_rate_cap
+    description: Low rate cap amount (taxable component of lump sums between preservation age and 59)
+    kind: scalar
+    value: 260000
+    unit: AUD
+    effective_from: 2025-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2025-06-30
+    verification: verified
+    legal_status: instrument
+    instrument: Income Tax Assessment Act 1997 s307-345 (AWOTE-indexed, last indexed value)
+    sources:
+      - { <<: *payments, locator: 'Table 9 (2025-26 $260,000)' }
+  - name: super.low_rate_cap
+    description: Low rate cap amount (taxable component of lump sums between preservation age and 59)
+    kind: scalar
+    value: 260000
+    unit: AUD
+    effective_from: 2026-07-01
+    effective_to: null
+    knowledge_date: 2026-09-16
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Assessment Act 1997 s307-345
+    notes: '"From 1 July 2026, the low rate cap is $260,000" and no longer indexed; 2025-26 was the last indexed value (also $260,000).'
+    sources:
+      - { <<: *payments, locator: '"From 1 July 2026, the low rate cap is $260,000"' }
+  - name: super.untaxed_plan_cap
+    description: Untaxed plan cap amount
+    kind: scalar
+    value: 1780000
+    unit: AUD
+    effective_from: 2024-07-01
+    effective_to: 2025-06-30
+    knowledge_date: 2024-02-28
+    verification: verified
+    legal_status: instrument
+    instrument: Income Tax Assessment Act 1997 s307-350
+    sources:
+      - { <<: *payments, locator: Table 10 }
+  - name: super.untaxed_plan_cap
+    description: Untaxed plan cap amount
+    kind: scalar
+    value: 1865000
+    unit: AUD
+    effective_from: 2025-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2025-02-26
+    verification: verified
+    legal_status: instrument
+    instrument: Income Tax Assessment Act 1997 s307-350
+    sources:
+      - { <<: *payments, locator: Table 10 }
+  - name: super.untaxed_plan_cap
+    description: Untaxed plan cap amount
+    kind: scalar
+    value: 1935000
+    unit: AUD
+    effective_from: 2026-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2026-02-25
+    verification: verified
+    legal_status: instrument
+    instrument: Income Tax Assessment Act 1997 s307-350
+    sources:
+      - { <<: *payments, locator: 'Table 10 "2026–27 $1,935,000"' }
+  - name: super.lump_sum_rates
+    description: Maximum tax rates on super lump sums (excluding Medicare levy) by element, recipient and age band
+    kind: table
+    value:
+      taxed_under_preservation: 0.20
+      taxed_preservation_to_59_above_low_rate_cap: 0.15
+      untaxed_under_preservation_to_untaxed_cap: 0.30
+      untaxed_preservation_to_59_to_low_rate_cap: 0.15
+      untaxed_preservation_to_59_low_rate_cap_to_untaxed_cap: 0.30
+      untaxed_60_plus_to_untaxed_cap: 0.15
+      untaxed_above_untaxed_cap: 0.45
+      death_non_dependant_taxed: 0.15
+      death_non_dependant_untaxed: 0.30
+      small_benefit_below: 200
+      medicare_levy_note: 0.02
+    unit: rate
+    effective_from: 2017-07-01
+    effective_to: null
+    knowledge_date: 2017-07-01
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Assessment Act 1997 Divs 301, 302 (Subdiv 301-B/C, 302-B)
+    notes: Maximum rates per ATO Table 13; the Medicare levy (2%) applies in addition where assessable. Death benefits to dependants are tax-free.
+    sources:
+      - { <<: *payments, locator: Table 13 (lump sum tax rates) }
+
+  # ---------------------------------------------------------------- government contributions
+  - name: super.co_contribution
+    description: Government co-contribution — income thresholds, maximum, matching rate, taper, minimum and payment rounding
+    kind: table
+    value:
+      lower_threshold: 45400
+      higher_threshold: 60400
+      max: 500
+      matching_rate: 0.5
+      taper_per_dollar: 0.03333
+      minimum: 20
+      round_up_to: 0.05
+    unit: AUD / rate
+    effective_from: 2024-07-01
+    effective_to: 2025-06-30
+    knowledge_date: 2024-02-28
+    verification: verified
+    legal_status: enacted
+    instrument: Superannuation (Government Co-contribution for Low Income Earners) Act 2003 ss9, 10, 10A, 11
+    sources:
+      - { <<: *govt, locator: Table 25 }
+      - { <<: *coact, locator: 's10(1C) "$500 reduced by 3.333 cents for each dollar"; s11 minimum $20' }
+      - { <<: *coc_page, locator: '"rounded up to the nearest multiple of 5 cents"' }
+  - name: super.co_contribution
+    description: Government co-contribution — income thresholds, maximum, matching rate, taper, minimum and payment rounding
+    kind: table
+    value:
+      lower_threshold: 47488
+      higher_threshold: 62488
+      max: 500
+      matching_rate: 0.5
+      taper_per_dollar: 0.03333
+      minimum: 20
+      round_up_to: 0.05
+    unit: AUD / rate
+    effective_from: 2025-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2025-02-26
+    verification: verified
+    legal_status: enacted
+    instrument: Superannuation (Government Co-contribution for Low Income Earners) Act 2003 ss9, 10, 10A, 11
+    sources:
+      - { <<: *govt, locator: Table 25 }
+      - { <<: *coact, locator: 's10(1C) "$500 reduced by 3.333 cents for each dollar"' }
+      - { <<: *coc_page, locator: '"rounded up to the nearest multiple of 5 cents"' }
+  - name: super.co_contribution
+    description: Government co-contribution — income thresholds, maximum, matching rate, taper, minimum and payment rounding
+    kind: table
+    value:
+      lower_threshold: 49293
+      higher_threshold: 64293
+      max: 500
+      matching_rate: 0.5
+      taper_per_dollar: 0.03333
+      minimum: 20
+      round_up_to: 0.05
+    unit: AUD / rate
+    effective_from: 2026-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2026-02-25
+    verification: verified
+    legal_status: enacted
+    instrument: Superannuation (Government Co-contribution for Low Income Earners) Act 2003 ss9, 10, 10A, 11
+    sources:
+      - { <<: *govt, locator: 'Table 25 "2026–27 $500 $49,293 $64,293"' }
+      - { <<: *coact, locator: 's10(1C) "$500 reduced by 3.333 cents for each dollar"' }
+      - { <<: *coc_page, locator: '"rounded up to the nearest multiple of 5 cents"' }
+  - name: super.listo
+    description: Low income super tax offset — rate on concessional contributions, maximum, minimum, adjusted taxable income threshold
+    kind: table
+    value:
+      rate: 0.15
+      max: 500
+      min: 10
+      income_threshold: 37000
+    unit: AUD / rate
+    effective_from: 2017-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2017-07-01
+    verification: verified
+    legal_status: enacted
+    instrument: Superannuation (Government Co-contribution for Low Income Earners) Act 2003 ss12C, 12E
+    sources:
+      - { <<: *listo_page, locator: '"by 0.15, rounding to the nearest cent"' }
+      - { <<: *coact, locator: 's12E "exceeds $500—$500"' }
+  - name: super.listo
+    description: Low income super tax offset — rate on concessional contributions, maximum, minimum, adjusted taxable income threshold
+    kind: table
+    value:
+      rate: 0.15
+      max: 810
+      min: 10
+      income_threshold: 45000
+    unit: AUD / rate
+    effective_from: 2027-07-01
+    effective_to: null
+    knowledge_date: 2026-03-13
+    verification: verified
+    legal_status: enacted
+    instrument: Superannuation (Government Co-contribution for Low Income Earners) Act 2003 as amended by Act No. 8 of 2026 Sch 4
+    notes: >-
+      ATO states the maximum rises to $810 and the threshold to $45,000. In the Act the threshold is
+      the top of ITRA Sch 7 Pt I item 1 and the cap is a formula using the SG charge percentage
+      (45,000 × 12% × 15% = 810 — consistency check only). Re-verify if the SG rate or bracket changes.
+    sources:
+      - { <<: *listo_new, locator: '"maximum payment will also increase to $810"' }
+      - { <<: *bsfss_act, locator: Sch 4 (commences 1 July 2027) }
+  - name: super.div296
+    description: Division 296 — large super balance threshold (LSBT), very large super balance threshold (VLSBT) and rates
+    kind: table
+    value:
+      lsbt: 3000000
+      vlsbt: 10000000
+      rate_lsbt: 0.15
+      rate_vlsbt: 0.10
+      proportion_dp: 2
+    unit: AUD / rate
+    effective_from: 2026-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2026-03-13
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Assessment Act 1997 Div 296 (Act No. 8 of 2026)
+    notes: Proportions are rounded to 2 decimal places (ATO). Thresholds CPI-indexed from 2027-28 in $150,000 / $500,000 increments (2027-28 values not yet published).
+    sources:
+      - { <<: *d296_rates, locator: 'Table 28 "for the 2026‑27 income year—$3,000,000"' }
+      - { <<: *d296_calc, locator: '"the following formulas are used (rounded to 2 decimal places)"' }
+  - name: super.spouse_offset
+    description: Spouse contribution tax offset — rate, maximum eligible contributions, spouse income threshold and cut-out
+    kind: table
+    value:
+      rate: 0.18
+      max_contributions: 3000
+      income_threshold: 37000
+      cut_out: 40000
+    unit: AUD / rate
+    effective_from: 2023-07-01
+    effective_to: null
+    knowledge_date: 2023-08-02
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Assessment Act 1997 s290-230
+    notes: Applied from the ATO page as current law (page dated 2 Aug 2023); earlier years not included.
+    sources:
+      - { <<: *spouse, locator: '"18% of the lesser of"; "up to $540 per year"' }
+  - name: super.contributions_tax_rate
+    description: Tax on concessional contributions within a complying fund
+    kind: scalar
+    value: 0.15
+    unit: rate
+    effective_from: 2007-07-01
+    effective_to: null
+    knowledge_date: 2007-07-01
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Assessment Act 1997 s295-160, Income Tax Rates Act 1986 s26
+    sources:
+      - url: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/understanding-concessional-and-non-concessional-contributions
+        title: ATO — Understanding concessional and non-concessional contributions
+        accessed: 2026-10-11
+        page_updated: 2026-01-15
+        locator: '"taxed in your super fund at the rate of 15%"'
+        primary: true

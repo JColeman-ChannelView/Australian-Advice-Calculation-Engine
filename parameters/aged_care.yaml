@@ -1,0 +1,355 @@
+# Residential aged care — 1 November 2025 fee arrangements (Aged Care Act 2024).
+# Evidence: verification/aged_care.md (accessed 2026-10-11). Indexed 20 March / 20 September;
+# some income thresholds and the maximum accommodation payment also move on 1 July.
+
+sources:
+  sched_nov25: &sched_nov25
+    url: https://www.health.gov.au/sites/default/files/2025-11/schedule-of-fees-and-charges-for-residential-care.docx
+    title: Schedule of fees and charges for residential care from 1 November 2025
+    accessed: 2026-10-11
+    primary: true
+  sched_mar26: &sched_mar26
+    url: https://www.health.gov.au/sites/default/files/2026-03/schedule_of_fees_and_charges_for_residential_care_-_20_march_2026.docx
+    title: Schedule of fees and charges for residential care from 20 March 2026
+    accessed: 2026-10-11
+    primary: true
+  sched_jul26: &sched_jul26
+    url: https://www.health.gov.au/sites/default/files/2026-07/schedule_of_fees_and_charges_for_residential_care_1_july_2026_v2_0.docx
+    title: Schedule of fees and charges for residential care from 1 July 2026 (v2)
+    accessed: 2026-10-11
+    primary: true
+  sched_sep26: &sched_sep26
+    url: https://www.health.gov.au/sites/default/files/2026-09/schedule_of_fees_and_charges_for_residential_care_20_september_2026.docx
+    title: Schedule of fees and charges for residential care from 20 September 2026
+    accessed: 2026-10-11
+    primary: true
+  sched_jan26: &sched_jan26
+    url: https://www.health.gov.au/sites/default/files/2025-12/schedule-of-fees-and-charges-for-residential-care.docx
+    title: Schedule of fees and charges for residential care from 1 January 2026
+    accessed: 2026-10-11
+    primary: true
+  act: &act
+    url: https://www.legislation.gov.au/C2024A00104/2026-07-01/2026-07-01/text/original/epub/OEBPS/document_1/document_1.html
+    title: Aged Care Act 2024 (Compilation No. 2, 1 July 2026) ss235, 277, 278, 279, 308, 319
+    accessed: 2026-10-11
+    page_updated: 2026-07-01
+    primary: true
+  rules_sep26: &rules_sep26
+    url: https://www.legislation.gov.au/F2025L01173/latest/versions
+    title: Aged Care Rules 2025 (Compilation No. 11, 20 September 2026)
+    accessed: 2026-10-11
+    page_updated: 2026-09-20
+    primary: true
+  max_accom: &max_accom
+    url: https://www.health.gov.au/our-work/residential-aged-care/charging/maximum-accommodation-payment-amounts
+    title: health.gov.au — Maximum accommodation payment amounts
+    accessed: 2026-10-11
+    page_updated: 2026-06-26
+    primary: true
+  retention: &retention
+    url: https://www.health.gov.au/our-work/residential-aged-care/charging/rad-and-rac-retention
+    title: health.gov.au — RAD and RAC retention
+    accessed: 2026-10-11
+    page_updated: 2026-02-16
+    primary: true
+
+records:
+  # ------------------------------------------------ resident fee amounts and caps
+  - name: aged_care.fees
+    description: Residential care daily amounts — basic daily fee, maximum hotelling supplement, maximum accommodation supplement, NCCC daily cap, NCCC lifetime cap, NCCC day cap
+    kind: table
+    value:
+      basic_daily_fee: 65.55
+      max_hotelling_supplement: 22.15
+      max_accommodation_supplement: 70.94
+      nccc_daily_cap: 105.30
+      nccc_lifetime_cap: 135318.69
+      nccc_max_days: 1460
+    unit: AUD per day / AUD / days
+    effective_from: 2025-11-01
+    effective_to: 2026-03-19
+    knowledge_date: 2025-11-01
+    verification: verified
+    legal_status: instrument
+    instrument: Aged Care Act 2024 ss277-279; Aged Care Rules 2025 ss7-20, 230-5, 230-10, 279-5, 279-10
+    sources:
+      - { <<: *sched_nov25, locator: 'Basic daily fee $65.55; MAS $70.94; Daily cap $105.30; Lifetime cap $135,318.69' }
+  - name: aged_care.fees
+    description: Residential care daily amounts — basic daily fee, maximum hotelling supplement, maximum accommodation supplement, NCCC daily cap, NCCC lifetime cap, NCCC day cap
+    kind: table
+    value:
+      basic_daily_fee: 66.80
+      max_hotelling_supplement: 22.15
+      max_accommodation_supplement: 72.30
+      nccc_daily_cap: 107.32
+      nccc_lifetime_cap: 137917.01
+      nccc_max_days: 1460
+    unit: AUD per day / AUD / days
+    effective_from: 2026-03-20
+    effective_to: 2026-09-19
+    knowledge_date: 2026-03-20
+    verification: verified
+    legal_status: instrument
+    instrument: Aged Care Act 2024 ss277-279; Aged Care Rules 2025 ss7-20, 230-5, 230-10, 279-5, 279-10
+    notes: The health.gov.au scenarios page prints the lifetime cap as $137,910.01; the Schedule and Rules 7-20 say $137,917.01 (used here).
+    sources:
+      - { <<: *sched_mar26, locator: 'BDF $66.80; MAS $72.30; daily cap $107.32' }
+      - { <<: *rules_sep26, locator: 'Rules 279-5 "the amount is $107.32" (Comp. 10)' }
+  - name: aged_care.fees
+    description: Residential care daily amounts — basic daily fee, maximum hotelling supplement, maximum accommodation supplement, NCCC daily cap, NCCC lifetime cap, NCCC day cap
+    kind: table
+    value:
+      basic_daily_fee: 68.93
+      max_hotelling_supplement: 22.15
+      max_accommodation_supplement: 73.73
+      nccc_daily_cap: 109.45
+      nccc_lifetime_cap: 140652.80
+      nccc_max_days: 1460
+    unit: AUD per day / AUD / days
+    effective_from: 2026-09-20
+    effective_to: 2027-03-19
+    knowledge_date: 2026-09-20
+    verification: verified
+    legal_status: instrument
+    instrument: Aged Care Act 2024 ss277-279; Aged Care Rules 2025 ss7-20, 230-5, 230-10, 279-5, 279-10
+    sources:
+      - { <<: *sched_sep26, locator: 'MAS $73.73 per day; daily cap $109.45; lifetime cap $140,652.80' }
+      - { <<: *rules_sep26, locator: 'Rules 279-5 "the amount is $109.45"' }
+
+  # ------------------------------------------------ means-tested amount thresholds (Act s319; Rules 319-5)
+  - name: aged_care.means_test
+    description: Means-tested amount thresholds — income free areas and four income thresholds; asset free area and four asset thresholds (first asset threshold also caps the counted home value)
+    kind: table
+    value:
+      income_free_area_single: 34762.00
+      income_free_area_couple: 34034.00
+      income_t1_single: 86406.32
+      income_t1_couple: 85678.32
+      income_t2: 101105.00
+      income_t3: 117230.20
+      income_t4_single: 139048.00
+      income_t4_couple: 136136.00
+      asset_free_area: 63000.00
+      asset_t1: 210555.20
+      asset_t2: 252000.00
+      asset_t3: 355366.66
+      asset_t4: 532055.20
+    unit: AUD per year / AUD
+    effective_from: 2025-11-01
+    effective_to: 2026-03-19
+    knowledge_date: 2025-11-01
+    verification: verified
+    legal_status: instrument
+    instrument: Aged Care Act 2024 s319; Aged Care Rules 2025 s319-5
+    sources:
+      - { <<: *sched_nov25, locator: 'Rates for 1 November 2025 fee and accommodation arrangements' }
+  - name: aged_care.means_test
+    description: Means-tested amount thresholds — income free areas and four income thresholds; asset free area and four asset thresholds (first asset threshold also caps the counted home value)
+    kind: table
+    value:
+      income_free_area_single: 35313.20
+      income_free_area_couple: 34585.20
+      income_t1_single: 87947.60
+      income_t1_couple: 87219.60
+      income_t2: 101105.00
+      income_t3: 117230.20
+      income_t4_single: 141252.80
+      income_t4_couple: 138340.80
+      asset_free_area: 64500.00
+      asset_t1: 214884.00
+      asset_t2: 258000.00
+      asset_t3: 361366.66
+      asset_t4: 536384.00
+    unit: AUD per year / AUD
+    effective_from: 2026-03-20
+    effective_to: 2026-06-30
+    knowledge_date: 2026-03-20
+    verification: verified
+    legal_status: instrument
+    instrument: Aged Care Act 2024 s319; Aged Care Rules 2025 s319-5
+    notes: Parameter set used by the health.gov.au fee scenarios (rates current on 20 March 2026).
+    sources:
+      - { <<: *sched_mar26, locator: 'income free area $35,313.20; asset free area $64,500' }
+  - name: aged_care.means_test
+    description: Means-tested amount thresholds — income free areas and four income thresholds; asset free area and four asset thresholds (first asset threshold also caps the counted home value)
+    kind: table
+    value:
+      income_free_area_single: 35521.20
+      income_free_area_couple: 34793.20
+      income_t1_single: 88155.60
+      income_t1_couple: 87427.60
+      income_t2: 101105.00
+      income_t3: 117230.20
+      income_t4_single: 142084.80
+      income_t4_couple: 139172.80
+      asset_free_area: 64500.00
+      asset_t1: 214884.00
+      asset_t2: 258000.00
+      asset_t3: 361366.66
+      asset_t4: 547884.00
+    unit: AUD per year / AUD
+    effective_from: 2026-07-01
+    effective_to: 2026-09-19
+    knowledge_date: 2026-07-01
+    verification: verified
+    legal_status: instrument
+    instrument: Aged Care Act 2024 s319; Aged Care Rules 2025 s319-5
+    sources:
+      - { <<: *sched_jul26, locator: 'from 1 July 2026 thresholds' }
+  - name: aged_care.means_test
+    description: Means-tested amount thresholds — income free areas and four income thresholds; asset free area and four asset thresholds (first asset threshold also caps the counted home value)
+    kind: table
+    value:
+      income_free_area_single: 36454.60
+      income_free_area_couple: 35726.60
+      income_t1_single: 90130.04
+      income_t1_couple: 89402.04
+      income_t2: 105048.00
+      income_t3: 121173.20
+      income_t4_single: 145818.40
+      income_t4_couple: 142906.40
+      asset_free_area: 66500.00
+      asset_t1: 219858.40
+      asset_t2: 266000.00
+      asset_t3: 369366.66
+      asset_t4: 552858.40
+    unit: AUD per year / AUD
+    effective_from: 2026-09-20
+    effective_to: 2027-03-19
+    knowledge_date: 2026-09-20
+    verification: verified
+    legal_status: instrument
+    instrument: Aged Care Act 2024 s319; Aged Care Rules 2025 s319-5
+    sources:
+      - { <<: *sched_sep26, locator: 'from 20 September 2026 thresholds' }
+  - name: aged_care.means_test_rates
+    description: Means-tested amount taper rates by band (income 50/0/50/0/50; assets 17.5/0/7.8/0/7.8) and the daily divisor
+    kind: table
+    value:
+      income_band1: 0.5
+      income_band3: 0.5
+      income_band5: 0.5
+      asset_band1: 0.175
+      asset_band3: 0.078
+      asset_band5: 0.078
+      days_divisor: 364
+    unit: rate
+    effective_from: 2025-11-01
+    effective_to: null
+    knowledge_date: 2024-12-02
+    verification: verified
+    legal_status: enacted
+    instrument: Aged Care Act 2024 s319(1) Steps 1–14
+    notes: The 17.5% / 1% / 2% tiers belong only to the grandfathered post-2014 class (Rules 319-20) and are not used here.
+    sources:
+      - { <<: *act, locator: 's319(1) "50% of that excess, divided by 364"; "17.5% of the excess"' }
+
+  # ------------------------------------------------ accommodation
+  - name: aged_care.max_accommodation_payment
+    description: Maximum accommodation payment amount (maximum room price without IHACPA approval)
+    kind: scalar
+    value: 758627
+    unit: AUD
+    effective_from: 2025-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2025-07-01
+    verification: verified
+    legal_status: instrument
+    instrument: Aged Care Rules 2025 (indexed 1 July by CPI)
+    sources:
+      - { <<: *max_accom, locator: 'Maximum refundable accommodation deposit $758,627' }
+  - name: aged_care.max_accommodation_payment
+    description: Maximum accommodation payment amount (maximum room price without IHACPA approval)
+    kind: scalar
+    value: 789686
+    unit: AUD
+    effective_from: 2026-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2026-06-26
+    verification: verified
+    legal_status: instrument
+    instrument: Aged Care Rules 2025 (indexed 1 July by CPI)
+    sources:
+      - { <<: *max_accom, locator: '"From 1 July 2026, the maximum accommodation payment amount is $789,686"' }
+  - name: aged_care.mpir
+    description: Maximum permissible interest rate (used to convert room prices to daily accommodation payments) — rate on the day the price was agreed
+    kind: scalar
+    value: 0.0761
+    unit: rate p.a.
+    effective_from: 2025-10-01
+    effective_to: 2025-12-31
+    knowledge_date: 2025-10-01
+    verification: verified
+    legal_status: instrument
+    instrument: Aged Care Rules 2025 (MPIR, set quarterly)
+    sources:
+      - { <<: *sched_nov25, locator: '"from 1 October 2025 – 31 December 2025 | 7.61%"' }
+  - name: aged_care.mpir
+    description: Maximum permissible interest rate (used to convert room prices to daily accommodation payments) — rate on the day the price was agreed
+    kind: scalar
+    value: 0.0765
+    unit: rate p.a.
+    effective_from: 2026-01-01
+    effective_to: 2026-03-31
+    knowledge_date: 2026-01-01
+    verification: verified
+    legal_status: instrument
+    instrument: Aged Care Rules 2025 (MPIR, set quarterly)
+    sources:
+      - { <<: *sched_jan26, locator: '"from 1 January 2026 – 31 March 2026 | 7.65%"' }
+  - name: aged_care.mpir
+    description: Maximum permissible interest rate (used to convert room prices to daily accommodation payments) — rate on the day the price was agreed
+    kind: scalar
+    value: 0.0796
+    unit: rate p.a.
+    effective_from: 2026-04-01
+    effective_to: 2026-06-30
+    knowledge_date: 2026-03-20
+    verification: verified
+    legal_status: instrument
+    instrument: Aged Care Rules 2025 (MPIR, set quarterly)
+    sources:
+      - { <<: *sched_mar26, locator: '"from 1 April 2026 – 30 June 2026 | 7.96%"' }
+  - name: aged_care.mpir
+    description: Maximum permissible interest rate (used to convert room prices to daily accommodation payments) — rate on the day the price was agreed
+    kind: scalar
+    value: 0.0843
+    unit: rate p.a.
+    effective_from: 2026-07-01
+    effective_to: 2026-09-30
+    knowledge_date: 2026-07-01
+    verification: verified
+    legal_status: instrument
+    instrument: Aged Care Rules 2025 (MPIR, set quarterly)
+    sources:
+      - { <<: *sched_jul26, locator: '"from 1 July 2026 – 30 September 2026" 8.43%' }
+  - name: aged_care.mpir
+    description: Maximum permissible interest rate (used to convert room prices to daily accommodation payments) — rate on the day the price was agreed
+    kind: scalar
+    value: 0.0851
+    unit: rate p.a.
+    effective_from: 2026-10-01
+    effective_to: 2026-12-31
+    knowledge_date: 2026-09-20
+    verification: verified
+    legal_status: instrument
+    instrument: Aged Care Rules 2025 (MPIR, set quarterly)
+    sources:
+      - { <<: *sched_sep26, locator: '"from 1 October 2026 – 31 December 2026 ... 8.51%"' }
+  - name: aged_care.rad_retention
+    description: Refundable deposit retention — annual rate (charged daily on the balance) and maximum years
+    kind: table
+    value:
+      rate: 0.02
+      years: 5
+      day_basis: 365
+    unit: rate / years
+    effective_from: 2025-11-01
+    effective_to: null
+    knowledge_date: 2024-12-02
+    verification: verified
+    legal_status: enacted
+    instrument: Aged Care Act 2024 s308
+    sources:
+      - { <<: *act, locator: 's308 "calculated at a rate of 2 per cent per annum: (a) on a daily basis"' }
+      - { <<: *retention, locator: '"multiply the RAD or RAC balance by 2% then divide by 365"' }

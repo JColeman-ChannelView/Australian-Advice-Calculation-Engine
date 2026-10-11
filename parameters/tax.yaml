@@ -1,0 +1,506 @@
+# Personal income tax parameters. Evidence: verification/tax.md (all accessed 2026-10-11).
+# Windows are inclusive. FY-based values run 1 July – 30 June.
+
+sources:
+  ato_resident: &ato_resident
+    url: https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents
+    title: ATO — Tax rates, Australian resident
+    accessed: 2026-10-11
+    page_updated: 2026-08-13
+    primary: true
+  itra: &itra
+    url: https://www.legislation.gov.au/C2004A03348/latest/text
+    title: Income Tax Rates Act 1986 (Compilation No. 66, 1 July 2026)
+    accessed: 2026-10-11
+    page_updated: 2026-07-01
+    primary: true
+  ato_taxcuts: &ato_taxcuts
+    url: https://www.ato.gov.au/about-ato/new-legislation/in-detail/individuals/personal-income-tax-new-tax-cuts-for-every-australian-taxpayer
+    title: ATO — Personal income tax, new tax cuts for every Australian taxpayer
+    accessed: 2026-10-11
+    page_updated: 2026-05-13
+    primary: true
+  ato_foreign: &ato_foreign
+    url: https://www.ato.gov.au/tax-rates-and-codes/tax-rates-foreign-residents
+    title: ATO — Tax rates, foreign residents
+    accessed: 2026-10-11
+    page_updated: 2026-06-01
+    primary: true
+  mla: &mla
+    url: https://www.legislation.gov.au/C2004A03351/latest/text
+    title: Medicare Levy Act 1986 (Compilation No. 53, 1 July 2026)
+    accessed: 2026-10-11
+    page_updated: 2026-07-01
+    primary: true
+  ato_ml_low: &ato_ml_low
+    url: https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy/medicare-levy-reduction/medicare-levy-reduction-for-low-income-earners
+    title: ATO — Medicare levy reduction for low-income earners
+    accessed: 2026-10-11
+    page_updated: 2026-06-30
+    primary: true
+  ato_ml_family: &ato_ml_family
+    url: https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy/medicare-levy-reduction/medicare-levy-reduction-family-income
+    title: ATO — Medicare levy reduction, family income
+    accessed: 2026-10-11
+    page_updated: 2026-06-30
+    primary: true
+  ato_mytax_2025_ml: &ato_mytax_2025_ml
+    url: https://www.ato.gov.au/individuals-and-families/your-tax-return/instructions-to-complete-your-tax-return/mytax-instructions/2025/medicare-and-private-health-insurance/medicare-levy-reduction-or-exemption
+    title: ATO — myTax 2025 Medicare levy reduction or exemption
+    accessed: 2026-10-11
+    primary: true
+  ato_mls: &ato_mls
+    url: https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy-surcharge/medicare-levy-surcharge-income-thresholds-and-rates
+    title: ATO — Medicare levy surcharge income, thresholds and rates
+    accessed: 2026-10-11
+    page_updated: 2026-06-22
+    primary: true
+  ato_help: &ato_help
+    url: https://www.ato.gov.au/tax-rates-and-codes/study-and-training-support-loans-rates-and-repayment-thresholds
+    title: ATO — Study and training support loans rates and repayment thresholds
+    accessed: 2026-10-11
+    page_updated: 2026-06-30
+    primary: true
+  ato_lito: &ato_lito
+    url: https://www.ato.gov.au/individuals-and-families/income-deductions-offsets-and-records/tax-offsets/low-income-tax-offset
+    title: ATO — Low income tax offset
+    accessed: 2026-10-11
+    page_updated: 2026-06-08
+    primary: true
+  ato_sapto: &ato_sapto
+    url: https://www.ato.gov.au/individuals-and-families/income-deductions-offsets-and-records/tax-offsets/seniors-and-pensioners-tax-offset
+    title: ATO — Seniors and pensioners tax offset
+    accessed: 2026-10-11
+    page_updated: 2026-10-02
+    primary: true
+  tr1_act: &tr1_act
+    url: https://www.legislation.gov.au/C2026A00049/asmade/text
+    title: Treasury Laws Amendment (Tax Reform No. 1) Act 2026 (No. 49, 2026)
+    accessed: 2026-10-11
+    page_updated: 2026-06-26
+    primary: true
+  ato_wato: &ato_wato
+    url: https://www.ato.gov.au/about-ato/new-legislation/in-detail/individuals/working-australians-tax-offset
+    title: ATO — Working Australians tax offset
+    accessed: 2026-10-11
+    page_updated: 2026-07-23
+    primary: true
+  ato_div293: &ato_div293
+    url: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/division-293-tax-on-concessional-contributions-by-high-income-earners
+    title: ATO — Division 293 tax on concessional contributions by high-income earners
+    accessed: 2026-10-11
+    page_updated: 2026-08-24
+    primary: true
+
+records:
+  # ---------------------------------------------------------------- scales
+  - name: tax.resident_scale
+    description: Resident individual marginal tax scale (full-year resident, full tax-free threshold); excludes Medicare levy
+    kind: brackets
+    value:
+      - { over: 0, rate: 0 }
+      - { over: 18200, rate: 0.16 }
+      - { over: 45000, rate: 0.30 }
+      - { over: 135000, rate: 0.37 }
+      - { over: 190000, rate: 0.45 }
+    unit: AUD / rate
+    effective_from: 2024-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2024-03-27
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Rates Act 1986 Sch 7 Pt I
+    notes: 2024-25 and 2025-26. ATO published bases 4,288 / 31,288 / 51,638.
+    sources:
+      - { <<: *ato_resident, locator: 'Resident tax rates 2024–25 and 2025–26 tables' }
+      - { <<: *itra, locator: 'Sch 7 Pt I table for 2024-25 or 2025-26' }
+  - name: tax.resident_scale
+    description: Resident individual marginal tax scale (full-year resident, full tax-free threshold); excludes Medicare levy
+    kind: brackets
+    value:
+      - { over: 0, rate: 0 }
+      - { over: 18200, rate: 0.15 }
+      - { over: 45000, rate: 0.30 }
+      - { over: 135000, rate: 0.37 }
+      - { over: 190000, rate: 0.45 }
+    unit: AUD / rate
+    effective_from: 2026-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2025-03-27
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Rates Act 1986 Sch 7 Pt I
+    notes: 2026-27. ATO published bases 4,020 / 31,020 / 51,370.
+    sources:
+      - { <<: *ato_resident, locator: 'Resident tax rates 2026–27 table' }
+      - { <<: *itra, locator: '"Tax rates for resident taxpayers for the 2026‑27 year of income"' }
+  - name: tax.resident_scale
+    description: Resident individual marginal tax scale (full-year resident, full tax-free threshold); excludes Medicare levy
+    kind: brackets
+    value:
+      - { over: 0, rate: 0 }
+      - { over: 18200, rate: 0.14 }
+      - { over: 45000, rate: 0.30 }
+      - { over: 135000, rate: 0.37 }
+      - { over: 190000, rate: 0.45 }
+    unit: AUD / rate
+    effective_from: 2027-07-01
+    effective_to: null
+    knowledge_date: 2025-03-27
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Rates Act 1986 Sch 7 Pt I (2027-28 or a later year of income)
+    notes: Bases derived 3,752 / 30,752 / 51,102 (not published by the ATO on its rates page as at 2026-10-11).
+    sources:
+      - { <<: *itra, locator: 'Sch 7 Pt I table "2027‑28 year of income or a later year"' }
+      - { <<: *ato_taxcuts, locator: '"From 1 July 2027 ... reduced further to 14 per cent"' }
+  - name: tax.foreign_resident_scale
+    description: Foreign resident marginal tax scale (no tax-free threshold); no Medicare levy
+    kind: brackets
+    value:
+      - { over: 0, rate: 0.30 }
+      - { over: 135000, rate: 0.37 }
+      - { over: 190000, rate: 0.45 }
+    unit: AUD / rate
+    effective_from: 2024-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2024-03-27
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Rates Act 1986 Sch 7 Pt II
+    notes: ATO bases 40,500 / 60,850.
+    sources:
+      - { <<: *ato_foreign, locator: '"$60,850 plus 45c for each $1 over $190,000"' }
+  - name: tax.foreign_resident_scale
+    description: Foreign resident marginal tax scale (no tax-free threshold); no Medicare levy
+    kind: brackets
+    value:
+      - { over: 0, rate: 0.30 }
+      - { over: 135000, rate: 0.37 }
+      - { over: 190000, rate: 0.45 }
+    unit: AUD / rate
+    effective_from: 2026-07-01
+    effective_to: null
+    knowledge_date: 2025-03-27
+    verification: derived
+    legal_status: enacted
+    instrument: Income Tax Rates Act 1986 Sch 7 Pt II
+    notes: >-
+      Derived from the Act: Sch 7 Pt II applies "for the 2024-25 year of income or a later year" using
+      the second (30%) and third (37%) resident rates, which are unchanged in the 2026-27 and 2027-28
+      Pt I tables. The ATO foreign-resident page (updated 2026-06-01) shows only up to 2025-26.
+    sources:
+      - { <<: *itra, locator: 'Sch 7 Pt II "2024‑25 year of income or a later year"' }
+
+  # ---------------------------------------------------------------- Medicare
+  - name: tax.medicare.levy_rate
+    description: Medicare levy rate on taxable income
+    kind: scalar
+    value: 0.02
+    unit: rate
+    effective_from: 2014-07-01
+    effective_to: null
+    knowledge_date: 2013-06-28
+    verification: verified
+    legal_status: enacted
+    instrument: Medicare Levy Act 1986 s6(1)
+    sources:
+      - { <<: *mla, locator: '"The rate of levy payable ... is 2%."' }
+  - name: tax.medicare.phase_in_rate
+    description: Low-income phase-in — levy may not exceed this share of taxable income above the threshold
+    kind: scalar
+    value: 0.10
+    unit: rate
+    effective_from: 2014-07-01
+    effective_to: null
+    knowledge_date: 2013-06-28
+    verification: verified
+    legal_status: enacted
+    instrument: Medicare Levy Act 1986 s7
+    sources:
+      - { <<: *mla, locator: '"shall not exceed 10% of the amount of the excess"' }
+  - name: tax.medicare.low_income_thresholds
+    description: Medicare levy low-income threshold amounts (individual) — lower threshold and phase-in limit
+    kind: table
+    value:
+      single_lower: 27222
+      single_upper: 34027
+      single_sapto_lower: 43020
+      single_sapto_upper: 53775
+      family_upper: 57383
+      family_sapto_upper: 74857
+      family_child_upper: 5270
+    unit: AUD
+    effective_from: 2024-07-01
+    effective_to: 2025-06-30
+    knowledge_date: 2025-06-30
+    verification: verified
+    legal_status: enacted
+    instrument: Medicare Levy Act 1986 s3, s7, s8
+    notes: 2024-25 family lower thresholds were not shown on the page read, so family reductions for 2024-25 are blocked.
+    sources:
+      - { <<: *ato_mytax_2025_ml, locator: 'Table 2 "All other taxpayers $27,222 $34,027"' }
+  - name: tax.medicare.low_income_thresholds
+    description: Medicare levy low-income threshold amounts (individual and family) — lower threshold and phase-in limit
+    kind: table
+    value:
+      single_lower: 28011
+      single_upper: 35013
+      single_sapto_lower: 44268
+      single_sapto_upper: 55335
+      family_lower: 47238
+      family_upper: 59047
+      family_child_lower: 4338
+      family_child_upper: 5423
+      family_sapto_lower: 61623
+      family_sapto_upper: 77028
+    unit: AUD
+    effective_from: 2025-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2026-06-30
+    verification: verified
+    legal_status: enacted
+    instrument: Medicare Levy Act 1986 s3, s7, s8 (as amended by Act No. 58 of 2026)
+    notes: 2026-27 thresholds are not yet published (Budget-set, often retrospectively); 2026-27 Medicare low-income calculations block until they are.
+    sources:
+      - { <<: *ato_ml_low, locator: '"in any other case—$28,011"' }
+      - { <<: *ato_ml_family, locator: '"$47,238 increased by $4,338 for each" child' }
+      - { <<: *mla, locator: 's3 threshold amount and phase-in limit; s8(5) and s8(7)' }
+  - name: tax.medicare.surcharge_tiers
+    description: Medicare levy surcharge income-for-MLS tier thresholds (upper bound of base tier, tier 1 and tier 2) and rates
+    kind: table
+    value:
+      single_base_max: 97000
+      single_t1_max: 113000
+      single_t2_max: 151000
+      rate_t1: 0.01
+      rate_t2: 0.0125
+      rate_t3: 0.015
+    unit: AUD / rate
+    effective_from: 2024-07-01
+    effective_to: 2025-06-30
+    knowledge_date: 2024-06-30
+    verification: verified
+    legal_status: enacted
+    instrument: A New Tax System (Medicare Levy Surcharge—Fringe Benefits) Act 1999; Medicare Levy Act 1986
+    notes: 2024-25 family tiers not captured, so family MLS tiers for 2024-25 are blocked.
+    sources:
+      - { <<: *ato_mls, locator: '"$97,000 or less"' }
+  - name: tax.medicare.surcharge_tiers
+    description: Medicare levy surcharge income-for-MLS tier thresholds (upper bound of base tier, tier 1 and tier 2) and rates
+    kind: table
+    value:
+      single_base_max: 101000
+      single_t1_max: 118000
+      single_t2_max: 158000
+      family_base_max: 202000
+      family_t1_max: 236000
+      family_t2_max: 316000
+      family_child_increment: 1500
+      rate_t1: 0.01
+      rate_t2: 0.0125
+      rate_t3: 0.015
+    unit: AUD / rate
+    effective_from: 2025-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2025-06-30
+    verification: verified
+    legal_status: enacted
+    instrument: A New Tax System (Medicare Levy Surcharge—Fringe Benefits) Act 1999; Medicare Levy Act 1986
+    notes: Family thresholds increase by 1,500 for each MLS dependent child after the first.
+    sources:
+      - { <<: *ato_mls, locator: '"$101,000 or less" / "$202,000 or less"' }
+  - name: tax.medicare.surcharge_tiers
+    description: Medicare levy surcharge income-for-MLS tier thresholds (upper bound of base tier, tier 1 and tier 2) and rates
+    kind: table
+    value:
+      single_base_max: 105000
+      single_t1_max: 123000
+      single_t2_max: 164000
+      family_base_max: 210000
+      family_t1_max: 246000
+      family_t2_max: 328000
+      family_child_increment: 1500
+      rate_t1: 0.01
+      rate_t2: 0.0125
+      rate_t3: 0.015
+    unit: AUD / rate
+    effective_from: 2026-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2026-06-22
+    verification: verified
+    legal_status: enacted
+    instrument: A New Tax System (Medicare Levy Surcharge—Fringe Benefits) Act 1999; Medicare Levy Act 1986
+    notes: Family thresholds increase by 1,500 for each MLS dependent child after the first.
+    sources:
+      - { <<: *ato_mls, locator: '"$105,000 or less" / "$210,000 or less"' }
+
+  # ---------------------------------------------------------------- HELP
+  - name: tax.help.repayment_schedule
+    description: Study and training loan compulsory repayment (marginal method) — thresholds, rates and published band base
+    kind: table
+    value:
+      threshold: 67000
+      rate1: 0.15
+      band2_over: 125000
+      band2_base: 8700
+      rate2: 0.17
+      top_from: 179286
+      top_rate_of_total: 0.10
+    unit: AUD / rate
+    effective_from: 2025-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2025-06-30
+    verification: verified
+    legal_status: enacted
+    instrument: Higher Education Support Act 2003 s154-20 (marginal method from 2025-26)
+    notes: '"$179,286 and over ... 10% of your total repayment income"'
+    sources:
+      - { <<: *ato_help, locator: 'Table 2 (2025–26)' }
+  - name: tax.help.repayment_schedule
+    description: Study and training loan compulsory repayment (marginal method) — thresholds, rates and published band base
+    kind: table
+    value:
+      threshold: 69528
+      rate1: 0.15
+      band2_over: 129717
+      band2_base: 9028
+      rate2: 0.17
+      top_from: 186051
+      top_rate_of_total: 0.10
+    unit: AUD / rate
+    effective_from: 2026-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2026-06-30
+    verification: verified
+    legal_status: enacted
+    instrument: Higher Education Support Act 2003 s154-20 (indexed)
+    notes: >-
+      The published band-2 base is 9,028 although 0.15 x (129,717 - 69,528) = 9,028.35; the ATO's
+      own worked example (Barry, RI 137,064 -> 10,276.99) uses the published 9,028, so the engine
+      uses the published base.
+    sources:
+      - { <<: *ato_help, locator: '"$9,028 plus 17c for each $1 over $129,717"' }
+
+  # ---------------------------------------------------------------- offsets
+  - name: tax.offsets.lito
+    description: Low income tax offset — maximum, taper thresholds and rates (non-refundable)
+    kind: table
+    value:
+      max: 700
+      full_to: 37500
+      taper1: 0.05
+      step_at: 45000
+      step_amount: 325
+      taper2: 0.015
+      cut_out: 66667
+    unit: AUD / rate
+    effective_from: 2024-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2026-06-08
+    verification: derived
+    legal_status: enacted
+    instrument: Income Tax Assessment Act 1997 s61-110, s61-115
+    notes: >-
+      Values VERIFIED as current law on the ATO page (updated 2026-06-08), but the page is not
+      year-stamped, so per-year applicability is derived: they are applied to 2024-25..2026-27 on the
+      basis that the page describes the law in force over that period and records no change.
+      2027-28 is left uncovered until confirmed against ITAA97 s61-115, so 2027-28 calculations
+      needing LITO block.
+    sources:
+      - { <<: *ato_lito, locator: '"$700 minus 5 cents for every $1 above $37,500"' }
+  - name: tax.offsets.sapto
+    description: Seniors and pensioners tax offset — maximum offset, shade-out threshold and cut-out by category
+    kind: table
+    value:
+      single_max: 2230
+      single_shade_out: 34919
+      single_cut_out: 52759
+      couple_max: 1602
+      couple_shade_out: 30994
+      couple_cut_out: 43810
+      illness_separated_max: 2040
+      illness_separated_shade_out: 33732
+      illness_separated_cut_out: 50052
+      taper: 0.125
+    unit: AUD / rate
+    effective_from: 2025-07-01
+    effective_to: 2026-06-30
+    knowledge_date: 2025-06-30
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Assessment Act 1936 s160AAAA; Income Tax Assessment (1936 Act) Regulations 2025
+    notes: Couple values are per partner. Offset rounded up to the nearest whole dollar (ATO).
+    sources:
+      - { <<: *ato_sapto, locator: '"Single $2,230 $34,919 $52,759"' }
+  - name: tax.offsets.sapto
+    description: Seniors and pensioners tax offset — maximum offset, shade-out threshold and cut-out by category
+    kind: table
+    value:
+      single_max: 2230
+      single_shade_out: 36034
+      single_cut_out: 53874
+      couple_max: 1602
+      couple_shade_out: 31847
+      couple_cut_out: 44663
+      illness_separated_max: 2040
+      illness_separated_shade_out: 34767
+      illness_separated_cut_out: 51087
+      taper: 0.125
+    unit: AUD / rate
+    effective_from: 2026-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2025-03-27
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Assessment Act 1936 s160AAAA; Income Tax Assessment (1936 Act) Regulations
+    notes: 2027-28 thresholds are not published; 2027-28 SAPTO calculations block.
+    sources:
+      - { <<: *ato_taxcuts, locator: '"Single $2,230 $36,034 $53,874"' }
+      - { <<: *ato_sapto, locator: 'taper "$0.125 for every dollar"' }
+  - name: tax.offsets.wato
+    description: Working Australians tax offset — maximum (lesser of this and basic tax on net labour income); non-refundable
+    kind: table
+    value:
+      max: 250
+    unit: AUD
+    effective_from: 2027-07-01
+    effective_to: null
+    knowledge_date: 2026-06-26
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Assessment Act 1997 ss61-155, 61-160 (inserted by Act No. 49 of 2026)
+    notes: Eligible if an Australian resident at any time in the year and net labour income exceeds the tax-free threshold.
+    sources:
+      - { <<: *tr1_act, locator: 's61-160 "the lesser of: (a) $250"' }
+      - { <<: *ato_wato, locator: 'non-refundable, cannot transfer or carry forward' }
+  - name: tax.tax_free_threshold
+    description: Resident tax-free threshold (used for WATO eligibility)
+    kind: scalar
+    value: 18200
+    unit: AUD
+    effective_from: 2012-07-01
+    effective_to: null
+    knowledge_date: 2012-06-30
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Rates Act 1986 s3 "tax-free threshold"
+    sources:
+      - { <<: *itra, locator: '"tax‑free threshold means $18,200."' }
+
+  # ---------------------------------------------------------------- Division 293
+  - name: tax.div293
+    description: Division 293 tax — income threshold and rate
+    kind: table
+    value:
+      threshold: 250000
+      rate: 0.15
+    unit: AUD / rate
+    effective_from: 2017-07-01
+    effective_to: null
+    knowledge_date: 2016-11-29
+    verification: verified
+    legal_status: enacted
+    instrument: Income Tax Assessment Act 1997 Div 293
+    sources:
+      - { <<: *ato_div293, locator: '"15% of the excess over the threshold or the taxable super contributions, whichever is less"' }

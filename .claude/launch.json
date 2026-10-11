@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "engine",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["tsx", "src/api/server.ts"],
+      "port": 8787
+    }
+  ]
+}

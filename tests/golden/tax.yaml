@@ -1,0 +1,266 @@
+# Golden tests — tax. kind: official (government worked example) | derived (computed from an
+# official schedule) | identity (published figures reconcile with formulae) | blocking (the engine
+# must refuse). Each case records who checked it. Expected values are strings, exact to the cent.
+cases:
+  - id: TAX-001
+    kind: official
+    description: HELP 2026-27 — ATO example Christina (repayment income stated as 86,380)
+    calculator: tax.help_repayment
+    input: { financial_year: '2026-27', repayment_income: 86380 }
+    expect: { status: ok, result: { help_repayment: '2527.80' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/study-and-training-support-loans-rates-and-repayment-thresholds
+    checked: verification/tax.md (ACCEPT; research note "income inferred" was wrong — income is stated)
+  - id: TAX-002
+    kind: official
+    description: HELP 2026-27 — ATO example Priya, top band 10% of total
+    calculator: tax.help_repayment
+    input: { financial_year: '2026-27', repayment_income: 254780 }
+    expect: { status: ok, result: { help_repayment: '25478.00' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/study-and-training-support-loans-rates-and-repayment-thresholds
+    checked: verification/tax.md (ACCEPT)
+  - id: TAX-HELP-BARRY
+    kind: official
+    description: HELP 2026-27 — ATO example Barry (uses published band base 9,028)
+    calculator: tax.help_repayment
+    input: { financial_year: '2026-27', repayment_income: 137064 }
+    expect: { status: ok, result: { help_repayment: '10276.99' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/study-and-training-support-loans-rates-and-repayment-thresholds
+    checked: verification/tax.md (additional official example)
+  - id: TAX-003
+    kind: derived
+    description: Resident tax 2026-27, TI 100,000
+    calculator: tax.income_tax
+    input: { financial_year: '2026-27', taxable_income: 100000 }
+    expect: { status: ok, result: { income_tax: '20520.00' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents
+    checked: verification/tax.md (ACCEPT)
+  - id: TAX-004
+    kind: derived
+    description: Resident tax 2025-26, TI 100,000
+    calculator: tax.income_tax
+    input: { financial_year: '2025-26', taxable_income: 100000 }
+    expect: { status: ok, result: { income_tax: '20788.00' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents
+    checked: verification/tax.md (ACCEPT)
+  - id: TAX-005a
+    kind: identity
+    description: 2026-27 published base at 45,000
+    calculator: tax.income_tax
+    input: { financial_year: '2026-27', taxable_income: 45000 }
+    expect: { status: ok, result: { income_tax: '4020.00' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents
+    checked: verification/tax.md (ACCEPT)
+  - id: TAX-005b
+    kind: identity
+    description: 2026-27 published base at 135,000
+    calculator: tax.income_tax
+    input: { financial_year: '2026-27', taxable_income: 135000 }
+    expect: { status: ok, result: { income_tax: '31020.00' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents
+    checked: verification/tax.md (ACCEPT)
+  - id: TAX-005c
+    kind: identity
+    description: 2026-27 published base at 190,000
+    calculator: tax.income_tax
+    input: { financial_year: '2026-27', taxable_income: 190000 }
+    expect: { status: ok, result: { income_tax: '51370.00' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents
+    checked: verification/tax.md (ACCEPT)
+  - id: TAX-005d
+    kind: identity
+    description: 2025-26 published bases at 45,000 / 135,000 / 190,000 (4,288 / 31,288 / 51,638) — checked at 190,000
+    calculator: tax.income_tax
+    input: { financial_year: '2025-26', taxable_income: 190000 }
+    expect: { status: ok, result: { income_tax: '51638.00' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents
+    checked: orchestrator (ATO page read 2026-10-11)
+  - id: TAX-006
+    kind: derived
+    description: Tax-free threshold 2025-26
+    calculator: tax.income_tax
+    input: { financial_year: '2025-26', taxable_income: 18200 }
+    expect: { status: ok, result: { income_tax: '0.00' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents
+    checked: verification/tax.md (ACCEPT)
+  - id: TAX-007
+    kind: derived
+    description: Foreign resident 2025-26, TI 150,000
+    calculator: tax.income_tax
+    input: { financial_year: '2025-26', taxable_income: 150000, residency: foreign }
+    expect: { status: ok, result: { income_tax: '46050.00' } }
+    source: https://www.ato.gov.au/tax-rates-and-codes/tax-rates-foreign-residents
+    checked: verification/tax.md (ACCEPT)
+  - id: TAX-008
+    kind: derived
+    description: 2027-28 resident tax at 45,000 (14% bracket, enacted)
+    calculator: tax.income_tax
+    input: { financial_year: '2027-28', taxable_income: 45000 }
+    expect: { status: ok, result: { income_tax: '3752.00' } }
+    source: https://www.legislation.gov.au/C2004A03348/latest/text
+    checked: verification/tax.md (ACCEPT)
+  - id: TAX-009a
+    kind: identity
+    description: SAPTO 2026-27 single cut-out 53,874 = 36,034 + 2,230/0.125 — offset nil at cut-out
+    calculator: tax.sapto
+    input: { financial_year: '2026-27', rebate_income: 53874, category: single }
+    expect: { status: ok, result: { sapto: '0.00' } }
+    source: https://www.ato.gov.au/about-ato/new-legislation/in-detail/individuals/personal-income-tax-new-tax-cuts-for-every-australian-taxpayer
+    checked: verification/tax.md (ACCEPT)
+  - id: TAX-009b
+    kind: identity
+    description: SAPTO 2026-27 single — $1 below cut-out leaves 0.125 → rounded up to $1
+    calculator: tax.sapto
+    input: { financial_year: '2026-27', rebate_income: 53873, category: single }
+    expect: { status: ok, result: { sapto: '1.00' } }
+    source: https://www.ato.gov.au/individuals-and-families/income-deductions-offsets-and-records/tax-offsets/seniors-and-pensioners-tax-offset
+    checked: orchestrator (round-up rule per ATO SAPTO page)
+  - id: TAX-009c
+    kind: identity
+    description: SAPTO 2026-27 couple-each cut-out 44,663 = 31,847 + 1,602/0.125
+    calculator: tax.sapto
+    input: { financial_year: '2026-27', rebate_income: 44663, category: couple }
+    expect: { status: ok, result: { sapto: '0.00' } }
+    source: https://www.ato.gov.au/about-ato/new-legislation/in-detail/individuals/personal-income-tax-new-tax-cuts-for-every-australian-taxpayer
+    checked: verification/tax.md (ACCEPT)
+  - id: TAX-SAPTO-JOSE
+    kind: official
+    description: SAPTO 2025-26 — ATO example José (single, rebate income 39,000 → 1,719.875 → 1,720)
+    calculator: tax.sapto
+    input: { financial_year: '2025-26', rebate_income: 39000, category: single }
+    expect: { status: ok, result: { sapto: '1720.00' } }
+    source: https://www.ato.gov.au/individuals-and-families/income-deductions-offsets-and-records/tax-offsets/seniors-and-pensioners-tax-offset
+    checked: verification/tax.md
+  - id: TAX-SAPTO-KEITH
+    kind: official
+    description: SAPTO 2025-26 — ATO example Keith (couple, rebate income 33,650 → 1,270)
+    calculator: tax.sapto
+    input: { financial_year: '2025-26', rebate_income: 33650, category: couple }
+    expect: { status: ok, result: { sapto: '1270.00' } }
+    source: https://www.ato.gov.au/individuals-and-families/income-deductions-offsets-and-records/tax-offsets/seniors-and-pensioners-tax-offset
+    checked: verification/tax.md
+  - id: TAX-SAPTO-VANH
+    kind: official
+    description: SAPTO 2025-26 — ATO example Vanh (couple, rebate income 32,590 → 1,402.50 → 1,403)
+    calculator: tax.sapto
+    input: { financial_year: '2025-26', rebate_income: 32590, category: couple }
+    expect: { status: ok, result: { sapto: '1403.00' } }
+    source: https://www.ato.gov.au/individuals-and-families/income-deductions-offsets-and-records/tax-offsets/seniors-and-pensioners-tax-offset
+    checked: verification/tax.md
+  - id: TAX-010
+    kind: derived
+    description: Division 293 — income 240,000, LTC 32,500 → 3,375
+    calculator: tax.div293
+    input: { financial_year: '2026-27', division_293_income: 240000, low_tax_contributions: 32500 }
+    expect: { status: ok, result: { div293_tax: '3375.00' } }
+    source: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/division-293-tax-on-concessional-contributions-by-high-income-earners
+    checked: verification/tax.md (ACCEPT)
+  - id: TAX-DIV293-JAN
+    kind: official
+    description: Division 293 — ATO example Jan (240,000 + 15,000 → 750)
+    calculator: tax.div293
+    input: { financial_year: '2025-26', division_293_income: 240000, low_tax_contributions: 15000 }
+    expect: { status: ok, result: { div293_tax: '750.00' } }
+    source: https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/caps-limits-and-tax-on-super-contributions/division-293-tax-on-concessional-contributions-by-high-income-earners
+    checked: verification/tax.md
+  - id: TAX-MEDICARE-ANGIE
+    kind: official
+    description: Medicare levy 2025-26 — ATO example Angie (TI 29,000 single → 98.90)
+    calculator: tax.medicare_levy
+    input: { financial_year: '2025-26', taxable_income: 29000 }
+    expect: { status: ok, result: { medicare_levy: '98.90' } }
+    source: https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy/medicare-levy-reduction/medicare-levy-reduction-for-low-income-earners
+    checked: verification/tax.md
+  - id: TAX-MEDICARE-FAMILY-BLOCK
+    kind: blocking
+    description: Medicare family reduction range must block (s8 not implemented)
+    calculator: tax.medicare_levy
+    input: { financial_year: '2025-26', taxable_income: 40000, family: { family_income: 55000, dependent_children: 1 } }
+    expect: { status: blocked, blocked_code: RULE_NOT_IMPLEMENTED }
+    source: https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy/medicare-levy-reduction/medicare-levy-reduction-family-income
+    checked: orchestrator
+  - id: TAX-MEDICARE-2026-27-BLOCK
+    kind: blocking
+    description: 2026-27 Medicare low-income thresholds not yet published → block
+    calculator: tax.medicare_levy
+    input: { financial_year: '2026-27', taxable_income: 60000 }
+    expect: { status: blocked, blocked_code: PARAMETER_MISSING }
+    source: https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy/medicare-levy-reduction/medicare-levy-reduction-for-low-income-earners
+    checked: verification/tax.md (NOT-FOUND for 2026-27)
+  - id: TAX-SAPTO-2027-28-BLOCK
+    kind: blocking
+    description: 2027-28 SAPTO thresholds not published → block
+    calculator: tax.sapto
+    input: { financial_year: '2027-28', rebate_income: 40000, category: single }
+    expect: { status: blocked, blocked_code: PARAMETER_MISSING }
+    source: https://www.ato.gov.au/individuals-and-families/income-deductions-offsets-and-records/tax-offsets/seniors-and-pensioners-tax-offset
+    checked: verification/tax.md
+  - id: TAX-WATO-001
+    kind: derived
+    description: WATO 2027-28 — net labour income 60,000 → lesser of 250 and tax on 60,000 → 250
+    calculator: tax.wato
+    input: { financial_year: '2027-28', net_labour_income: 60000 }
+    expect: { status: ok, result: { wato: '250.00' } }
+    source: https://www.legislation.gov.au/C2026A00049/asmade/text
+    checked: orchestrator (s61-160 lesser-of rule)
+  - id: TAX-WATO-002
+    kind: derived
+    description: WATO 2027-28 — net labour income 19,000 → tax on 19,000 = 14% × 800 = 112 < 250
+    calculator: tax.wato
+    input: { financial_year: '2027-28', net_labour_income: 19000 }
+    expect: { status: ok, result: { wato: '112.00' } }
+    source: https://www.legislation.gov.au/C2026A00049/asmade/text
+    checked: orchestrator
+  - id: TAX-PERSONAL-001
+    kind: derived
+    description: Personal tax 2025-26 — TI 85,000 with HELP RI 85,000 (gross 16,288; LITO nil; Medicare 1,700; HELP 2,700)
+    calculator: tax.personal_tax
+    input: { financial_year: '2025-26', taxable_income: 85000, help_repayment_income: 85000 }
+    expect:
+      status: ok
+      result: { income_tax: '16288.00', lito: '0.00', net_income_tax: '16288.00', medicare_levy: '1700.00', help_repayment: '2700.00', total_payable: '20688.00' }
+    source: https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents
+    checked: orchestrator (4,288 + 0.30 × 40,000; 2% × 85,000; 15% × 18,000)
+  - id: TAX-PERSONAL-002
+    kind: derived
+    description: Personal tax 2025-26 — TI 30,000; LITO 700 exceeds gross tax 1,888 partially? gross 1,888, LITO 700 → net 1,188; Medicare min(600, 10% × 1,989) = 198.90
+    calculator: tax.personal_tax
+    input: { financial_year: '2025-26', taxable_income: 30000 }
+    expect:
+      status: ok
+      result: { income_tax: '1888.00', lito: '700.00', offsets_used: '700.00', net_income_tax: '1188.00', medicare_levy: '198.90', total_payable: '1386.90' }
+    source: https://www.ato.gov.au/individuals-and-families/income-deductions-offsets-and-records/tax-offsets/low-income-tax-offset
+    checked: orchestrator
+  - id: TAX-PERSONAL-003
+    kind: derived
+    description: Personal tax 2025-26 — TI 20,000; gross 288 < LITO 700 → net nil, unused 412; Medicare nil (below 28,011)
+    calculator: tax.personal_tax
+    input: { financial_year: '2025-26', taxable_income: 20000 }
+    expect:
+      status: ok
+      result: { income_tax: '288.00', offsets_used: '288.00', unused_offsets: '412.00', net_income_tax: '0.00', medicare_levy: '0.00' }
+    source: https://www.ato.gov.au/individuals-and-families/income-deductions-offsets-and-records/tax-offsets/low-income-tax-offset
+    checked: orchestrator
+  - id: TAX-PERSONAL-SAPTO-NOT-ENTITLED
+    kind: derived
+    description: SAPTO single block supplied but rebate income 53,000 ≥ cut-out 52,759 → SAPTO nil, so ordinary Medicare threshold applies (2% × 53,000 = 1,060) (audit finding 2)
+    calculator: tax.personal_tax
+    input: { financial_year: '2025-26', taxable_income: 53000, sapto: { category: single, rebate_income: 53000 } }
+    expect: { status: ok, result: { sapto: '0.00', medicare_levy: '1060.00' } }
+    source: https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy/medicare-levy-reduction/medicare-levy-reduction-for-low-income-earners
+    checked: orchestrator
+  - id: TAX-PERSONAL-SAPTO-ENTITLED
+    kind: derived
+    description: SAPTO single, TI and rebate income 45,000 (2025-26) → SAPTO 2,230 − 0.125 × 10,081 = 969.875 → 970; Medicare uses SAPTO threshold 44,268 → min(900, 10% × 732) = 73.20
+    calculator: tax.personal_tax
+    input: { financial_year: '2025-26', taxable_income: 45000, sapto: { category: single, rebate_income: 45000 } }
+    expect: { status: ok, result: { sapto: '970.00', medicare_levy: '73.20' } }
+    source: https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy/medicare-levy-reduction/medicare-levy-reduction-for-low-income-earners
+    checked: orchestrator
+  - id: TAX-PERSONAL-SAPTO-COUPLE-BLOCK
+    kind: blocking
+    description: SAPTO couple category without family details → blocked (spouse implied; s8 range unchecked) (audit finding 2)
+    calculator: tax.personal_tax
+    input: { financial_year: '2025-26', taxable_income: 40000, sapto: { category: couple, rebate_income: 40000 } }
+    expect: { status: blocked, blocked_code: RULE_NOT_IMPLEMENTED }
+    source: https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy/medicare-levy-reduction/medicare-levy-reduction-family-income
+    checked: orchestrator

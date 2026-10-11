@@ -1,0 +1,131 @@
+cases:
+  - id: AC-001
+    kind: official
+    description: Sakura (health.gov.au scenario, 20 Mar 2026 rates) — MTA 121.33 → hotelling 22.15, NCCC 26.88
+    calculator: aged_care.contributions_from_mta
+    input: { fee_date: '2026-04-01', means_tested_amount: 121.33 }
+    expect: { status: ok, result: { hotelling_contribution: '22.15', non_clinical_care_contribution: '26.88' } }
+    source: https://www.health.gov.au/our-work/residential-aged-care/charging/fees/scenarios2025
+    checked: verification/aged_care.md (ACCEPT; effective-dated to 20 Mar–19 Sep 2026)
+  - id: AC-002
+    kind: official
+    description: Raj — MTA 92.70 → hotelling 20.40, NCCC 0
+    calculator: aged_care.contributions_from_mta
+    input: { fee_date: '2026-04-01', means_tested_amount: 92.70 }
+    expect: { status: ok, result: { hotelling_contribution: '20.40', non_clinical_care_contribution: '0.00' } }
+    source: https://www.health.gov.au/our-work/residential-aged-care/charging/fees/scenarios2025
+    checked: verification/aged_care.md (ACCEPT)
+  - id: AC-003
+    kind: official
+    description: Julie — MTA 19.42 → nil contributions
+    calculator: aged_care.contributions_from_mta
+    input: { fee_date: '2026-04-01', means_tested_amount: 19.42 }
+    expect: { status: ok, result: { hotelling_contribution: '0.00', non_clinical_care_contribution: '0.00' } }
+    source: https://www.health.gov.au/our-work/residential-aged-care/charging/fees/scenarios2025
+    checked: verification/aged_care.md (ACCEPT)
+  - id: AC-004
+    kind: official
+    description: Couple — Julie and Raj (sell family home), MTA 107.38 → 22.15 / 12.93
+    calculator: aged_care.contributions_from_mta
+    input: { fee_date: '2026-04-01', means_tested_amount: 107.38 }
+    expect: { status: ok, result: { hotelling_contribution: '22.15', non_clinical_care_contribution: '12.93' } }
+    source: https://www.health.gov.au/our-work/residential-aged-care/charging/fees/scenarios2025
+    checked: verification/aged_care.md (ACCEPT; label corrected)
+  - id: AC-005
+    kind: derived
+    description: MTA 250 → NCCC daily cap 107.32 binds (20 Mar–19 Sep 2026)
+    calculator: aged_care.contributions_from_mta
+    input: { fee_date: '2026-04-01', means_tested_amount: 250 }
+    expect: { status: ok, result: { hotelling_contribution: '22.15', non_clinical_care_contribution: '107.32' } }
+    source: https://www.health.gov.au/our-work/residential-aged-care/charging/fees/scenarios2025
+    checked: verification/aged_care.md (ACCEPT, effective-dated)
+  - id: AC-005-SEP26
+    kind: derived
+    description: Same MTA 250 from 20 Sep 2026 → cap 109.45
+    calculator: aged_care.contributions_from_mta
+    input: { fee_date: '2026-10-11', means_tested_amount: 250 }
+    expect: { status: ok, result: { non_clinical_care_contribution: '109.45' } }
+    source: https://www.health.gov.au/sites/default/files/2026-09/schedule_of_fees_and_charges_for_residential_care_20_september_2026.docx
+    checked: verification/aged_care.md (date-sensitivity table)
+  - id: AC-001-NOV25
+    kind: derived
+    description: Sakura MTA under 1 Nov 2025 rates (MAS 70.94) → NCCC 28.24
+    calculator: aged_care.contributions_from_mta
+    input: { fee_date: '2025-12-01', means_tested_amount: 121.33 }
+    expect: { status: ok, result: { hotelling_contribution: '22.15', non_clinical_care_contribution: '28.24' } }
+    source: https://www.health.gov.au/sites/default/files/2025-11/schedule-of-fees-and-charges-for-residential-care.docx
+    checked: verification/aged_care.md (date-sensitivity table)
+  - id: AC-SAKURA-FULL
+    kind: official
+    description: Sakura full assessment — income 52,000, assets 340,000 + home 960,000 capped at 214,884 → income-tested 22.92, asset-tested 98.41, MTA 121.33; RAD 650,000 = DAP 136.23; partial RAD 250,000 → DAP 83.84
+    calculator: aged_care.residential_fees
+    input:
+      fee_date: '2026-04-01'
+      entry_date: '2026-03-25'
+      relationship: single
+      assessable_income: 52000
+      assessable_assets: 340000
+      home_value: 960000
+      room_price: 650000
+      lump_sum_paid: 250000
+      price_agreed_date: '2026-03-25'
+    expect:
+      status: ok
+      result:
+        income_tested_amount: '22.92'
+        asset_tested_amount: '98.41'
+        means_tested_amount: '121.33'
+        basic_daily_fee: '66.80'
+        hotelling_contribution: '22.15'
+        non_clinical_care_contribution: '26.88'
+        accommodation: { room_price_as_dap: '136.23', daily_accommodation_payment: '83.84' }
+    source: https://www.health.gov.au/our-work/residential-aged-care/charging/fees/scenarios2025
+    checked: verification/aged_care.md (scenario table; MPIR 7.65% for a price agreed in Jan–Mar 2026)
+  - id: AC-RAJ-FULL
+    kind: official
+    description: Raj — income 44,000 (couple), assets 78,000 + home counted at 214,884 → 12.93 + 79.77 = 92.70 (requires rounding down; nearest cent would give 92.71)
+    calculator: aged_care.residential_fees
+    input: { fee_date: '2026-04-01', entry_date: '2026-03-25', relationship: couple, assessable_income: 44000, assessable_assets: 78000, home_value: 600000 }
+    expect: { status: ok, result: { income_tested_amount: '12.93', asset_tested_amount: '79.77', means_tested_amount: '92.70', hotelling_contribution: '20.40', non_clinical_care_contribution: '0.00' } }
+    source: https://www.health.gov.au/our-work/residential-aged-care/charging/fees/scenarios2025
+    checked: verification/aged_care.md (open item Q12 — rounding inferred)
+  - id: AC-JULIE-FULL
+    kind: official
+    description: Julie — low means; home exempt (protected person); MTA 19.42; DAC = lower of 19.42, 72.30, room DAP 92.22 → 19.42
+    calculator: aged_care.residential_fees
+    input: { fee_date: '2026-04-01', entry_date: '2026-03-25', relationship: couple, assessable_income: 44000, assessable_assets: 78000, home_value: 600000, home_exempt: true, room_price: 440000, price_agreed_date: '2026-03-25' }
+    expect: { status: ok, result: { means_tested_amount: '19.42', accommodation: { low_means: true, daily_accommodation_contribution: '19.42', government_accommodation_supplement: '52.88', room_price_as_dap: '92.22' } } }
+    source: https://www.health.gov.au/our-work/residential-aged-care/charging/fees/scenarios2025
+    checked: verification/aged_care.md
+  - id: AC-JULIE-RAC
+    kind: official
+    description: Julie with partial RAC $40,000 — equivalent 40,000 × 7.65% / 365 = 8.38/day; reduced DAC 19.42 − 8.38 = 11.04 (audit finding 1)
+    calculator: aged_care.residential_fees
+    input: { fee_date: '2026-04-01', entry_date: '2026-03-25', relationship: couple, assessable_income: 44000, assessable_assets: 78000, home_value: 600000, home_exempt: true, room_price: 440000, lump_sum_paid: 40000 }
+    expect: { status: ok, result: { accommodation: { lump_sum_daily_equivalent: '8.38', daily_accommodation_contribution: '11.04' }, total_daily: '77.84' } }
+    source: https://www.health.gov.au/our-work/residential-aged-care/charging/fees/scenarios2025
+    checked: verification/aged_care.md (Julie partial RAC; low-means MPIR at entry date)
+  - id: AC-COUPLE-SELL
+    kind: official
+    description: Couple after selling home — each assets 378,000, income 44,000 → 12.93 + 94.45 = 107.38
+    calculator: aged_care.residential_fees
+    input: { fee_date: '2026-04-01', entry_date: '2026-03-25', relationship: couple, assessable_income: 44000, assessable_assets: 378000 }
+    expect: { status: ok, result: { asset_tested_amount: '94.45', means_tested_amount: '107.38', hotelling_contribution: '22.15', non_clinical_care_contribution: '12.93' } }
+    source: https://www.health.gov.au/our-work/residential-aged-care/charging/fees/scenarios2025
+    checked: verification/aged_care.md
+  - id: AC-GRANDFATHERED-BLOCK
+    kind: blocking
+    description: Entered before 1 Nov 2025 without opting in → blocked (older arrangements not modelled)
+    calculator: aged_care.residential_fees
+    input: { fee_date: '2026-04-01', entry_date: '2024-05-01', relationship: single, assessable_income: 40000, assessable_assets: 100000 }
+    expect: { status: blocked, blocked_code: OUT_OF_SCOPE }
+    source: https://www.health.gov.au/our-work/residential-aged-care/charging/fee-and-accommodation-arrangements
+    checked: verification/aged_care.md
+  - id: AC-LIFETIME-CAP
+    kind: derived
+    description: NCCC nil once 1,460 days have been paid
+    calculator: aged_care.residential_fees
+    input: { fee_date: '2026-04-01', entry_date: '2025-11-01', relationship: single, assessable_income: 52000, assessable_assets: 340000, home_value: 960000, nccc_days_paid: 1460 }
+    expect: { status: ok, result: { non_clinical_care_contribution: '0.00', nccc_cap_reached: true } }
+    source: https://www.health.gov.au/our-work/residential-aged-care/charging/means-tested-fees
+    checked: verification/aged_care.md

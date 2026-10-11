@@ -1,0 +1,146 @@
+# Projection / forecasting defaults.
+# Verified 2026-10-11 from the full text of the ASIC instruments on legislation.gov.au
+# (see verification/projection.md). Windows are inclusive; 2022/603 is "repealed on 1 July 2027",
+# so its defaults are in force to 30 June 2027 and calculations dated later are blocked unless the
+# user supplies their own rates.
+records:
+  - name: projection.asic_super.wage_deflator
+    description: Default nominal wage inflation rate (r) for present values before the assumed retirement age
+    kind: scalar
+    value: 0.04
+    unit: rate p.a.
+    effective_from: 2022-07-01
+    effective_to: 2024-12-31
+    knowledge_date: 2022-06-30
+    verification: verified
+    legal_status: administrative
+    instrument: ASIC Corporations (Superannuation Calculators and Retirement Estimates) Instrument 2022/603 s4 "present value"
+    notes: >-
+      4% before 11 Sep 2024. From 11 Sep 2024 to 31 Dec 2024 either 0.04 or 0.037 was permitted
+      (Amendment Instrument 2024/733); this record keeps 0.04 for that window.
+    sources:
+      - url: https://www.legislation.gov.au/F2022L00895/latest/text
+        title: ASIC Instrument 2022/603 (Compilation No. 1)
+        accessed: 2026-10-11
+        page_updated: 2024-09-11
+        locator: s4 def "present value", para (a), r
+        primary: true
+  - name: projection.asic_super.wage_deflator
+    description: Default nominal wage inflation rate (r) for present values before the assumed retirement age
+    kind: scalar
+    value: 0.037
+    unit: rate p.a.
+    effective_from: 2025-01-01
+    effective_to: 2027-06-30
+    knowledge_date: 2024-09-10
+    verification: verified
+    legal_status: administrative
+    instrument: ASIC Corporations (Superannuation Calculators and Retirement Estimates) Instrument 2022/603 s4 "present value"
+    notes: Based on the 2023 Intergenerational Report nominal wage growth forecast.
+    sources:
+      - url: https://www.legislation.gov.au/F2022L00895/latest/text
+        title: ASIC Instrument 2022/603 (Compilation No. 1)
+        accessed: 2026-10-11
+        page_updated: 2024-09-11
+        locator: '"if this formula is used on or after 1 January 2025—0.037"'
+        primary: true
+  - name: projection.asic_super.cpi_deflator
+    description: Default assumed inflation rate (s) for present values at and after the assumed retirement age
+    kind: scalar
+    value: 0.025
+    unit: rate p.a.
+    effective_from: 2022-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2022-06-30
+    verification: verified
+    legal_status: administrative
+    instrument: ASIC Instrument 2022/603 s4 "present value" paras (b), (c)
+    sources:
+      - url: https://www.legislation.gov.au/F2022L00895/latest/text
+        title: ASIC Instrument 2022/603 (Compilation No. 1)
+        accessed: 2026-10-11
+        page_updated: 2024-09-11
+        locator: '"s is 0.025 or such other assumed inflation rate"'
+        primary: true
+  - name: projection.asic_super.retirement_age
+    description: Assumed retirement age where the person is under 67 or age unknown (age at next birthday if 67 or over)
+    kind: scalar
+    value: 67
+    unit: years
+    effective_from: 2022-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2022-06-30
+    verification: verified
+    legal_status: administrative
+    instrument: ASIC Instrument 2022/603 s4 "assumed retirement age"
+    sources:
+      - url: https://www.legislation.gov.au/F2022L00895/latest/text
+        title: ASIC Instrument 2022/603 (Compilation No. 1)
+        accessed: 2026-10-11
+        page_updated: 2024-09-11
+        locator: '"if the age of the person is less than 67 years"'
+        primary: true
+  - name: projection.asic_super.drawdown_end_age
+    description: Assumed drawdown period ends at the later of this age and drawdown_min_years after it starts
+    kind: table
+    value:
+      end_age: 92
+      min_years: 5
+    unit: years
+    effective_from: 2022-07-01
+    effective_to: 2027-06-30
+    knowledge_date: 2022-06-30
+    verification: verified
+    legal_status: administrative
+    instrument: ASIC Instrument 2022/603 s4 "assumed drawdown period"
+    notes: Ends on, or within 12 months before, the later of age 92 and 5 years after the start.
+    sources:
+      - url: https://www.legislation.gov.au/F2022L00895/latest/text
+        title: ASIC Instrument 2022/603 (Compilation No. 1)
+        accessed: 2026-10-11
+        page_updated: 2024-09-11
+        locator: '"the person reaching 92 years of age"'
+        primary: true
+  - name: projection.asic_generic.inflation
+    description: Assumed inflation rate for present values in generic (non-superannuation) financial calculators
+    kind: scalar
+    value: 0.025
+    unit: rate p.a.
+    effective_from: 2026-03-19
+    effective_to: 2031-03-31
+    knowledge_date: 2026-03-18
+    verification: verified
+    legal_status: administrative
+    instrument: ASIC Corporations (Generic Calculators) Instrument 2026/41 s6 "present value"
+    notes: Repealed at the start of 1 April 2031 (s9). Present value required for amounts payable 2+ years ahead (s8(1)(e)(iv)).
+    sources:
+      - url: https://www.legislation.gov.au/F2026L00271/latest/text
+        title: ASIC Instrument 2026/41
+        accessed: 2026-10-11
+        page_updated: 2026-03-18
+        locator: '"r is 0.025 or such other assumed inflation rate"'
+        primary: true
+      - url: https://www.legislation.gov.au/F2026L00271/asmade/2026-03-18/text/original/epub/OEBPS/document_1/document_1.html
+        title: ASIC Instrument 2026/41 (epub text, s6 formula image alt text)
+        accessed: 2026-10-11
+        locator: 'formula alt text "C over open round bracket 1 plus r close bracket to the power of n"'
+        primary: true
+  - name: projection.moneysmart.insurance_premium
+    description: MoneySmart superannuation calculator default insurance premium (charged mid-year, indexed with inflation)
+    kind: scalar
+    value: 599
+    unit: AUD p.a.
+    effective_from: 2026-07-02
+    effective_to: null
+    knowledge_date: 2026-07-02
+    verification: verified
+    legal_status: administrative
+    instrument: MoneySmart superannuation calculator assumptions (ASIC)
+    notes: A calculator convention used for parity testing, not a legal requirement.
+    sources:
+      - url: https://moneysmart.gov.au/how-super-works/superannuation-calculator
+        title: MoneySmart superannuation calculator
+        accessed: 2026-10-11
+        page_updated: 2026-07-02
+        locator: '"$599 will be charged mid-year on average"'
+        primary: true

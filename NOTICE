@@ -1,0 +1,24 @@
+au-advice-calc-engine
+Copyright 2026 the au-advice-calc-engine contributors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This software implements Australian tax, superannuation, social-security and aged-care rules from
+publicly available government and legislative sources cited per parameter in /parameters and
+/verification. It is not financial product advice, is not endorsed by the Australian Taxation
+Office, ASIC, Services Australia, the Department of Social Services, the Department of Health,
+Disability and Ageing, or any Commonwealth agency, and is provided under the Apache License 2.0
+WITHOUT WARRANTY. Users who provide financial advice remain responsible for validating outputs and
+for compliance with the Corporations Act 2001 and their AFS licence conditions.
+
+Government material: ATO material is used under the ATO's copyright notice, which permits reuse
+provided no endorsement is implied. Values are stored as short structured data with attribution;
+no long passages of government text are reproduced.
+
+Parameter currency statement: each release embeds a parameter release hash and currency date
+(src/generated/parameters.json, docs/PARAMETERS.md) identifying the latest source incorporated.
+
+Third-party runtime dependencies: decimal.js (MIT), zod (MIT). The web interface bundles React
+(MIT). Development tools are not distributed; a licence scan of node_modules (2026-10-11) found
+MIT, Apache-2.0, ISC, BSD-3-Clause and MPL-2.0 (lightningcss, build-time CSS tooling only) and no
+GPL/AGPL packages.
